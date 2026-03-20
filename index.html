@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="translationCore® — desktop workspace for Bible translation checking. Plus unfoldingWord translation helps, church-based training, and Foundations BT.">
+  <title>translationCore Suite — unfoldingWord</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <img src="/assets/images/tc_logo.png" alt="translationCore" class="brand-logo">
+      <span class="brand-name">translationCore&reg; Suite</span>
+    </div>
+    <nav class="site-nav">
+      <a href="#translationcore">translationCore&reg;</a>
+      <a href="#translation-helps">Helps</a>
+      <a href="#church-training">Church-Based Training</a>
+      <a href="#foundations-bt">Foundations BT</a>
+    </nav>
+  </header>
+
+  <!-- Hero: translationCore -->
+  <div id="translationcore" class="hero hero-translationcore">
+    <div class="hero-tc-copy">
+      <p class="eyebrow">translationCore&reg; software</p>
+      <h1>translationCore</h1>
+      <p class="subhead">A focused desktop workspace that keeps translation teams aligned with checks, notes, and alignment tools built for church-led movements.</p>
+      <div class="hero-actions">
+        <a href="/translationcore/" class="cta primary">Download</a>
+        <a href="/translationcore/" class="cta secondary">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero: Translation Helps -->
+  <div id="translation-helps" class="hero hero-helps">
+    <p class="eyebrow">unfoldingWord translation helps</p>
+    <h2>Insights and notes that illuminate every verse</h2>
+    <p class="subhead">Download the latest translation notes, questions, and key terms so your team never loses momentum in Scripture checking.</p>
+    <div class="hero-actions">
+      <button id="download-helps" class="cta primary" type="button" aria-haspopup="dialog" aria-expanded="false">Download helps</button>
+      <a href="/translation-helps/" class="cta secondary">Learn more</a>
+    </div>
+  </div>
+
+  <!-- Hero pair: Training + Foundations -->
+  <div class="hero-pair">
+    <div id="church-training" class="hero hero-training">
+      <p class="eyebrow">Church-Based Training</p>
+      <h2>Equip everyday believers to translate the Bible</h2>
+      <div class="hero-actions">
+        <a href="https://unfoldingword.notion.site/Church-Based-Bible-Translation-Training-Resources-f4568b2fbaa9435c9be6999466c5d61a" class="cta primary" target="_blank" rel="noopener">Browse Materials</a>
+        <a href="https://churchbased.bible/training/" class="cta secondary" target="_blank" rel="noopener">Learn more</a>
+      </div>
+    </div>
+
+    <div id="foundations-bt" class="hero hero-foundations">
+      <p class="eyebrow">Foundations Bible Translation</p>
+      <h2>Form gospel-centered translators with guided cohorts</h2>
+      <div class="hero-actions">
+        <a href="https://foundationsbt.com/" class="cta primary" target="_blank" rel="noopener">Foundations of BT</a>
+        <a href="https://foundationsbt.com/" class="cta secondary" target="_blank" rel="noopener">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download Helps dialog -->
+  <div
+    id="helps-dialog"
+    class="helps-dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="helps-dialog-title"
+    hidden
+    aria-hidden="true"
+  >
+    <div class="helps-dialog__backdrop" data-helps-close></div>
+    <div class="helps-dialog__panel helps-card">
+      <button type="button" class="helps-dialog__close" data-helps-close aria-label="Close download helps dialog">&times;</button>
+      <p class="eyebrow" style="color:var(--text-secondary)">Translation Notes</p>
+      <h2 id="helps-dialog-title">Pick a book to open its PDF instantly</h2>
+      <p class="subhead">Choose a Bible book to jump straight into the latest unfoldingWord translation notes (<span data-version-label>loading&hellip;</span>).</p>
+      <label class="select-label" for="book-select">Book of the Bible</label>
+      <div class="select-wrapper">
+        <select id="book-select" class="book-select">
+          <option value="" disabled selected>Select a book&hellip;</option>
+        </select>
+      </div>
+      <p id="download-message" class="helps-status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-columns">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <img src="/assets/images/tc_logo.png" alt="translationCore">
+          <span>translationCore&reg;</span>
+        </div>
+        <p>translationCore&reg; is a project of unfoldingWord.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/translation-helps/">Translation Notes</a></li>
+          <li><a href="/translation-helps/">Translation Words</a></li>
+          <li><a href="/translation-helps/">Key Terms</a></li>
+          <li><a href="/translation-helps/">Study Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Software</h4>
+        <ul>
+          <li><a href="/translationcore/">translationCore&reg;</a></li>
+          <li><a href="https://github.com/unfoldingWord/translationCore/releases" target="_blank" rel="noopener">Release Notes</a></li>
+          <li><a href="https://github.com/unfoldingWord/translationCore" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="https://foundationsbt.com" target="_blank" rel="noopener">Foundations BT</a></li>
+          <li><a href="https://forum.door43.org/c/software/translationcore" target="_blank" rel="noopener">Community Forum</a></li>
+          <li><a href="https://unfoldingword.org" target="_blank" rel="noopener">About unfoldingWord</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <p>License: CC BY-SA 4.0</p>
+    </div>
+  </footer>
+
+  <script src="/scripts/helps-dialog.js" defer></script>
+  <script src="/scripts/helps.js" defer></script>
+</body>
+</html>

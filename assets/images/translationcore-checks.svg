@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="464" viewBox="0 0 1024 464" role="img" aria-labelledby="title desc">
+  <title id="title">translationCore verse check screenshot illustration</title>
+  <desc id="desc">A stylized interface screenshot of translationCore showing Step 1 Read with highlighted notes and selections.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#123E8C" />
+      <stop offset="100%" stop-color="#0B2D64" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1F4FAB" />
+      <stop offset="100%" stop-color="#163A7D" />
+    </linearGradient>
+    <linearGradient id="highlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F6C744" />
+      <stop offset="100%" stop-color="#F19B2C" />
+    </linearGradient>
+    <clipPath id="panel-clip">
+      <rect x="24" y="24" width="976" height="416" rx="24" />
+    </clipPath>
+  </defs>
+  <rect x="0" y="0" width="1024" height="464" rx="32" fill="url(#bg)" />
+  <g clip-path="url(#panel-clip)">
+    <rect x="24" y="24" width="976" height="416" rx="24" fill="#0F2B56" opacity="0.5" />
+    <rect x="24" y="24" width="976" height="416" rx="24" fill="url(#panel)" />
+    <rect x="24" y="24" width="976" height="68" fill="rgba(12, 24, 58, 0.75)" />
+    <text x="52" y="66" fill="#C2D6FF" font-family="'Inter','Segoe UI',sans-serif" font-size="26" font-weight="600">Step 1: Read</text>
+    <text x="232" y="66" fill="#8CAFEF" font-family="'Inter','Segoe UI',sans-serif" font-size="20">Gateway Language: Kannada (GLT)</text>
+    <rect x="36" y="104" width="204" height="284" rx="16" fill="rgba(15, 25, 54, 0.6)" />
+    <rect x="36" y="104" width="204" height="284" rx="16" fill="rgba(255, 255, 255, 0.08)" />
+    <text x="58" y="136" fill="#D7E4FF" font-family="'Inter','Segoe UI',sans-serif" font-size="17" font-weight="600">Group 1: Read</text>
+    <rect x="58" y="150" width="160" height="10" rx="5" fill="rgba(255,255,255,0.24)" />
+    <rect x="58" y="170" width="120" height="10" rx="5" fill="rgba(255,255,255,0.18)" />
+    <rect x="58" y="200" width="140" height="10" rx="5" fill="rgba(255,255,255,0.12)" />
+    <rect x="58" y="220" width="112" height="10" rx="5" fill="rgba(255,255,255,0.12)" />
+    <rect x="58" y="240" width="136" height="10" rx="5" fill="rgba(255,255,255,0.12)" />
+    <rect x="58" y="260" width="144" height="10" rx="5" fill="rgba(255,255,255,0.12)" />
+    <rect x="58" y="280" width="128" height="10" rx="5" fill="rgba(255,255,255,0.12)" />
+    <rect x="58" y="300" width="132" height="10" rx="5" fill="rgba(255,255,255,0.12)" />
+    <rect x="58" y="320" width="142" height="10" rx="5" fill="rgba(255,255,255,0.12)" />
+    <rect x="58" y="340" width="118" height="10" rx="5" fill="rgba(255,255,255,0.12)" />
+    <rect x="58" y="360" width="148" height="10" rx="5" fill="rgba(255,255,255,0.12)" />
+    <rect x="262" y="104" width="240" height="284" rx="16" fill="rgba(18, 38, 88, 0.9)" />
+    <rect x="262" y="104" width="240" height="284" rx="16" fill="rgba(15, 25, 54, 0.5)" />
+    <rect x="272" y="118" width="220" height="32" rx="12" fill="rgba(0, 0, 0, 0.18)" />
+    <rect x="284" y="124" width="168" height="20" rx="10" fill="rgba(255,255,255,0.2)" />
+    <rect x="272" y="164" width="220" height="196" rx="12" fill="#0E1D45" />
+    <rect x="288" y="184" width="188" height="18" rx="9" fill="url(#highlight)" opacity="0.9" />
+    <rect x="288" y="214" width="188" height="16" rx="8" fill="rgba(255,255,255,0.18)" />
+    <rect x="288" y="238" width="188" height="16" rx="8" fill="rgba(255,255,255,0.18)" />
+    <rect x="288" y="262" width="188" height="16" rx="8" fill="rgba(255,255,255,0.18)" />
+    <rect x="288" y="286" width="188" height="16" rx="8" fill="rgba(255,255,255,0.18)" />
+    <rect x="288" y="310" width="188" height="16" rx="8" fill="rgba(255,255,255,0.18)" />
+    <rect x="522" y="104" width="232" height="284" rx="16" fill="rgba(14, 23, 54, 0.85)" />
+    <rect x="522" y="104" width="232" height="284" rx="16" fill="rgba(0, 0, 0, 0.2)" />
+    <rect x="534" y="118" width="208" height="32" rx="12" fill="rgba(0, 0, 0, 0.18)" />
+    <rect x="546" y="124" width="172" height="20" rx="10" fill="rgba(255,255,255,0.22)" />
+    <rect x="534" y="164" width="208" height="196" rx="12" fill="#10224F" />
+    <rect x="550" y="184" width="176" height="18" rx="9" fill="rgba(255,255,255,0.22)" />
+    <rect x="550" y="208" width="176" height="70" rx="12" fill="rgba(255,255,255,0.14)" />
+    <rect x="550" y="286" width="176" height="18" rx="9" fill="url(#highlight)" opacity="0.9" />
+    <rect x="550" y="314" width="176" height="16" rx="8" fill="rgba(255,255,255,0.18)" />
+    <rect x="774" y="104" width="214" height="284" rx="16" fill="rgba(13, 30, 72, 0.9)" />
+    <rect x="774" y="104" width="214" height="284" rx="16" fill="rgba(0, 0, 0, 0.18)" />
+    <rect x="786" y="118" width="190" height="32" rx="12" fill="rgba(0, 0, 0, 0.18)" />
+    <rect x="800" y="124" width="154" height="20" rx="10" fill="rgba(255,255,255,0.24)" />
+    <rect x="786" y="164" width="190" height="196" rx="12" fill="#0F214C" />
+    <rect x="802" y="184" width="158" height="18" rx="9" fill="rgba(255,255,255,0.2)" />
+    <rect x="802" y="208" width="158" height="16" rx="8" fill="rgba(255,255,255,0.2)" />
+    <rect x="802" y="232" width="158" height="16" rx="8" fill="rgba(255,255,255,0.2)" />
+    <rect x="802" y="256" width="158" height="16" rx="8" fill="rgba(255,255,255,0.2)" />
+    <rect x="802" y="280" width="158" height="16" rx="8" fill="rgba(255,255,255,0.2)" />
+    <rect x="802" y="304" width="158" height="16" rx="8" fill="rgba(255,255,255,0.2)" />
+    <rect x="802" y="328" width="158" height="16" rx="8" fill="rgba(255,255,255,0.2)" />
+    <rect x="262" y="406" width="726" height="20" rx="10" fill="rgba(0,0,0,0.28)" />
+    <rect x="262" y="380" width="726" height="20" rx="10" fill="rgba(0,0,0,0.18)" />
+    <rect x="262" y="352" width="726" height="20" rx="10" fill="rgba(0,0,0,0.12)" />
+    <rect x="274" y="392" width="164" height="8" rx="4" fill="rgba(255,255,255,0.4)" />
+    <rect x="450" y="392" width="164" height="8" rx="4" fill="rgba(255,255,255,0.4)" />
+    <rect x="626" y="392" width="164" height="8" rx="4" fill="rgba(255,255,255,0.4)" />
+    <rect x="802" y="392" width="164" height="8" rx="4" fill="rgba(255,255,255,0.4)" />
+  </g>
+</svg>
