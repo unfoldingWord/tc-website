@@ -134,18 +134,60 @@ img {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px clamp(24px, 4vw, 64px);
+  z-index: 100;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: saturate(180%) blur(16px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
 }
 
-.site-header.helps-header {
-  position: static;
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 clamp(24px, 4vw, 64px);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.brand-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
 
 .brand {
@@ -204,6 +246,42 @@ img {
 .site-nav a:focus-visible::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: flex !important;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 40px clamp(24px, 4vw, 64px);
+    gap: 24px;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 105;
+    font-size: 1.2rem;
+    overflow-y: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .site-nav.is-active {
+    transform: translateX(0);
+  }
+
+  .site-nav a::after {
+    display: none;
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 main {
