@@ -1286,20 +1286,10 @@ h1 .reg {
 }
 
 .footer-columns {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.footer-brand {
-  flex: 0 0 37.5%;
-  min-width: 180px;
-}
-
-.footer-col {
-  flex: 0 0 20.83%;
-  min-width: 140px;
 }
 
 .footer-brand-row {
@@ -1399,8 +1389,8 @@ h1 .reg {
   .tc-simple__hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
   .tc-simple__section h2 { font-size: clamp(2rem, 6vw, 3rem); }
   .tc-helps-hero-centered h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
-  .footer-columns { flex-direction: column; gap: 1.5rem; }
-  .footer-brand, .footer-col { flex: none; }
+  .footer-columns { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .footer-brand { grid-column: 1 / -1; }
 }
 
 @media (max-width: 720px) {
