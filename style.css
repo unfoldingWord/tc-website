@@ -826,11 +826,14 @@ body.dialog-open {
   background: linear-gradient(135deg, #0a4a6a 0%, #2daee4 100%);
   color: #ffffff;
   max-height: clamp(520px, 78vh, 760px);
-  padding: clamp(64px, 10vw, 120px) clamp(32px, 6vw, 80px) clamp(48px, 8vw, 80px);
+  padding: clamp(48px, 8vw, 80px) clamp(32px, 6vw, 80px);
   position: relative;
   overflow: hidden;
   border-radius: 12px;
   margin: 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .tc-simple__hero::before {
