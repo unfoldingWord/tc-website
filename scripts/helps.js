@@ -134,7 +134,16 @@ async function fetchLatestRelease() {
       })
       .then((data) => {
         const tag = (data && data.tag_name) || FALLBACK_TAG;
-        cachedRelease = { tag, available_books: null };
+        const assets = (data && data.assets) || [];
+        const available_books = assets
+          .map((a) => a.name)
+          .filter((name) => name.endsWith('_LETTER.pdf'))
+          .map((name) => {
+            const match = name.match(/^en_tn_(.+?)_v\d+_LETTER\.pdf$/);
+            return match ? match[1] : null;
+          })
+          .filter(Boolean);
+        cachedRelease = { tag, available_books: available_books.length > 0 ? available_books : null };
         return cachedRelease;
       })
       .catch((err) => {
