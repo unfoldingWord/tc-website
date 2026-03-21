@@ -137,7 +137,6 @@ img {
   z-index: 100;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: saturate(180%) blur(16px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   min-height: 80px;
   display: flex;
   align-items: center;
@@ -372,7 +371,7 @@ main {
 
 /* First hero: small top margin */
 .hero.hero-translationcore {
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 /* Brighten the background images */
