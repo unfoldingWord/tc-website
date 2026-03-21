@@ -798,7 +798,7 @@ body.dialog-open {
    tc-simple (translationCore & Helps subpages)
    ======================================== */
 .tc-simple {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: #ffffff;
   color: var(--text-primary);
   min-height: 100vh;
   margin-top: 0 !important;
@@ -825,6 +825,8 @@ body.dialog-open {
   padding-block: clamp(48px, 10vw, 80px);
   position: relative;
   overflow: hidden;
+  border-radius: 12px;
+  margin: 0 10px;
 }
 
 .tc-simple__hero::before {
@@ -976,6 +978,8 @@ body.dialog-open {
   background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
   padding-block: clamp(32px, 5vw, 56px);
   position: relative;
+  border-radius: 12px;
+  margin-inline: 10px;
 }
 
 .tc-simple__section--muted::before {
@@ -1185,6 +1189,8 @@ body.dialog-open {
   color: #ffffff;
   padding-block: clamp(32px, 5vw, 48px);
   text-align: center;
+  border-radius: 12px;
+  margin-inline: 10px;
 }
 
 .tc-simple__quote {
