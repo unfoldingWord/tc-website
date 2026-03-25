@@ -548,6 +548,13 @@ button.cta {
   color: rgba(255, 255, 255, 0.72);
 }
 
+.hero-download-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
 /* ========================================
    Hero background images
    ======================================== */
