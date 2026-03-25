@@ -481,7 +481,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: clamp(16px, 4vw, 28px);
 }
 
