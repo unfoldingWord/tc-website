@@ -373,9 +373,10 @@ main {
     );
 }
 
-/* First hero: small top margin */
+/* First hero: small top margin, reduced padding to tighten content */
 .hero.hero-translationcore {
   margin-top: 0;
+  padding-top: clamp(40px, 6vw, 72px);
 }
 
 /* Brighten the background images */
@@ -628,8 +629,13 @@ button.cta {
   padding-left: clamp(20px, 4vw, 60px);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   align-items: flex-start;
+}
+
+.hero.hero-translationcore h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
 }
 
 .hero.hero-translationcore .subhead {
