@@ -505,9 +505,10 @@ main {
   gap: clamp(16px, 4vw, 28px);
 }
 
-/* hero-pair CTAs align left */
+/* hero-pair CTAs align left, with breathing room above */
 .hero-pair .hero .hero-actions {
   justify-content: flex-start;
+  margin-top: clamp(16px, 3vw, 28px);
 }
 
 /* ========================================
@@ -1373,6 +1374,10 @@ body.dialog-open {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+}
+
+.tc-helps-hero-centered .hero-actions {
+  justify-content: center;
 }
 
 .tc-helps-hero-centered h1 {
