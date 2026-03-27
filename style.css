@@ -1256,11 +1256,15 @@ body.dialog-open {
 
 .tc-hero-section .tc-simple__hero-inner {
   grid-template-columns: 1fr;
-  text-align: center;
+  text-align: left;
 }
 
 .tc-hero-section .hero-actions {
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.tc-hero-section .eyebrow {
+  text-align: left;
 }
 
 /* ========================================
