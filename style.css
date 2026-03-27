@@ -126,6 +126,12 @@ a {
   text-decoration: underline;
 }
 
+.inline-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -553,6 +559,7 @@ main {
 .cta.secondary:focus-visible {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.55);
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.22);
 }
 
@@ -844,9 +851,14 @@ body.dialog-open {
   color: var(--text-primary);
 }
 
-.book-select:focus {
+.book-select:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+.book-select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .select-wrapper::after {
@@ -871,8 +883,22 @@ body.dialog-open {
   color: #a9191f;
 }
 
+.helps-status--success {
+  color: #0c6a92;
+}
+
+.helps-status--loading {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
 .helps-status .inline-link {
   color: var(--accent);
+  text-decoration: none;
+}
+
+.helps-status .inline-link:hover,
+.helps-status .inline-link:focus-visible {
   text-decoration: underline;
 }
 
@@ -1535,8 +1561,16 @@ h1 .reg {
   transition: color 200ms ease;
 }
 
-.footer-col ul li a:hover {
+.footer-col ul li a:hover,
+.footer-col ul li a:focus-visible {
   color: rgba(255, 255, 255, 0.85);
+  outline: none;
+}
+
+.footer-col ul li a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .footer-divider {
@@ -1600,4 +1634,28 @@ h1 .reg {
   .tc-simple__container { padding-inline: 20px; }
   .tc-simple__main { gap: clamp(40px, 10vw, 80px); padding-top: 0; padding-bottom: clamp(40px, 10vw, 80px); }
   .hero-actions { flex-direction: column; align-items: center; }
+
+  /* Unify hero scrims to centered radial at mobile — directional scrims
+     designed for desktop layouts don't match single-column stacking */
+  .hero::after,
+  .hero-pair .hero::after,
+  .hero.hero-translationcore::after,
+  .hero.hero-helps::after {
+    background: radial-gradient(
+      ellipse at 50% 60%,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.48) 50%,
+      rgba(0, 0, 0, 0.22) 100%
+    );
+  }
+
+  /* CTAs full-width when stacked, with minimum tap target height */
+  .hero .cta {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+  }
 }
