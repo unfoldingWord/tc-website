@@ -570,6 +570,11 @@ button.cta {
 .hero-training        { --hero-image: url('assets/images/church-training-hero.png'); }
 .hero-foundations     { --hero-image: url('assets/images/foundations-hero.png'); }
 
+.hero.hero-training {
+  justify-content: flex-start;
+  padding-top: clamp(40px, 6vw, 72px);
+}
+
 .hero.hero-helps {
   background-size: 160%;
   background-position: 50% 50%;
