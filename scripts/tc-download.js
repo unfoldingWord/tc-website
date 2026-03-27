@@ -37,6 +37,6 @@
   } else {
     btn.href = 'https://github.com/unfoldingWord/translationCore/releases';
     btn.removeAttribute('download');
-    if (statusEl && !osName) statusEl.textContent = 'Windows, macOS, Linux';
+    if (statusEl) statusEl.textContent = 'Windows, macOS, Linux';
   }
 })();

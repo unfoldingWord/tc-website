@@ -391,21 +391,21 @@ main {
     0 1px 4px rgba(0, 0, 0, 0.65);
 }
 
-/* Foundations: scrim darker on top AND left where text sits */
+/* Foundations: text is vertically centered — use center-weighted radial scrim */
 .hero-pair .hero-foundations::after {
   background:
-    linear-gradient(
-      180deg,
+    radial-gradient(
+      ellipse at 50% 50%,
       rgba(0, 0, 0, 0.65) 0%,
-      rgba(0, 0, 0, 0.40) 40%,
-      rgba(0, 0, 0, 0.10) 65%,
-      rgba(0, 0, 0, 0.00) 100%
+      rgba(0, 0, 0, 0.40) 50%,
+      rgba(0, 0, 0, 0.15) 100%
     ),
     linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.50) 0%,
-      rgba(0, 0, 0, 0.25) 40%,
-      rgba(0, 0, 0, 0.00) 70%
+      180deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.00) 40%,
+      rgba(0, 0, 0, 0.00) 60%,
+      rgba(0, 0, 0, 0.25) 100%
     );
 }
 
@@ -973,6 +973,7 @@ body.dialog-open {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  isolation: isolate;
 }
 
 .tc-simple__hero::before {
@@ -1062,6 +1063,11 @@ body.dialog-open {
 
 .tc-simple__hero .hero-status {
   color: rgba(255, 255, 255, 0.8);
+  text-shadow:
+    0 0 8px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.85),
+    0 0 45px rgba(0, 0, 0, 0.70),
+    0 2px 6px rgba(0, 0, 0, 0.95);
 }
 
 .tc-simple__hero-figure {
@@ -1239,6 +1245,11 @@ body.dialog-open {
   justify-content: center;
 }
 
+.tc-simple__section-note {
+  text-align: center;
+  margin-top: 24px;
+}
+
 .tc-simple__cta {
   background: linear-gradient(135deg, #0a4a6a 0%, #2daee4 100%);
   border-radius: 32px;
@@ -1408,7 +1419,11 @@ body.dialog-open {
 }
 
 .tc-helps-hero-section::before {
-  display: block;
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
   background:
     linear-gradient(
       180deg,
@@ -1467,6 +1482,11 @@ body.dialog-open {
 
 .tc-helps-hero-centered .hero-status {
   color: rgba(255, 255, 255, 0.6);
+  text-shadow:
+    0 0 8px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.85),
+    0 0 45px rgba(0, 0, 0, 0.70),
+    0 2px 6px rgba(0, 0, 0, 0.95);
 }
 
 .tc-simple__access-links {
