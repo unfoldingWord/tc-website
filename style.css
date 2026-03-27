@@ -615,9 +615,12 @@ button.cta {
 .hero.hero-translationcore h1,
 .hero.hero-translationcore h2,
 .hero.hero-translationcore .eyebrow,
-.hero.hero-translationcore .subhead,
 .hero.hero-translationcore p {
   text-align: left;
+}
+
+.hero.hero-translationcore .subhead {
+  text-align: right;
 }
 
 .hero-tc-copy {
