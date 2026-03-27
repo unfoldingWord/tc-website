@@ -361,6 +361,18 @@ main {
   );
 }
 
+/* Hero-pair text: softer shadow — readable but not stark */
+.hero-pair .hero h2,
+.hero-pair .hero .eyebrow,
+.hero-pair .hero p,
+.hero-pair .hero .hero-status {
+  text-shadow:
+    0 0 14px rgba(0, 0, 0, 0.60),
+    0 0 32px rgba(0, 0, 0, 0.45),
+    0 0 60px rgba(0, 0, 0, 0.30),
+    0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
 /* Foundations: scrim darker on top AND left where text sits */
 .hero-pair .hero-foundations::after {
   background:
