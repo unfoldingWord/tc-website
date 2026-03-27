@@ -878,12 +878,19 @@ body.dialog-open {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    rgba(0, 0, 0, 0.58) 0%,
-    rgba(0, 0, 0, 0.30) 55%,
-    rgba(0, 0, 0, 0.10) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.30) 50%,
+      rgba(0, 0, 0, 0.00) 100%
+    ),
+    radial-gradient(
+      ellipse at 35% 50%,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.35) 55%,
+      rgba(0, 0, 0, 0.10) 100%
+    );
   border-radius: inherit;
 }
 
@@ -1301,6 +1308,19 @@ body.dialog-open {
 
 .tc-helps-hero-section::before {
   display: block;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.60) 0%,
+      rgba(0, 0, 0, 0.40) 40%,
+      rgba(0, 0, 0, 0.55) 100%
+    ),
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.40) 55%,
+      rgba(0, 0, 0, 0.20) 100%
+    );
 }
 
 .tc-helps-hero-centered {
@@ -1338,7 +1358,6 @@ body.dialog-open {
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   display: inline-block;
-  text-shadow: none;
 }
 
 .tc-helps-hero-centered .hero-status {
