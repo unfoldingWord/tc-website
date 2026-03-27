@@ -532,7 +532,7 @@ main {
   padding: 14px 34px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.18);
   color: #fff;
   transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease, color 200ms ease;
 }
@@ -614,6 +614,7 @@ button.cta {
   background-size: cover;
   background-position: center;
   transform: scaleX(-1);
+  filter: brightness(1.15) saturate(1.1);
   z-index: -2;
 }
 
