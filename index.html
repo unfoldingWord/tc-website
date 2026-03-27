@@ -15,10 +15,13 @@
   <div id="translationcore" class="hero hero-translationcore">
     <div class="hero-tc-copy">
       <p class="eyebrow">translationCore&reg; App</p>
-      <h1>translationCore</h1>
+      <h1>translationCore<span class="reg">&reg;</span></h1>
       <p class="subhead">A focused desktop workspace that keeps translation teams aligned with checks, notes, and alignment tools built for church-led movements.</p>
       <div class="hero-actions">
-        <a href="/translationcore/" class="cta primary">Download</a>
+        <div class="hero-download-wrap">
+          <a href="https://github.com/unfoldingWord/translationCore/releases" id="tc-download-btn" class="cta primary">Download</a>
+          <p class="hero-status"></p>
+        </div>
         <a href="/translationcore/" class="cta secondary">Learn more</a>
       </div>
     </div>
@@ -39,7 +42,7 @@
   <div class="hero-pair">
     <div id="church-training" class="hero hero-training">
       <p class="eyebrow">Church-Based Training</p>
-      <h2>Equip everyday believers to translate the Bible</h2>
+      <h2>Equip everyday believers<br>to translate the Bible</h2>
       <div class="hero-actions">
         <a href="https://unfoldingword.notion.site/Church-Based-Bible-Translation-Training-Resources-f4568b2fbaa9435c9be6999466c5d61a" class="cta primary" target="_blank" rel="noopener">Browse Materials</a>
         <a href="https://churchbased.bible/training/" class="cta secondary" target="_blank" rel="noopener">Learn more</a>
@@ -48,10 +51,9 @@
 
     <div id="foundations-bt" class="hero hero-foundations">
       <p class="eyebrow">Foundations Bible Translation</p>
-      <h2>Form gospel-centered translators with guided cohorts</h2>
+      <h2>Form gospel-centered<br>translators with<br>guided cohorts</h2>
       <div class="hero-actions">
         <a href="https://foundationsbt.com/" class="cta primary" target="_blank" rel="noopener">Foundations of BT</a>
-        <a href="https://foundationsbt.com/" class="cta secondary" target="_blank" rel="noopener">Learn more</a>
       </div>
     </div>
   </div>
@@ -69,7 +71,7 @@
     <div class="helps-dialog__backdrop" data-helps-close></div>
     <div class="helps-dialog__panel helps-card">
       <button type="button" class="helps-dialog__close" data-helps-close aria-label="Close download helps dialog">&times;</button>
-      <p class="eyebrow" style="color:var(--text-secondary)">Translation Notes</p>
+      <p class="eyebrow">Translation Notes</p>
       <h2 id="helps-dialog-title">Pick a book to open its PDF instantly</h2>
       <p class="subhead">Choose a Bible book to jump straight into the latest unfoldingWord translation notes (<span data-version-label>loading&hellip;</span>).</p>
       <label class="select-label" for="book-select">Book of the Bible</label>
@@ -84,6 +86,7 @@
 
   <footer id="site-footer" class="site-footer"></footer>
 
+  <script src="/scripts/tc-download.js" defer></script>
   <script src="/scripts/helps-dialog.js" defer></script>
   <script src="/scripts/helps.js" defer></script>
   <script src="/scripts/footer-loader.js" defer></script>

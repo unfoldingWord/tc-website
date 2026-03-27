@@ -126,6 +126,12 @@ a {
   text-decoration: underline;
 }
 
+.inline-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -348,34 +354,82 @@ main {
 .hero-pair .hero::after {
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.15) 0%,
     rgba(0, 0, 0, 0.10) 35%,
     rgba(0, 0, 0, 0.50) 70%,
     rgba(0, 0, 0, 0.75) 100%
   );
 }
 
-/* Foundations: scrim darker on top AND left where text sits */
+/* Hero-pair text: softer shadow — readable but not stark */
+.hero-pair .hero h2,
+.hero-pair .hero p,
+.hero-pair .hero .hero-status {
+  text-shadow:
+    0 0 14px rgba(0, 0, 0, 0.60),
+    0 0 32px rgba(0, 0, 0, 0.45),
+    0 0 60px rgba(0, 0, 0, 0.30),
+    0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+/* Hero-pair eyebrows: tighter shadow sized for small uppercase text */
+.hero-pair .hero .eyebrow {
+  text-shadow:
+    0 0 8px  rgba(0, 0, 0, 0.85),
+    0 0 18px rgba(0, 0, 0, 0.65),
+    0 1px 3px rgba(0, 0, 0, 0.80);
+}
+
+/* Helps hero: strong scrim already backs text; softer shadow to match */
+.hero.hero-helps h2,
+.hero.hero-helps p,
+.hero.hero-helps .eyebrow {
+  text-shadow:
+    0 0 12px rgba(0, 0, 0, 0.65),
+    0 0 28px rgba(0, 0, 0, 0.48),
+    0 0 55px rgba(0, 0, 0, 0.32),
+    0 1px 4px rgba(0, 0, 0, 0.65);
+}
+
+/* Foundations: text is vertically centered — use center-weighted radial scrim */
 .hero-pair .hero-foundations::after {
   background:
-    linear-gradient(
-      180deg,
+    radial-gradient(
+      ellipse at 50% 50%,
       rgba(0, 0, 0, 0.65) 0%,
-      rgba(0, 0, 0, 0.40) 40%,
-      rgba(0, 0, 0, 0.10) 65%,
-      rgba(0, 0, 0, 0.00) 100%
+      rgba(0, 0, 0, 0.40) 50%,
+      rgba(0, 0, 0, 0.15) 100%
     ),
     linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.50) 0%,
-      rgba(0, 0, 0, 0.25) 40%,
-      rgba(0, 0, 0, 0.00) 70%
+      180deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.00) 40%,
+      rgba(0, 0, 0, 0.00) 60%,
+      rgba(0, 0, 0, 0.25) 100%
     );
 }
 
-/* First hero: small top margin */
+/* First hero: small top margin, reduced padding to tighten content */
 .hero.hero-translationcore {
   margin-top: 0;
+  padding-top: clamp(40px, 6vw, 72px);
+}
+
+/* translationCore hero: left-weighted scrim matches the left text column */
+.hero.hero-translationcore::after {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.60) 0%,
+      rgba(0, 0, 0, 0.35) 45%,
+      rgba(0, 0, 0, 0.10) 75%,
+      rgba(0, 0, 0, 0.00) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.00) 35%
+    );
 }
 
 /* Brighten the background images */
@@ -432,10 +486,12 @@ main {
 
 .hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.2rem);
+  line-height: 1.1;
 }
 
 .hero h2 {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.1;
 }
 
 .eyebrow {
@@ -481,12 +537,14 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
   gap: clamp(16px, 4vw, 28px);
 }
 
-/* hero-pair CTAs align left */
+/* hero-pair CTAs align left, with breathing room above */
 .hero-pair .hero .hero-actions {
   justify-content: flex-start;
+  margin-top: clamp(16px, 3vw, 28px);
 }
 
 /* ========================================
@@ -504,7 +562,7 @@ main {
   padding: 14px 34px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.18);
   color: #fff;
   transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease, color 200ms ease;
 }
@@ -531,6 +589,7 @@ main {
 .cta.secondary:focus-visible {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.55);
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.22);
 }
 
@@ -546,6 +605,24 @@ button.cta {
 
 .hero .hero-status {
   color: rgba(255, 255, 255, 0.72);
+  line-height: 1.2;
+  text-shadow:
+    0 0 8px  rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.85),
+    0 0 45px rgba(0, 0, 0, 0.70),
+    0 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+.hero-download-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.hero-download-wrap .hero-status {
+  min-height: 0;
+  margin-top: 10px;
 }
 
 /* ========================================
@@ -556,9 +633,34 @@ button.cta {
 .hero-training        { --hero-image: url('assets/images/church-training-hero.png'); }
 .hero-foundations     { --hero-image: url('assets/images/foundations-hero.png'); }
 
+.hero.hero-training {
+  background-image: none;
+}
+.hero.hero-training::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(-1);
+  filter: brightness(1.15) saturate(1.1);
+  z-index: -2;
+}
+
 .hero.hero-helps {
   background-size: 160%;
   background-position: 50% 50%;
+}
+
+/* Helps hero: stronger scrim — text is centered, image is zoomed */
+.hero.hero-helps::after {
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(0, 0, 0, 0.70) 0%,
+    rgba(0, 0, 0, 0.48) 50%,
+    rgba(0, 0, 0, 0.28) 100%
+  );
 }
 
 /* Foundations: vertically centered, left-aligned */
@@ -583,8 +685,15 @@ button.cta {
     0 2px 6px rgba(0, 0, 0, 0.95);
 }
 
+.hero h1,
+.hero h2,
 .hero .eyebrow,
-.tc-simple__hero .eyebrow {
+.tc-simple__hero .eyebrow,
+.tc-helps-hero-centered .eyebrow,
+.tc-simple__hero .subhead,
+.tc-helps-hero-centered .subhead,
+.tc-simple__hero h1,
+.tc-helps-hero-centered h1 {
   text-shadow:
     0 0 8px rgba(0, 0, 0, 0.95),
     0 0 20px rgba(0, 0, 0, 0.85),
@@ -602,8 +711,11 @@ button.cta {
 .hero.hero-translationcore h1,
 .hero.hero-translationcore h2,
 .hero.hero-translationcore .eyebrow,
-.hero.hero-translationcore .subhead,
 .hero.hero-translationcore p {
+  text-align: left;
+}
+
+.hero.hero-translationcore .subhead {
   text-align: left;
 }
 
@@ -612,8 +724,13 @@ button.cta {
   padding-left: clamp(20px, 4vw, 60px);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   align-items: flex-start;
+}
+
+.hero.hero-translationcore h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
 }
 
 .hero.hero-translationcore .subhead {
@@ -733,6 +850,7 @@ body.dialog-open {
 .helps-card h2 {
   color: var(--text-primary);
   margin-bottom: 12px;
+  line-height: 1.1;
 }
 
 .helps-card .subhead {
@@ -765,9 +883,14 @@ body.dialog-open {
   color: var(--text-primary);
 }
 
-.book-select:focus {
+.book-select:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+.book-select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .select-wrapper::after {
@@ -792,8 +915,22 @@ body.dialog-open {
   color: #a9191f;
 }
 
+.helps-status--success {
+  color: #0c6a92;
+}
+
+.helps-status--loading {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
 .helps-status .inline-link {
   color: var(--accent);
+  text-decoration: none;
+}
+
+.helps-status .inline-link:hover,
+.helps-status .inline-link:focus-visible {
   text-decoration: underline;
 }
 
@@ -836,18 +973,26 @@ body.dialog-open {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  isolation: isolate;
 }
 
 .tc-simple__hero::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    rgba(0, 0, 0, 0.58) 0%,
-    rgba(0, 0, 0, 0.30) 55%,
-    rgba(0, 0, 0, 0.10) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.30) 50%,
+      rgba(0, 0, 0, 0.20) 100%
+    ),
+    radial-gradient(
+      ellipse at 35% 50%,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.35) 55%,
+      rgba(0, 0, 0, 0.10) 100%
+    );
   border-radius: inherit;
 }
 
@@ -908,7 +1053,7 @@ body.dialog-open {
 
 .tc-simple__hero .hero-actions {
   justify-content: flex-start;
-  gap: 20px;
+  gap: clamp(16px, 4vw, 28px);
 }
 
 .tc-simple__hero .cta.secondary:hover {
@@ -918,6 +1063,11 @@ body.dialog-open {
 
 .tc-simple__hero .hero-status {
   color: rgba(255, 255, 255, 0.8);
+  text-shadow:
+    0 0 8px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.85),
+    0 0 45px rgba(0, 0, 0, 0.70),
+    0 2px 6px rgba(0, 0, 0, 0.95);
 }
 
 .tc-simple__hero-figure {
@@ -1095,6 +1245,11 @@ body.dialog-open {
   justify-content: center;
 }
 
+.tc-simple__section-note {
+  text-align: center;
+  margin-top: 24px;
+}
+
 .tc-simple__cta {
   background: linear-gradient(135deg, #0a4a6a 0%, #2daee4 100%);
   border-radius: 32px;
@@ -1243,11 +1398,15 @@ body.dialog-open {
 
 .tc-hero-section .tc-simple__hero-inner {
   grid-template-columns: 1fr;
-  text-align: center;
+  text-align: left;
 }
 
 .tc-hero-section .hero-actions {
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.tc-hero-section .eyebrow {
+  text-align: left;
 }
 
 /* ========================================
@@ -1260,7 +1419,24 @@ body.dialog-open {
 }
 
 .tc-helps-hero-section::before {
-  display: block;
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.60) 0%,
+      rgba(0, 0, 0, 0.40) 40%,
+      rgba(0, 0, 0, 0.55) 100%
+    ),
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.40) 55%,
+      rgba(0, 0, 0, 0.20) 100%
+    );
 }
 
 .tc-helps-hero-centered {
@@ -1273,6 +1449,10 @@ body.dialog-open {
   gap: 16px;
 }
 
+.tc-helps-hero-centered .hero-actions {
+  justify-content: center;
+}
+
 .tc-helps-hero-centered h1 {
   font-size: clamp(3rem, 8vw, 5rem);
   font-weight: 700;
@@ -1282,7 +1462,7 @@ body.dialog-open {
 }
 
 .tc-helps-hero-centered .subhead {
-  color: rgba(255, 255, 255, 0.85);
+  color: #ffffff;
   font-size: clamp(1.1rem, 3vw, 1.35rem);
   line-height: 1.6;
   max-width: 640px;
@@ -1291,18 +1471,22 @@ body.dialog-open {
 }
 
 .tc-helps-hero-centered .eyebrow {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   color: #ffffff !important;
-  padding: 8px 20px;
+  padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.85rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   display: inline-block;
-  text-shadow: none;
 }
 
 .tc-helps-hero-centered .hero-status {
   color: rgba(255, 255, 255, 0.6);
+  text-shadow:
+    0 0 8px rgba(0, 0, 0, 0.95),
+    0 0 20px rgba(0, 0, 0, 0.85),
+    0 0 45px rgba(0, 0, 0, 0.70),
+    0 2px 6px rgba(0, 0, 0, 0.95);
 }
 
 .tc-simple__access-links {
@@ -1429,8 +1613,16 @@ h1 .reg {
   transition: color 200ms ease;
 }
 
-.footer-col ul li a:hover {
+.footer-col ul li a:hover,
+.footer-col ul li a:focus-visible {
   color: rgba(255, 255, 255, 0.85);
+  outline: none;
+}
+
+.footer-col ul li a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .footer-divider {
@@ -1494,4 +1686,28 @@ h1 .reg {
   .tc-simple__container { padding-inline: 20px; }
   .tc-simple__main { gap: clamp(40px, 10vw, 80px); padding-top: 0; padding-bottom: clamp(40px, 10vw, 80px); }
   .hero-actions { flex-direction: column; align-items: center; }
+
+  /* Unify hero scrims to centered radial at mobile — directional scrims
+     designed for desktop layouts don't match single-column stacking */
+  .hero::after,
+  .hero-pair .hero::after,
+  .hero.hero-translationcore::after,
+  .hero.hero-helps::after {
+    background: radial-gradient(
+      ellipse at 50% 60%,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.48) 50%,
+      rgba(0, 0, 0, 0.22) 100%
+    );
+  }
+
+  /* CTAs full-width when stacked, with minimum tap target height */
+  .hero .cta {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+  }
 }
