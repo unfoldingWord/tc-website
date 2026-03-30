@@ -409,6 +409,36 @@ main {
     );
 }
 
+/* Related Projects divider banner */
+.related-projects-banner {
+  background: linear-gradient(135deg, #0a4a6a 0%, #2daee4 100%);
+  text-align: center;
+  padding: clamp(20px, 4vw, 32px) 24px;
+  margin: 0 10px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.related-projects-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.related-projects-banner p {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
 /* First hero: small top margin, reduced padding to tighten content */
 .hero.hero-translationcore {
   margin-top: 0;
@@ -632,6 +662,8 @@ button.cta {
 .hero-helps           { --hero-image: url('assets/images/translation-helps-hero.png'); }
 .hero-training        { --hero-image: url('assets/images/church-training-hero.png'); }
 .hero-foundations     { --hero-image: url('assets/images/foundations-hero.png'); }
+.hero-obs             { --hero-image: url('assets/images/obs-hero.png'); background-color: #2c3e50; }
+.hero-btservant       { --hero-image: url('assets/images/btservant-hero.png'); background-color: #1a3a4a; }
 
 .hero.hero-training {
   background-image: none;
@@ -1587,6 +1619,25 @@ h1 .reg {
   font-size: 0.85rem;
   line-height: 1.55;
   margin: 0;
+}
+
+.footer-brand-project {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-brand-uw {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s;
+}
+
+.footer-brand-uw:hover,
+.footer-brand-uw:focus-visible {
+  color: var(--accent);
 }
 
 .footer-col h4 {

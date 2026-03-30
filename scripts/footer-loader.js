@@ -8,16 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="/assets/images/tc_logo.png" alt="translationCore">
             <span>translationCore&reg;</span>
           </div>
-          <p>translationCore&reg; is a project of unfoldingWord.</p>
+          <p class="footer-brand-project">a project of</p>
+          <a href="https://unfoldingword.org" class="footer-brand-uw" target="_blank" rel="noopener">unfoldingWord</a>
         </div>
 
         <div class="footer-col">
           <h4>Resources</h4>
           <ul>
-            <li><a href="/translation-helps/">Translation Notes</a></li>
-            <li><a href="/translation-helps/">Translation Words</a></li>
-            <li><a href="/translation-helps/">Key Terms</a></li>
-            <li><a href="/translation-helps/">Study Resources</a></li>
+            <li><a href="/translation-helps/#resources">Translation Notes</a></li>
+            <li><a href="/translation-helps/#translation-words">Translation Words</a></li>
+            <li><a href="/translation-helps/#translation-academy">Translation Academy</a></li>
+            <li><a href="/translation-helps/#source-texts">Source Texts</a></li>
           </ul>
         </div>
 
@@ -27,15 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <li><a href="/translationcore/">translationCore&reg;</a></li>
             <li><a href="https://github.com/unfoldingWord/translationCore/releases" target="_blank" rel="noopener">Release Notes</a></li>
             <li><a href="https://github.com/unfoldingWord/translationCore" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://forum.door43.org/c/software/translationcore" target="_blank" rel="noopener">Community Forum</a></li>
+            <li><a href="https://unfoldingword.org/contact" target="_blank" rel="noopener">Contact unfoldingWord</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Support</h4>
+          <h4>Related Projects</h4>
           <ul>
             <li><a href="https://foundationsbt.com" target="_blank" rel="noopener">Foundations BT</a></li>
-            <li><a href="https://forum.door43.org/c/software/translationcore" target="_blank" rel="noopener">Community Forum</a></li>
-            <li><a href="https://unfoldingword.org" target="_blank" rel="noopener">About unfoldingWord</a></li>
+            <li><a href="https://churchbased.bible/training/" target="_blank" rel="noopener">Church-Based Training</a></li>
+            <li><a href="https://openbiblestories.org" target="_blank" rel="noopener">Open Bible Stories</a></li>
+            <li><a href="https://nt.bible" target="_blank" rel="noopener">nt.Bible</a></li>
           </ul>
         </div>
       </div>

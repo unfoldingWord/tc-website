@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <nav class="site-nav">
           <a href="/translationcore/">translationCore&reg;</a>
           <a href="/translation-helps/">Resources</a>
-          <a href="/#church-training">Church-Based Training</a>
-          <a href="/#foundations-bt">Foundations BT</a>
+          <a href="/#related-projects">Related Projects</a>
         </nav>
       </div>
     `;
