@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="/assets/images/tc_logo.png" alt="translationCore">
             <span>translationCore&reg;</span>
           </div>
-          <p class="footer-brand-project">a project of</p>
-          <a href="https://unfoldingword.org" class="footer-brand-uw" target="_blank" rel="noopener">unfoldingWord</a>
+          <p class="footer-brand-project">a project of <a href="https://unfoldingword.org" class="footer-brand-uw" target="_blank" rel="noopener">unfoldingWord</a></p>
         </div>
 
         <div class="footer-col">

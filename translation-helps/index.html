@@ -20,8 +20,8 @@
         <h1>The unfolding of your word brings light</h1>
         <p class="subhead">Open-licensed exegetical notes, lexicons, and source texts that give translation teams the information they need to make the best possible translation decisions.</p>
         <div class="hero-actions">
-          <a href="https://preview.door43.org" class="cta primary" target="_blank" rel="noopener">Browse Resources</a>
-          <a href="#resources" class="cta secondary">Explore below</a>
+          <button id="download-helps" class="cta primary" type="button" aria-haspopup="dialog" aria-expanded="false">Download resources</button>
+          <a href="https://tc-study.pages.dev/read" class="cta secondary" target="_blank" rel="noopener">Browse Resources</a>
         </div>
         <p class="hero-status">All resources licensed CC BY-SA 4.0</p>
       </div>
@@ -90,6 +90,36 @@
       </div>
     </section>
 
+    <!-- Translation Academy -->
+    <section id="translation-academy" class="tc-simple__section">
+      <div class="tc-simple__container">
+        <h2>Translation Academy</h2>
+        <p>A modular, self-paced training manual that equips translators with the skills and knowledge they need to produce high-quality Bible translations.</p>
+        <div class="tc-simple__grid tc-simple__grid--three">
+
+          <div class="tc-simple__card">
+            <h3>Translation process</h3>
+            <p>Step-by-step guidance on how to form a team, draft, check, and publish a translation using the unfoldingWord methodology.</p>
+          </div>
+
+          <div class="tc-simple__card">
+            <h3>Translation principles</h3>
+            <p>Core concepts like meaning-based translation, natural language, and accuracy that underpin every good translation.</p>
+          </div>
+
+          <div class="tc-simple__card">
+            <h3>Checking manual</h3>
+            <p>Clear criteria and reproducible procedures for community checking, peer review, and consultant checking.</p>
+          </div>
+
+        </div>
+        <div class="tc-simple__access-links">
+          <a href="https://git.door43.org/unfoldingWord/en_ta/releases/download/v85/en_ta_v85.pdf" class="cta primary" target="_blank" rel="noopener">Download PDF</a>
+          <a href="https://preview.door43.org/u/unfoldingWord/en_ta/v85/" class="cta secondary" target="_blank" rel="noopener">View on Door43</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Source Texts -->
     <section id="source-texts" class="tc-simple__section">
       <div class="tc-simple__container">
@@ -144,36 +174,6 @@
       </div>
     </section>
 
-    <!-- Translation Academy -->
-    <section id="translation-academy" class="tc-simple__section">
-      <div class="tc-simple__container">
-        <h2>Translation Academy</h2>
-        <p>A modular, self-paced training manual that equips translators with the skills and knowledge they need to produce high-quality Bible translations.</p>
-        <div class="tc-simple__grid tc-simple__grid--three">
-
-          <div class="tc-simple__card">
-            <h3>Translation process</h3>
-            <p>Step-by-step guidance on how to form a team, draft, check, and publish a translation using the unfoldingWord methodology.</p>
-          </div>
-
-          <div class="tc-simple__card">
-            <h3>Translation principles</h3>
-            <p>Core concepts like meaning-based translation, natural language, and accuracy that underpin every good translation.</p>
-          </div>
-
-          <div class="tc-simple__card">
-            <h3>Checking manual</h3>
-            <p>Clear criteria and reproducible procedures for community checking, peer review, and consultant checking.</p>
-          </div>
-
-        </div>
-        <div class="tc-simple__access-links">
-          <a href="https://git.door43.org/unfoldingWord/en_ta/releases/download/v85/en_ta_v85.pdf" class="cta primary" target="_blank" rel="noopener">Download PDF</a>
-          <a href="https://preview.door43.org/u/unfoldingWord/en_ta/v85/" class="cta secondary" target="_blank" rel="noopener">View on Door43</a>
-        </div>
-      </div>
-    </section>
-
     <!-- How They Work Together -->
     <section class="tc-simple__section">
       <div class="tc-simple__container">
@@ -196,7 +196,7 @@
           <h2>Explore these resources with BT Servant</h2>
           <p>BT Servant is an AI-powered assistant that helps you engage with translation notes, words, and source texts interactively. Ask questions, get explanations, and deepen your understanding of the resources.</p>
           <div class="hero-actions">
-            <a href="https://btservant.com" class="cta primary" target="_blank" rel="noopener">Try BT Servant</a>
+            <a href="https://app.btservant.ai/" class="cta primary" target="_blank" rel="noopener">Try BT Servant</a>
           </div>
         </div>
       </div>
@@ -209,7 +209,7 @@
           <h2>Open and unrestricted</h2>
           <p>Every resource is licensed under Creative Commons Attribution-ShareAlike 4.0. The global Church can freely use, translate, adapt, and redistribute them.</p>
           <div class="hero-actions">
-            <a href="https://preview.door43.org" class="cta primary" target="_blank" rel="noopener">Browse on Door43</a>
+            <a href="https://tc-study.pages.dev/read" class="cta primary" target="_blank" rel="noopener">Browse Resources</a>
             <a href="https://unfoldingword.org" class="cta secondary" target="_blank" rel="noopener">About unfoldingWord</a>
           </div>
         </div>
@@ -218,9 +218,37 @@
 
   </main>
 
+  <!-- Download Helps dialog -->
+  <div
+    id="helps-dialog"
+    class="helps-dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="helps-dialog-title"
+    hidden
+    aria-hidden="true"
+  >
+    <div class="helps-dialog__backdrop" data-helps-close></div>
+    <div class="helps-dialog__panel helps-card">
+      <button type="button" class="helps-dialog__close" data-helps-close aria-label="Close download helps dialog">&times;</button>
+      <p class="eyebrow">Translation Notes</p>
+      <h2 id="helps-dialog-title">Pick a book to open its PDF instantly</h2>
+      <p class="subhead">Choose a Bible book to jump straight into the latest unfoldingWord translation notes (<span data-version-label>loading&hellip;</span>).</p>
+      <label class="select-label" for="book-select">Book of the Bible</label>
+      <div class="select-wrapper">
+        <select id="book-select" class="book-select">
+          <option value="" disabled selected>Select a book&hellip;</option>
+        </select>
+      </div>
+      <p id="download-message" class="helps-status" aria-live="polite"></p>
+    </div>
+  </div>
+
   <footer id="site-footer" class="site-footer"></footer>
 
 </div>
+<script src="/scripts/helps-dialog.js" defer></script>
+<script src="/scripts/helps.js" defer></script>
 <script src="/scripts/footer-loader.js" defer></script>
 <script src="/scripts/header-loader.js" defer></script>
 </body>
