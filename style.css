@@ -788,7 +788,10 @@ button.cta {
   .hero.hero-translationcore {
     align-items: center;
   }
-  .hero.hero-translationcore h1,
+  .hero.hero-translationcore h1 {
+    font-size: clamp(1.6rem, 9vw, 2.2rem);
+    text-align: center;
+  }
   .hero.hero-translationcore .eyebrow,
   .hero.hero-translationcore .subhead,
   .hero.hero-translationcore p {
@@ -1720,11 +1723,18 @@ h1 .reg {
   .tc-simple__grid { grid-template-columns: 1fr; gap: 20px; }
   .tc-simple__grid--two { grid-template-columns: 1fr; }
   .tc-simple__hero { padding-block: clamp(60px, 15vw, 100px); }
-  .tc-simple__hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
+  .tc-simple__hero h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
   .tc-simple__section h2 { font-size: clamp(2rem, 6vw, 3rem); }
-  .tc-helps-hero-centered h1 { font-size: clamp(2.5rem, 8vw, 4rem); }
+  .tc-helps-hero-centered h1 { font-size: clamp(1.8rem, 7vw, 2.8rem); }
   .footer-columns { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .footer-brand { grid-column: 1 / -1; }
+  /* Reduce stacked hero-pair height so 4 cards don't require endless scrolling */
+  .hero-pair .hero { min-height: clamp(300px, 50vh, 480px); }
+}
+
+@media (max-width: 480px) {
+  /* Footer collapses to single column on narrow phones */
+  .footer-columns { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 720px) {
@@ -1735,7 +1745,8 @@ h1 .reg {
 }
 
 @media (max-width: 540px) {
-  .tc-simple__hero .hero-actions { flex-direction: column; align-items: stretch; gap: 16px; }
+  .tc-simple__hero .eyebrow { font-size: 0.7rem; padding: 6px 12px; }
+  .tc-simple__hero .hero-actions { flex-direction: column; align-items: center; gap: 16px; }
   .tc-simple__hero-figure { box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); }
   .tc-simple__cta .hero-actions { flex-direction: column; gap: 16px; }
   .tc-simple__container { padding-inline: 20px; }
