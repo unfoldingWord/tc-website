@@ -152,6 +152,11 @@ img {
   align-items: center;
 }
 
+/* Offset anchor scroll targets so the sticky header doesn't cover them */
+[id] {
+  scroll-margin-top: 90px;
+}
+
 .header-container {
   display: flex;
   flex-wrap: nowrap;
@@ -660,7 +665,7 @@ button.cta {
    ======================================== */
 .hero-translationcore { --hero-image: url('assets/images/translationcore-hero.png'); }
 .hero-helps           { --hero-image: url('assets/images/translation-helps-hero.png'); }
-.hero-training        { --hero-image: url('assets/images/church-training-hero.png'); }
+.hero-training        { --hero-image: url('assets/images/training-hero.jpg'); }
 .hero-foundations     { --hero-image: url('assets/images/foundations-hero.png'); }
 .hero-obs             { --hero-image: url('assets/images/obs-hero.png'); background-color: #2c3e50; }
 .hero-btservant       { --hero-image: url('assets/images/btservant-hero.png'); background-color: #1a3a4a; }
@@ -1486,7 +1491,7 @@ body.dialog-open {
 }
 
 .tc-helps-hero-centered h1 {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(2.8rem, 6.5vw, 4.2rem);
   font-weight: 700;
   line-height: 1.1;
   margin: 0;

@@ -52,10 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  if (helpsTrigger && helpsDialog) {
-    helpsTrigger.addEventListener('click', (event) => {
-      event.preventDefault();
-      openHelpsDialog();
+  // Also bind any .helps-dialog-trigger buttons (e.g. inline "Download by book" buttons)
+  const extraTriggers = document.querySelectorAll('.helps-dialog-trigger');
+
+  if ((helpsTrigger || extraTriggers.length > 0) && helpsDialog) {
+    if (helpsTrigger) {
+      helpsTrigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        openHelpsDialog();
+      });
+    }
+
+    extraTriggers.forEach((btn) => {
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+        openHelpsDialog();
+      });
     });
 
     helpsCloseButtons.forEach((button) => {
