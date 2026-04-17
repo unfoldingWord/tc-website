@@ -1745,6 +1745,8 @@ h1 .reg {
 }
 
 @media (max-width: 540px) {
+  /* Let hero headings reflow naturally — desktop <br> breaks look bad full-width */
+  .hero h2 br { display: none; }
   .tc-simple__hero .eyebrow { font-size: 0.7rem; padding: 6px 12px; }
   .tc-simple__hero .hero-actions { flex-direction: column; align-items: center; gap: 16px; }
   .tc-simple__hero-figure { box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); }
