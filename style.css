@@ -793,9 +793,11 @@ button.cta {
     text-align: center;
   }
   .hero.hero-translationcore .eyebrow,
-  .hero.hero-translationcore .subhead,
   .hero.hero-translationcore p {
     text-align: center;
+  }
+  .hero.hero-translationcore .subhead {
+    text-align: left;
   }
   .hero.hero-translationcore .hero-actions {
     justify-content: center;
