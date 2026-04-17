@@ -18,6 +18,7 @@
     const res = await fetch(
       'https://api.github.com/repos/unfoldingWord/translationCore/releases?per_page=10'
     );
+    if (!res.ok) throw new Error(`GitHub API ${res.status}`);
     const releases = await res.json();
     const liteRelease = releases.find(r => r.tag_name.toLowerCase().includes('-lite'));
     if (liteRelease) {

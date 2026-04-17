@@ -85,6 +85,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && isDialogOpen()) {
         closeHelpsDialog();
+        return;
+      }
+
+      // Focus trap: keep Tab cycling inside the open dialog
+      if (event.key === 'Tab' && isDialogOpen()) {
+        const focusable = Array.from(
+          helpsDialog.querySelectorAll('button, select, [href], input, textarea, [tabindex]:not([tabindex="-1"])')
+        ).filter(el => !el.disabled && el.offsetParent !== null);
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last  = focusable[focusable.length - 1];
+        if (event.shiftKey) {
+          if (document.activeElement === first) { event.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last)  { event.preventDefault(); first.focus(); }
+        }
       }
     });
   }

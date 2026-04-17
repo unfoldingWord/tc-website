@@ -1286,6 +1286,13 @@ body.dialog-open {
   justify-content: center;
 }
 
+.tc-version-tag {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--text-secondary, #666);
+  margin-left: 4px;
+}
+
 .tc-simple__section-note {
   text-align: center;
   margin-top: 24px;
