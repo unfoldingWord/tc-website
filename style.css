@@ -663,12 +663,12 @@ button.cta {
 /* ========================================
    Hero background images
    ======================================== */
-.hero-translationcore { --hero-image: url('assets/images/translationcore-hero.png'); }
-.hero-helps           { --hero-image: url('assets/images/translation-helps-hero.png'); }
-.hero-training        { --hero-image: url('assets/images/training-hero.jpg'); }
-.hero-foundations     { --hero-image: url('assets/images/foundations-hero.png'); }
-.hero-obs             { --hero-image: url('assets/images/obs-hero.png'); background-color: #2c3e50; }
-.hero-btservant       { --hero-image: url('assets/images/btservant-hero.png'); background-color: #1a3a4a; }
+.hero-translationcore { --hero-image: url('assets/images/translationcore-hero.webp'); }
+.hero-helps           { --hero-image: url('assets/images/translation-helps-hero.webp'); }
+.hero-training        { --hero-image: url('assets/images/training-hero.webp'); }
+.hero-foundations     { --hero-image: url('assets/images/foundations-hero.webp'); }
+.hero-obs             { --hero-image: url('assets/images/obs-hero.webp'); background-color: #2c3e50; }
+.hero-btservant       { --hero-image: url('assets/images/btservant-hero.webp'); background-color: #1a3a4a; }
 
 .hero.hero-training {
   background-image: none;
@@ -1434,7 +1434,7 @@ body.dialog-open {
    translationCore subpage
    ======================================== */
 .tc-hero-section {
-  background-image: url('/assets/images/translationcore-hero.png');
+  background-image: url('/assets/images/translationcore-hero.webp');
 }
 
 .tc-hero-section .tc-simple__hero-inner {
@@ -1454,7 +1454,7 @@ body.dialog-open {
    Translation Helps subpage
    ======================================== */
 .tc-helps-hero-section {
-  background-image: url('/assets/images/translation-helps-hero.png');
+  background-image: url('/assets/images/translation-helps-hero.webp');
   background-size: 160%;
   background-position: 50% 50%;
 }
