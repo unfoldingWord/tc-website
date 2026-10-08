@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Export a book as USFM (aligned or plain) · translationCore 4 Help</title>
+<meta name="description" content="Save the open book as a USFM file — with your word alignments woven in, or plain text only.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu-btn" id="menu-btn" aria-label="Show topics" aria-controls="sidebar" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">tC4</span> <span class="brand-text">Help</span></a>
+  <form class="search" action="search.html" method="get" role="search" autocomplete="off">
+    <input id="q" name="q" type="search" placeholder="Search help (press /)" aria-label="Search help">
+    <div class="search-results" id="search-results" role="listbox" hidden></div>
+  </form>
+</header>
+<div class="shell">
+<nav class="sidebar" id="sidebar" aria-label="Help topics">
+<details class="nav-group"><summary><a href="section-getting-started.html">Getting started</a></summary><ul>
+<li><a href="gs-install.html"><span class="dot dot-partial" aria-hidden="true"></span>Install and start tC4</a></li>
+<li><a href="gs-home.html"><span class="dot dot-shipped" aria-hidden="true"></span>The Home screen</a></li>
+<li><a href="gs-modes.html"><span class="dot dot-shipped" aria-hidden="true"></span>Understand, Translate and Check — the three modes</a></li>
+<li><a href="gs-save.html"><span class="dot dot-shipped" aria-hidden="true"></span>Saving and checkpoints</a></li>
+<li><a href="gs-resume.html"><span class="dot dot-shipped" aria-hidden="true"></span>Resume where you left off</a></li>
+<li><a href="gs-switch-project.html"><span class="dot dot-shipped" aria-hidden="true"></span>Switch project or go back Home</a></li>
+</ul></details>
+<details class="nav-group" open><summary><a href="section-bible-projects.html">Bible projects</a></summary><ul>
+<li><a href="bp-new-bible.html"><span class="dot dot-shipped" aria-hidden="true"></span>Create a Bible project</a></li>
+<li><a href="bp-add-book.html"><span class="dot dot-shipped" aria-hidden="true"></span>Add a book</a></li>
+<li><a href="bp-open-book.html"><span class="dot dot-shipped" aria-hidden="true"></span>Open a book and move between chapters</a></li>
+<li><a href="bp-import.html"><span class="dot dot-shipped" aria-hidden="true"></span>Import a project (translationCore 3, USFM or Scripture Burrito)</a></li>
+<li><a href="bp-export-pdf.html"><span class="dot dot-shipped" aria-hidden="true"></span>Export a book as PDF</a></li>
+<li><a href="bp-export-usfm.html" class="current" aria-current="page"><span class="dot dot-shipped" aria-hidden="true"></span>Export a book as USFM (aligned or plain)</a></li>
+<li><a href="bp-export-burrito.html"><span class="dot dot-shipped" aria-hidden="true"></span>Export a project as a Scripture Burrito</a></li>
+</ul></details>
+<details class="nav-group"><summary><a href="section-translate.html">Translate</a></summary><ul>
+<li><a href="tr-screen.html"><span class="dot dot-shipped" aria-hidden="true"></span>The Translate screen</a></li>
+<li><a href="tr-source-texts.html"><span class="dot dot-shipped" aria-hidden="true"></span>Source tabs — gateway texts and the original language</a></li>
+<li><a href="tr-draft-section.html"><span class="dot dot-shipped" aria-hidden="true"></span>Draft a section</a></li>
+<li><a href="tr-place-verse-numbers.html"><span class="dot dot-shipped" aria-hidden="true"></span>Place verse numbers</a></li>
+<li><a href="tr-verse-spans.html"><span class="dot dot-shipped" aria-hidden="true"></span>Make or break a verse span</a></li>
+<li><a href="tr-verse-by-verse.html"><span class="dot dot-shipped" aria-hidden="true"></span>Draft or revise one verse</a></li>
+<li><a href="tr-formatting.html"><span class="dot dot-shipped" aria-hidden="true"></span>Paragraphs and poetry</a></li>
+<li><a href="tr-helps-panel.html"><span class="dot dot-shipped" aria-hidden="true"></span>The helps panel in Translate</a></li>
+<li><a href="tr-edit-after-check.html"><span class="dot dot-shipped" aria-hidden="true"></span>Editing a verse you already checked or aligned</a></li>
+</ul></details>
+<details class="nav-group"><summary><a href="section-understand.html">Understand</a></summary><ul>
+<li><a href="un-read-passage.html"><span class="dot dot-shipped" aria-hidden="true"></span>Read a passage before you translate</a></li>
+<li><a href="un-notes.html"><span class="dot dot-shipped" aria-hidden="true"></span>Translation notes and Translation Academy articles</a></li>
+<li><a href="un-word-links.html"><span class="dot dot-shipped" aria-hidden="true"></span>Word links (Translation Words)</a></li>
+<li><a href="un-questions.html"><span class="dot dot-shipped" aria-hidden="true"></span>Translation questions</a></li>
+<li><a href="un-simplified.html"><span class="dot dot-shipped" aria-hidden="true"></span>The simplified text tab</a></li>
+<li><a href="un-user-comments.html"><span class="dot dot-shipped" aria-hidden="true"></span>Write a user comment</a></li>
+</ul></details>
+<details class="nav-group"><summary><a href="section-check.html">Check</a></summary><ul>
+<li><a href="ck-tool-picker.html"><span class="dot dot-shipped" aria-hidden="true"></span>Choose a checking tool</a></li>
+<li><a href="ck-translation-notes.html"><span class="dot dot-shipped" aria-hidden="true"></span>Check with Translation Notes</a></li>
+<li><a href="ck-translation-words.html"><span class="dot dot-shipped" aria-hidden="true"></span>Check with Translation Words</a></li>
+<li><a href="ck-decide.html"><span class="dot dot-shipped" aria-hidden="true"></span>Decide on a check item (valid, invalid, to do)</a></li>
+<li><a href="ck-bookmarks.html"><span class="dot dot-shipped" aria-hidden="true"></span>Bookmark a check</a></li>
+<li><a href="ck-comments.html"><span class="dot dot-shipped" aria-hidden="true"></span>Write a check comment</a></li>
+<li><a href="ck-filter-sort.html"><span class="dot dot-shipped" aria-hidden="true"></span>Filter and sort check items</a></li>
+<li><a href="ck-community-checking.html"><span class="dot dot-shipped" aria-hidden="true"></span>Community Checking preview</a></li>
+</ul></details>
+<details class="nav-group"><summary><a href="section-align.html">Align</a></summary><ul>
+<li><a href="al-open.html"><span class="dot dot-shipped" aria-hidden="true"></span>Open the Align tool</a></li>
+<li><a href="al-link-words.html"><span class="dot dot-shipped" aria-hidden="true"></span>Link your words to the source</a></li>
+<li><a href="al-phrases.html"><span class="dot dot-shipped" aria-hidden="true"></span>Align a phrase (merge and split cards)</a></li>
+<li><a href="al-modes.html"><span class="dot dot-shipped" aria-hidden="true"></span>Align to the gateway text or the original language</a></li>
+<li><a href="al-suggestions.html"><span class="dot dot-shipped" aria-hidden="true"></span>Alignment suggestions</a></li>
+<li><a href="al-mark-valid.html"><span class="dot dot-shipped" aria-hidden="true"></span>Mark an alignment done</a></li>
+</ul></details>
+<details class="nav-group"><summary><a href="section-obs.html">Open Bible Stories</a></summary><ul>
+<li><a href="obs-create.html"><span class="dot dot-shipped" aria-hidden="true"></span>Start an Open Bible Stories project</a></li>
+<li><a href="obs-story-tiles.html"><span class="dot dot-shipped" aria-hidden="true"></span>Find a story on Home</a></li>
+<li><a href="obs-translate.html"><span class="dot dot-shipped" aria-hidden="true"></span>Translate a story</a></li>
+<li><a href="obs-understand.html"><span class="dot dot-shipped" aria-hidden="true"></span>Understand a story</a></li>
+<li><a href="obs-check.html"><span class="dot dot-shipped" aria-hidden="true"></span>Check a story</a></li>
+<li><a href="obs-community-checking.html"><span class="dot dot-shipped" aria-hidden="true"></span>Story preview and export</a></li>
+<li><a href="obs-export-markdown-pdf.html"><span class="dot dot-shipped" aria-hidden="true"></span>Export stories as PDF or Markdown</a></li>
+</ul></details>
+<details class="nav-group"><summary><a href="section-resources.html">Resources and offline</a></summary><ul>
+<li><a href="rs-whats-included.html"><span class="dot dot-shipped" aria-hidden="true"></span>What comes with the app</a></li>
+<li><a href="rs-source-texts.html"><span class="dot dot-shipped" aria-hidden="true"></span>Download source texts</a></li>
+<li><a href="rs-checking-language.html"><span class="dot dot-shipped" aria-hidden="true"></span>Change the checking language</a></li>
+<li><a href="rs-upgrade-helps.html"><span class="dot dot-shipped" aria-hidden="true"></span>Update pinned helps</a></li>
+<li><a href="rs-upgrade-texts.html"><span class="dot dot-shipped" aria-hidden="true"></span>Update scripture texts</a></li>
+<li><a href="rs-guided-fix.html"><span class="dot dot-shipped" aria-hidden="true"></span>Fix a missing resource</a></li>
+<li><a href="rs-offline.html"><span class="dot dot-shipped" aria-hidden="true"></span>Working offline</a></li>
+</ul></details>
+<details class="nav-group"><summary><a href="section-settings.html">Settings</a></summary><ul>
+<li><a href="st-project-settings.html"><span class="dot dot-partial" aria-hidden="true"></span>Project settings</a></li>
+<li><a href="st-where-projects-live.html"><span class="dot dot-shipped" aria-hidden="true"></span>Where your projects are stored</a></li>
+<li><a href="st-app-language.html"><span class="dot dot-not-yet" aria-hidden="true"></span>App language</a></li>
+</ul></details>
+<details class="nav-group"><summary><a href="section-troubleshooting.html">Troubleshooting and known limits</a></summary><ul>
+<li><a href="ts-save-problems.html"><span class="dot dot-shipped" aria-hidden="true"></span>When a save fails</a></li>
+<li><a href="ts-protect-messages.html"><span class="dot dot-shipped" aria-hidden="true"></span>Messages that protect your project</a></li>
+<li><a href="ts-crash-recovery.html"><span class="dot dot-shipped" aria-hidden="true"></span>If the app closed unexpectedly or the window went blank</a></li>
+<li><a href="ts-platform.html"><span class="dot dot-partial" aria-hidden="true"></span>Windows, macOS and Linux notes</a></li>
+<li><a href="ts-share-door43.html"><span class="dot dot-shipped" aria-hidden="true"></span>Share to Door43</a></li>
+<li><a href="ts-team-sync.html"><span class="dot dot-not-yet" aria-hidden="true"></span>Working as a team on several computers</a></li>
+<li><a href="ts-not-yet.html"><span class="dot dot-not-yet" aria-hidden="true"></span>Features not built yet</a></li>
+</ul></details>
+<details class="nav-group"><summary><a href="section-whats-new.html">What&#x27;s new</a></summary><ul>
+<li><a href="wn-alpha1.html">alpha.1 — First public build</a></li>
+<li><a href="wn-alpha2.html">alpha.2 — Check and align</a></li>
+<li><a href="wn-alpha4.html">alpha.4 — Open and resume</a></li>
+<li><a href="wn-alpha5.html">alpha.5 — Drafting for real</a></li>
+<li><a href="wn-alpha6.html">alpha.6 — Suggestions and resources</a></li>
+<li><a href="wn-alpha7.html">alpha.7 — Open Bible Stories</a></li>
+<li><a href="wn-next.html">Since alpha.7 — export, import, share and more (not yet released)</a></li>
+<li><a href="wn-add-a-project.html">Sep 27, 2026 — one + Add a project button on Home (not yet released)</a></li>
+<li><a href="wn-rc1.html">What&#x27;s new in 4.0 rc.1 (Increment 8)</a></li>
+</ul></details>
+</nav>
+<main id="main" class="content">
+<p class="crumbs"><a href="index.html">Help</a> › <a href="section-bible-projects.html">Bible projects</a></p>
+<h1>Export a book as USFM (aligned or plain)</h1>
+<div class="meta"><span class="badge badge-shipped" title="Status in build 79d3017">Shipped</span><span class="badge badge-since">rc.1</span></div>
+<p class="lede">Save the open book as a USFM file — with your word alignments woven in, or plain text only.</p>
+<p class="where"><span class="where-label">Where in the app:</span> <span class="ui">Check</span> › <span class="ui">Community Checking</span> › <span class="ui">Export</span> › <span class="ui">USFM, aligned</span> or <span class="ui">USFM, plain</span></p>
+<h2 id="what-it-is">What it is</h2>
+<p>USFM is the standard text format for Bible translations. tC4 can export the open book two ways:</p>
+<ul><li><strong><span class="ui">USFM, aligned</span></strong> — your text with the word alignments to the original language included, the format other alignment-aware tools read.</li><li><strong><span class="ui">USFM, plain</span></strong> — just your text, without alignment data.</li></ul>
+<p>The file is written outside the project. Your project does not change (apart from a checkpoint).</p>
+<h2 id="when-to-use-it">When to use it</h2>
+<p>To hand a book to another program, a typesetter, or a reviewer who works in USFM.</p>
+<h2 id="step-by-step">Step by step</h2>
+<ol><li>Open the book and click <span class="ui">Check</span>. If the last checking tool you used opens instead of the list, click <span class="ui">← All checking tools</span>.</li><li>Click <span class="ui">Open →</span> on the <span class="ui">Community Checking</span> card.</li><li>Click <span class="ui">Export</span>.</li><li>Click <span class="ui">USFM, aligned</span> or <span class="ui">USFM, plain</span>.</li><li>A save window opens with a suggested file name. Keep it or type another, then save.</li><li>When the file is saved, the panel shows "Saved &lt;file name&gt;", for example "Saved TIT-aligned-2026-10-05.usfm". If you cancel, no message appears.</li></ol>
+<h2 id="what-you-should-see">What you should see</h2><ul class="expected"><li><span class="ui">USFM, aligned</span> saves a file named like <code>TIT-aligned-2026-10-05.usfm</code>.</li><li><span class="ui">USFM, plain</span> saves a file named like <code>TIT-2026-10-05.usfm</code>.</li><li>The panel shows "Saved &lt;file name&gt;".</li></ul>
+<h2 id="screenshots">Screenshots</h2><div class="shots"><figure class="shot" id="shot-1"><img src="img/bp-export-usfm-1.png" alt="Build 79d3017, QA373 Titus: after Export › USFM, aligned and Save, the panel shows Saved TIT-aligned-2026-10-05.usfm." loading="lazy" onerror="this.parentNode.classList.add('missing')"><div class="shot-ph"><span class="shot-ph-icon" aria-hidden="true">📷</span><strong>Screenshot coming</strong><span>Build 79d3017, QA373 Titus: after Export › USFM, aligned and Save, the panel shows Saved TIT-aligned-2026-10-05.usfm.</span><code>img/bp-export-usfm-1.png</code></div><figcaption>1. Build 79d3017, QA373 Titus: after Export › USFM, aligned and Save, the panel shows Saved TIT-aligned-2026-10-05.usfm.</figcaption></figure><figure class="shot" id="shot-2"><img src="img/bp-export-usfm-2.png" alt="Save window for USFM, aligned on QA439 Titus, nothing drafted. Suggested name TIT-aligned-2026-10-03.usfm. Cancel was clicked." loading="lazy" onerror="this.parentNode.classList.add('missing')"><div class="shot-ph"><span class="shot-ph-icon" aria-hidden="true">📷</span><strong>Screenshot coming</strong><span>Save window for USFM, aligned on QA439 Titus, nothing drafted. Suggested name TIT-aligned-2026-10-03.usfm. Cancel was clicked.</span><code>img/bp-export-usfm-2.png</code></div><figcaption>2. Save window for USFM, aligned on QA439 Titus, nothing drafted. Suggested name TIT-aligned-2026-10-03.usfm. Cancel was clicked.</figcaption></figure><figure class="shot" id="shot-3"><img src="img/bp-export-usfm-3.png" alt="Save window for USFM, plain on QA439 Titus, nothing drafted. Suggested name TIT-2026-10-03.usfm. Cancel was clicked." loading="lazy" onerror="this.parentNode.classList.add('missing')"><div class="shot-ph"><span class="shot-ph-icon" aria-hidden="true">📷</span><strong>Screenshot coming</strong><span>Save window for USFM, plain on QA439 Titus, nothing drafted. Suggested name TIT-2026-10-03.usfm. Cancel was clicked.</span><code>img/bp-export-usfm-3.png</code></div><figcaption>3. Save window for USFM, plain on QA439 Titus, nothing drafted. Suggested name TIT-2026-10-03.usfm. Cancel was clicked.</figcaption></figure><figure class="shot" id="shot-4"><img src="img/bp-export-usfm-4.png" alt="After Export › USFM, plain and Save, the panel shows Saved TIT-2026-10-05.usfm." loading="lazy" onerror="this.parentNode.classList.add('missing')"><div class="shot-ph"><span class="shot-ph-icon" aria-hidden="true">📷</span><strong>Screenshot coming</strong><span>After Export › USFM, plain and Save, the panel shows Saved TIT-2026-10-05.usfm.</span><code>img/bp-export-usfm-4.png</code></div><figcaption>4. After Export › USFM, plain and Save, the panel shows Saved TIT-2026-10-05.usfm.</figcaption></figure></div>
+<h2 id="tips">Tips</h2>
+<ul><li>Align your verses first if you want the aligned file to carry alignments. See <a href="al-link-words.html">Link and unlink words</a>.</li><li>Until you align, <span class="ui">USFM, aligned</span> and <span class="ui">USFM, plain</span> give the same text: there are no alignments to weave in yet.</li><li>Unlike the PDF, USFM export does not refuse a book with nothing drafted.</li><li>A verse span you joined is written as one verse, for example <code>\v 2-3</code>.</li><li><strong>On Linux, the save window</strong> is the system file window. Its title bar shows a long "blob:http://127.0.0.1…" address; that is normal. It opens in your <strong>Downloads</strong> folder, with the suggested name selected in the Name field. On this build its <strong>Save</strong> and <strong>Cancel</strong> buttons were above the visible part of the window: press <strong>Enter</strong> to save, or <strong>Esc</strong> to cancel.</li></ul>
+<h2 id="known-limits">Known limits</h2>
+<ul><li>On Windows the plain USFM export does not download in this build (issue #425).</li><li id="known-issue-1"><strong>Known issue:</strong> The book's header lines (<code>\h</code>, <code>\toc1</code>–<code>\toc3</code>, <code>\mt</code>) contain the book code (for example <code>TIT</code>), not the book's name. Edit them in the file if another program needs the name.</li><li id="known-issue-2"><strong>Known issue:</strong> Undrafted verses are written with a <code>___</code> placeholder.</li></ul>
+<h2 id="related">Related topics</h2><ul class="related"><li><a href="bp-new-bible.html">Create a Bible project</a></li><li><a href="bp-add-book.html">Add a book</a></li><li><a href="bp-open-book.html">Open a book and move between chapters</a></li><li><a href="bp-import.html">Import a project (translationCore 3, USFM or Scripture Burrito)</a></li><li><a href="bp-export-pdf.html">Export a book as PDF</a></li><li><a href="bp-export-burrito.html">Export a project as a Scripture Burrito</a></li></ul>
+<aside class="tested" aria-label="Tested in">
+<strong>Tested in</strong>
+<span>Build: <code>79d3017</code></span>
+<span>Date: 2026-10-05</span>
+<span>Result: <span class="result result-pass-with-issues-usfm-aligned-showed-saved-tit-aligned-2026-10-05-usfm-and-usfm-plain-showed-saved-tit-2026-10-05-usfm-with-no-alignments-yet-the-two-files-were-the-same-known-issues-the-h-toc-and-mt-lines-carry-the-book-code-tit-not-a-book-name-undrafted-verses-are-written-as-placeholders">Pass with issues — USFM, aligned showed Saved TIT-aligned-2026-10-05.usfm and USFM, plain showed Saved TIT-2026-10-05.usfm. With no alignments yet, the two files were the same. Known issues: the \h, \toc and \mt lines carry the book code TIT, not a book name; undrafted verses are written as ___ placeholders.</span></span>
+<span>Environment: Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus (1:1 and 2-3 drafted, nothing aligned). Files saved to ~/Downloads.</span>
+<span>Known issues (see <a href="#tips">Tips</a>): <a href="#known-issue-1">1</a>, <a href="#known-issue-2">2</a></span>
+<span class="tested-doc">Documented from <code>79d3017</code></span>
+</aside>
+<details class="devrefs"><summary>For testers and developers</summary><p>Code: <code>src/views/ExportMenu.jsx</code>, <code>src/data/export/usfm.ts</code>, <code>src/data/export/weave.mjs</code>, <code>src/data/export/kernel.ts</code><br>Journeys: J7<br>Issues: <a href="https://github.com/unfoldingWord/translationCore4/issues/19">#19</a>, <a href="https://github.com/unfoldingWord/translationCore4/issues/425">#425</a></p></details>
+</main>
+</div>
+<footer class="sitefoot">Documented from translationCore 4 build <code>79d3017</code> (main 79d3017 (reports 4.0.0-rc.1; package-desktop run 37288923493, 2026-10-05 ET) for the Increment 8 pages (epics #373 and #439, retested 2026-10-05/06); other pages keep their own Tested in build (mostly 6f878aa or earlier)). The app is the source of truth: if this page and the app disagree, the app is right — please tell us.</footer>
+<script src="search-index.js"></script>
+<script src="assets/search.js"></script>
+</body>
+</html>
