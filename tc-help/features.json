@@ -1,7 +1,7 @@
 {
   "generated": "2026-10-07",
   "target_build": "79d30170bdb6b03a7f7b29b2936bdbacd1f37c5d",
-  "target_label": "main 79d3017 (reports 4.0.0-rc.1; package-desktop run 37288923493, 2026-10-05 ET) for the Increment 8 pages (epics #373 and #439, retested 2026-10-05/06); other pages keep their own Tested in build (mostly 6f878aa or earlier)",
+  "target_label": "build 79d3017, which includes v4.0.0-rc.1 plus later fixes",
   "latest_release": "v4.0.0-rc.1",
   "feature_count": 66,
   "by_section_status": {
@@ -49,7 +49,6 @@
       "section_title": "Getting started",
       "status": "partial",
       "since": "alpha.1",
-      "release": "Installers since alpha.6; Linux zip since alpha.4",
       "where": "Your computer's Downloads folder, then the tC4 app or the start-tc4.sh launcher",
       "summary": "Download the build for your computer, install or unpack it, and start the app. It opens on the Home screen.",
       "ui_labels": [
@@ -77,27 +76,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "start-tc4.sh (Linux launcher, in the download)",
-        "docs/PACKAGING.md",
-        "src/views/Home.jsx"
-      ],
-      "journeys": [
-        "J1"
-      ],
-      "issues": [
-        "#44",
-        "#284",
-        "#214"
-      ],
-      "page": "gs-install.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME. The Home heading and empty-state message were rechecked with a fresh HOME on PR #445 head ea38d2d (merged to main as 82fe671), 2026-09-27, Pass.",
-        "known_issues": 0
-      }
+      "page": "gs-install.html"
     },
     {
       "id": "gs-home",
@@ -106,7 +85,6 @@
       "section_title": "Getting started",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Home — the first screen. Click the tC4 logo, or the project name in the top bar, to come back to it.",
       "summary": "Home lists your projects, most recently used first. From here you open a book or story, add a project with + Add a project, share a project to Door43, and open its Settings.",
       "ui_labels": [
@@ -155,13 +133,13 @@
         {
           "n": 1,
           "file": "img/gs-home-1.png",
-          "caption": "Home on a fresh install (build 79d3017): Your projects, PROJECTS, + Add a project, and No projects yet. Select + Add a project to start. The top bar has only the tC4 logo and the round account icon.",
+          "caption": "Home on a fresh install: Your projects, PROJECTS, + Add a project, and No projects yet. Select + Add a project to start. The top bar has only the tC4 logo and the round account icon.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/gs-home-2.png",
-          "caption": "Home with a Bible project and a stories project. Resume banner QA373 Stories · Story 1. The QA373 Titus card reads es · 1 book · 1 in progress · Only on this computer, with Share on Door43 and Settings. The stories card has the OBS badge and one tile, 1 · La creación.",
+          "caption": "Home with a Bible project and a stories project. Resume banner Sample Stories · Story 1. The Sample Titus card reads es · 1 book · 1 in progress · Only on this computer, with Share on Door43 and Settings. The stories card has the OBS badge and one tile, 1 · La creación.",
           "exists": true
         },
         {
@@ -179,7 +157,7 @@
         {
           "n": 5,
           "file": "img/gs-home-5.png",
-          "caption": "Offline371 Home (build 6f878aa). Resume quotes verse 1. Bible card: en, 1 book, Titus 2%, Add a book. Stories card: 50 stories, 1% drafted, tile 1 The Creation at 6% and Oct 2.",
+          "caption": "Sample English Home. Resume quotes verse 1. Bible card: en, 1 book, Titus 2%, Add a book. Stories card: 50 stories, 1% drafted, tile 1 The Creation at 6% and Oct 2.",
           "exists": true
         },
         {
@@ -195,29 +173,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Home.jsx",
-        "src/views/modals/AddProject.jsx",
-        "src/App.jsx"
-      ],
-      "journeys": [
-        "J1",
-        "J8",
-        "J20"
-      ],
-      "issues": [
-        "#431",
-        "#505",
-        "#506"
-      ],
-      "page": "gs-home.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05/06",
-        "result": "Pass with issues — fresh Home shows only the logo and the account icon (no QA server label, no Project settings button). Cards read es · 1 book · 1 in progress · Only on this computer, with Share on Door43 and Settings, in most-recently-used order. Known issues: the import message does not close by itself; only the newest import keeps the Imported badge.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. Fresh HOME with QA373 Titus, QA373 Stories and three imports.",
-        "known_issues": 4
-      }
+      "page": "gs-home.html"
     },
     {
       "id": "gs-modes",
@@ -226,7 +182,6 @@
       "section_title": "Getting started",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Top bar, centre — the Understand · Translate · Check switch (shown while a project is open)",
       "summary": "Every open project has three modes. Understand the passage, Translate it, then Check it — in any order.",
       "ui_labels": [
@@ -253,36 +208,17 @@
         {
           "n": 1,
           "file": "img/gs-modes-1.png",
-          "caption": "Offline371 Titus 1 with Translate selected. The top bar also shows Understand and Check, Saved, and the account icon.",
+          "caption": "Sample English Titus 1 with Translate selected. The top bar also shows Understand and Check, Saved, and the account icon.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/gs-modes-2.png",
-          "caption": "Build 79d3017: a new Titus book opens in Understand (selected in the top bar), heading Titus 1 — Read the passage and its helps before you translate. Translate and Check are beside it. The right of the top bar has only Saved and the account icon.",
+          "caption": "A new Titus book opens in Understand (selected in the top bar), heading Titus 1 — Read the passage and its helps before you translate. Translate and Check are beside it. The right of the top bar has only Saved and the account icon.",
           "exists": true
         }
       ],
-      "code": [
-        "src/App.jsx (TopBar, MainView)",
-        "src/views/Understand.jsx",
-        "src/views/Draft.jsx",
-        "src/views/Check.jsx"
-      ],
-      "journeys": [
-        "J2",
-        "J4",
-        "J16"
-      ],
-      "issues": [],
-      "page": "gs-modes.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — a new Titus book and a new stories project opened in Understand. Translate and Check kept the same book. In all three modes the right of the top bar showed only Saved and the account icon (no Project settings, no QA server, no Internet/Local label).",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus and QA373 Stories, fresh HOME.",
-        "known_issues": 0
-      }
+      "page": "gs-modes.html"
     },
     {
       "id": "gs-save",
@@ -291,7 +227,6 @@
       "section_title": "Getting started",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Top bar, right side — the save indicator",
       "summary": "tC4 saves as you work. The indicator at the top right tells you the truth about your last save, and offers Retry if a save failed.",
       "ui_labels": [
@@ -315,31 +250,11 @@
         {
           "n": 1,
           "file": "img/gs-save-1.png",
-          "caption": "Check on QA439 Titus. The top right shows a green Saved next to the account icon. No verse was drafted in this pass.",
+          "caption": "Check on Sample Titus. The top right shows a green Saved next to the account icon. ",
           "exists": true
         }
       ],
-      "code": [
-        "src/App.jsx (SaveIndicator)",
-        "src/data/saveScheduler.ts",
-        "src/data/checkpoint.ts"
-      ],
-      "journeys": [
-        "J2",
-        "J8"
-      ],
-      "issues": [
-        "#183",
-        "#356"
-      ],
-      "page": "gs-save.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Partial — the indicator reads Saved. Saving…, Unsaved changes, and a failed save were not seen.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus, in Check.",
-        "known_issues": 0
-      }
+      "page": "gs-save.html"
     },
     {
       "id": "gs-resume",
@@ -348,7 +263,6 @@
       "section_title": "Getting started",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Home — the dark blue Resume banner at the top, with the Resume → button",
       "summary": "The Resume banner on Home takes you straight back to the book, chapter and mode where you last made a change — Understand, Translate, or the checking tool you were using — even after you close and restart the app.",
       "ui_labels": [
@@ -364,7 +278,7 @@
         "tC4 opens the same book and chapter, in Understand, Translate or Check — whichever you used last. In Check it reopens the same tool."
       ],
       "expected": [
-        "The banner names the project and the book and chapter (or story), and the last edit, for example QA373 Titus · Titus 1 and Last edited verse 3 — \"y a su tiempo\".",
+        "The banner names the project and the book and chapter (or story), and the last edit, for example Sample Titus · Titus 1 and Last edited verse 3 — \"y a su tiempo\".",
         "Clicking it opens the same book and chapter (or story) in the mode you last used — Understand, Translate or Check — and in Check, the same checking tool.",
         "The banner follows your last change (a drafted verse or frame, a comment, or a checking decision). Only opening a book does not change it."
       ],
@@ -372,31 +286,31 @@
         {
           "n": 1,
           "file": "img/gs-resume-1.png",
-          "caption": "Home on this build. The banner reads QA439 Titus · Titus 1, Last edited verse 1, with Resume. The Titus card under it says 0%.",
+          "caption": "Home on this build. The banner reads Sample Titus · Titus 1, Last edited verse 1, with Resume. The Titus card under it says 0%.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/gs-resume-2.png",
-          "caption": "Home after working in stories. The banner reads QA439 Stories · Story 1, Last edited frame 0, with Resume. The stories card says 50 stories, 1 in progress, 1% drafted. The story 1 tile says 0% and Oct 2.",
+          "caption": "Home after working in stories. The banner reads Sample Stories · Story 1, Last edited frame 0, with Resume. The stories card says 50 stories, 1 in progress, 1% drafted. The story 1 tile says 0% and Oct 2.",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/gs-resume-3.png",
-          "caption": "Offline371 Home. The banner reads Offline371 · Titus 1, Last edited verse 1 — Paul, a servant of God. Resume was not clicked. Titus tile is 2%.",
+          "caption": "Sample English Home. The banner reads Sample English · Titus 1, Last edited verse 1 — Paul, a servant of God. Titus tile is 2%.",
           "exists": true
         },
         {
           "n": 4,
           "file": "img/gs-resume-4.png",
-          "caption": "Build 79d3017: the banner reads QA373 Titus · Titus 1, Last edited verse 3 — y a su tiempo, with Resume →. Verses 2 and 3 had just been joined into the span 2-3, but the banner still names verse 3 (known issue).",
+          "caption": "The banner reads Sample Titus · Titus 1, Last edited verse 3 — y a su tiempo, with Resume →. Verses 2 and 3 had just been joined into the span 2-3, but the banner still names verse 3 (known issue).",
           "exists": true
         },
         {
           "n": 5,
           "file": "img/gs-resume-5.png",
-          "caption": "After a Translation Notes decision in Check, the banner reads QA373 Titus · Titus 1, Last edited verse 1.",
+          "caption": "After a Translation Notes decision in Check, the banner reads Sample Titus · Titus 1, Last edited verse 1.",
           "exists": true
         },
         {
@@ -406,25 +320,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Home.jsx (ResumeCard)",
-        "src/state.jsx (lastEdit, resumeCheckTool)"
-      ],
-      "journeys": [
-        "J8"
-      ],
-      "issues": [
-        "#184",
-        "#268"
-      ],
-      "page": "gs-resume.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass with issues — Resume opened QA373 Stories story 1 in Translate (the last mode), and later QA373 Titus in Check › Translation Words (the last tool). Known issues: after a span save the banner still named verse 3; Resume opened the story at the top, not at frame 2; the stories banner's frame number changed after checking decisions only.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus and QA373 Stories, fresh HOME.",
-        "known_issues": 3
-      }
+      "page": "gs-resume.html"
     },
     {
       "id": "gs-switch-project",
@@ -433,7 +329,6 @@
       "section_title": "Getting started",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Top bar, left — the project chip (initials and name). Its tooltip says Switch project.",
       "summary": "Click the project name at the top left to leave the project and return to Home, where you can open another project or book.",
       "ui_labels": [
@@ -454,27 +349,11 @@
         {
           "n": 1,
           "file": "img/gs-switch-project-1.png",
-          "caption": "The QA439 Titus chip, initials QT and language es, with the tooltip Switch project. Check is still open behind it.",
+          "caption": "The Sample Titus chip, initials QT and language es, with the tooltip Switch project. Check is still open behind it.",
           "exists": true
         }
       ],
-      "code": [
-        "src/App.jsx (TopBar)",
-        "src/ds/components/navigation/AppHeader.jsx",
-        "src/state.jsx (backToProjects)"
-      ],
-      "journeys": [
-        "J8"
-      ],
-      "issues": [],
-      "page": "gs-switch-project.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass for the tooltip and the return to Home. A checkpoint on the way out was not checked. The Bible-to-stories Check mismatch was not retested.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus was open in Check.",
-        "known_issues": 0
-      }
+      "page": "gs-switch-project.html"
     },
     {
       "id": "bp-new-bible",
@@ -483,7 +362,6 @@
       "section_title": "Bible projects",
       "status": "shipped",
       "since": "alpha.1",
-      "release": "",
       "where": "Home › + Add a project › New Bible",
       "summary": "A Bible project is one translation in one language and one text direction. Name it, give the language, choose the direction, and add books next.",
       "ui_labels": [
@@ -536,7 +414,7 @@
         {
           "n": 3,
           "file": "img/bp-new-bible-3.png",
-          "caption": "Build 79d3017: New Bible filled in — QA373 Titus, Español, es, Left to right. Checking language English, RECOMMENDED, with the line unfoldingWord · ULT + UST, notes, words — installed with the app. Script font Noto Sans (default).",
+          "caption": "New Bible filled in — Sample Titus, Español, es, Left to right. Checking language English, RECOMMENDED, with the line unfoldingWord · ULT + UST, notes, words — installed with the app. Script font Noto Sans (default).",
           "exists": true
         },
         {
@@ -560,27 +438,11 @@
         {
           "n": 7,
           "file": "img/bp-new-bible-7.png",
-          "caption": "After Create Bible →, the Add a book dialog opens straight away over Home, on Start a blank book. The new QA373 Titus card is already behind it.",
+          "caption": "After Create Bible →, the Add a book dialog opens straight away over Home, on Start a blank book. The new Sample Titus card is already behind it.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/AddProject.jsx",
-        "src/views/modals/NewBible.jsx",
-        "src/state.jsx (openNewProject, createBible, validateNewBible)"
-      ],
-      "journeys": [
-        "J1"
-      ],
-      "issues": [],
-      "page": "bp-new-bible.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — QA373 Titus (Español, es, Left to right, English checking language) was created. The checking-language card says unfoldingWord · ULT + UST, notes, words — installed with the app. Create Bible → opened Add a book straight away, and the new book opened in Understand.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus, fresh HOME.",
-        "known_issues": 2
-      }
+      "page": "bp-new-bible.html"
     },
     {
       "id": "bp-add-book",
@@ -589,7 +451,6 @@
       "section_title": "Bible projects",
       "status": "shipped",
       "since": "alpha.1",
-      "release": "",
       "where": "Home › a Bible project card › Add a book tile (also opens by itself after Create Bible →)",
       "summary": "Add one book, or several at once, to a Bible project. The drafting sources (unfoldingWord ULT + UST v91) come with the app, and a new book opens in Understand.",
       "ui_labels": [
@@ -623,7 +484,7 @@
         {
           "n": 1,
           "file": "img/bp-add-book-1.png",
-          "caption": "Add a book, to QA439 Titus. The only choice shown is Start a blank book: pick a book and draft from verse 1, and the unfoldingWord source package downloads automatically.",
+          "caption": "Add a book, to Sample Titus. The only choice shown is Start a blank book: pick a book and draft from verse 1, and the unfoldingWord source package downloads automatically.",
           "exists": true
         },
         {
@@ -641,33 +502,17 @@
         {
           "n": 4,
           "file": "img/bp-add-book-4.png",
-          "caption": "Build 79d3017: Titus (TIT) chosen, Titus · 3 chapters · New Testament, and Drafting sources: unfoldingWord ULT + UST v91 — installed with the app. ← Back and Create book.",
+          "caption": "Titus (TIT) chosen, Titus · 3 chapters · New Testament, and Drafting sources: unfoldingWord ULT + UST v91 — installed with the app. ← Back and Create book.",
           "exists": true
         },
         {
           "n": 5,
           "file": "img/bp-add-book-5.png",
-          "caption": "A second book, Philemon, added to QA373 Titus. It opens in Understand at Philemon 1, Read the passage and its helps before you translate. The rail lists Titus and Philemon.",
+          "caption": "A second book, Philemon, added to Sample Titus. It opens in Understand at Philemon 1, Read the passage and its helps before you translate. The rail lists Titus and Philemon.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/AddBook.jsx",
-        "src/state.jsx (openAddBook, addBooks)",
-        "src/data/bookNames.ts"
-      ],
-      "journeys": [
-        "J1"
-      ],
-      "issues": [],
-      "page": "bp-add-book.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — on QA373 Titus the book step read Drafting sources: unfoldingWord ULT + UST v91 — installed with the app. Create book added Titus, then Philemon, and each opened in Understand at chapter 1.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus, fresh HOME. The several-at-once grid shot is from build 6f878aa.",
-        "known_issues": 0
-      }
+      "page": "bp-add-book.html"
     },
     {
       "id": "bp-open-book",
@@ -676,7 +521,6 @@
       "section_title": "Bible projects",
       "status": "shipped",
       "since": "alpha.1",
-      "release": "",
       "where": "Home › a book tile; inside the project, the Books · {n} list on the left (toggle it with Toggle book list)",
       "summary": "Click a book tile on Home to open it. Inside the project, the book list on the left moves you between books and chapters.",
       "ui_labels": [
@@ -701,29 +545,11 @@
         {
           "n": 1,
           "file": "img/bp-open-book-1.png",
-          "caption": "Translate, QA439 Titus. The book list shows Titus at 0% and chapters 1, 2, and 3. Chapter 1 is selected.",
+          "caption": "Translate, Sample Titus. The book list shows Titus at 0% and chapters 1, 2, and 3. Chapter 1 is selected.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Home.jsx (BookTile)",
-        "src/views/BookRail.jsx",
-        "src/views/railChrome.jsx",
-        "src/views/OpenProgress.jsx"
-      ],
-      "journeys": [
-        "J8",
-        "J15"
-      ],
-      "issues": [],
-      "page": "bp-open-book.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Partial — the book list shows Titus at 0% with chapters 1–3, and chapter 1 is open. The opening-progress window and switching chapters were not retested.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus.",
-        "known_issues": 0
-      }
+      "page": "bp-open-book.html"
     },
     {
       "id": "bp-import",
@@ -732,7 +558,6 @@
       "section_title": "Bible projects",
       "status": "shipped",
       "since": "rc.1",
-      "release": "4.0.0-rc.1 (Increment 8, tagged Oct 2, 2026); retested on main 79d3017",
       "where": "Home › + Add a project › Import a project",
       "summary": "Bring existing work into tC4 as a new project — from translationCore 3 project zips, USFM files, or a Scripture Burrito zip. Nothing is created until you confirm.",
       "ui_labels": [
@@ -790,7 +615,7 @@
         {
           "n": 1,
           "file": "img/bp-import-1.png",
-          "caption": "Build 79d3017: Import · step 1 of 3 — Import a project. Choose the kind of file you have: translationCore 3 project, USFM files, Scripture Burrito. Each import creates a new Bible. Nothing on this computer is changed until you confirm. ← Back at the bottom.",
+          "caption": "Import · step 1 of 3 — Import a project. Choose the kind of file you have: translationCore 3 project, USFM files, Scripture Burrito. Each import creates a new Bible. Nothing on this computer is changed until you confirm. ← Back at the bottom.",
           "exists": true
         },
         {
@@ -832,7 +657,7 @@
         {
           "n": 8,
           "file": "img/bp-import-8.png",
-          "caption": "Build 79d3017: the review of a translationCore 3 project (cfm_fbt_tit_book.zip). Format translationCore 3 project; CARRIED OVER FROM TRANSLATIONCORE 3: Verses 46, Alignments 0 verses, Checking decisions 5. Resource versions is orange: Look up on Door43 the resource versions this project used (translationNotes, the original-language text), or use the versions on this computer, with Look up on Door43 and Use installed versions.",
+          "caption": "The review of a translationCore 3 project (cfm_fbt_tit_book.zip). Format translationCore 3 project; CARRIED OVER FROM TRANSLATIONCORE 3: Verses 46, Alignments 0 verses, Checking decisions 5. Resource versions is orange: Look up on Door43 the resource versions this project used (translationNotes, the original-language text), or use the versions on this computer, with Look up on Door43 and Use installed versions.",
           "exists": true
         },
         {
@@ -842,42 +667,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/AddProject.jsx",
-        "src/views/modals/Import.jsx",
-        "src/data/import/shell.ts",
-        "src/data/import/parsers.ts",
-        "src/data/import/tc3.ts",
-        "src/data/import/usfm.ts",
-        "src/data/import/burrito.ts",
-        "src/state.jsx (openImport, importReview, importRun)"
-      ],
-      "journeys": [
-        "J9a",
-        "J9c",
-        "J9d"
-      ],
-      "issues": [
-        "#361",
-        "#21",
-        "#195",
-        "#196",
-        "#41",
-        "#365",
-        "#436",
-        "#437",
-        "#156",
-        "#507",
-        "#435"
-      ],
-      "page": "bp-import.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-06",
-        "result": "Pass with issues — USFM (no language: orange Details, code typed, green, imported as Tito, opened in Understand), name clash refused until renamed, damaged USFM (import.damaged.usfm-parse) and truncated burrito (import.damaged.truncated) refused with nothing created, tC4 burritos QA661 Titus and Equipo Ejemplo (es-419, 2 books, carried-over alignments and decisions) imported. translationCore 3 project (cfm_fbt_tit_book.zip): Resource versions choice (Look up on Door43 found en_tn v87 and el-x-koine_ugnt v0.34), imported 3 times (cfm_fbt, cfm_fbt 2, cfm_fbt 3), Titus opened at once each time with no white window, name clash refused on the tC3 path too. Known issues: import message never closes by itself; Imported badge only on the newest import.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. USFM and Burrito fixtures from /workspace/tc4-epic-373-439/fixtures. The 2026-10-06 run rechecked steps 4.1–4.8 and ran the translationCore 3 import (fixture cfm_fbt_tit_book.zip, online for Look up on Door43).",
-        "known_issues": 5
-      }
+      "page": "bp-import.html"
     },
     {
       "id": "bp-export-pdf",
@@ -886,7 +676,6 @@
       "section_title": "Bible projects",
       "status": "shipped",
       "since": "rc.1",
-      "release": "4.0.0-rc.1 (Increment 8, tagged Oct 2, 2026); retested on main 79d3017",
       "where": "Check › Community Checking card › Open → › Export › Export PDF",
       "summary": "Make a print-ready, dated PDF of the open book, laid out with your Page setup choices.",
       "ui_labels": [
@@ -919,7 +708,7 @@
         {
           "n": 1,
           "file": "img/bp-export-pdf-1.png",
-          "caption": "Build 79d3017, QA373 Titus in Community Checking (Spacing Double, Paper size Letter). The Export menu is open: Export PDF, USFM, aligned, USFM, plain, Scripture Burrito (.zip).",
+          "caption": "Sample Titus in Community Checking (Spacing Double, Paper size Letter). The Export menu is open: Export PDF, USFM, aligned, USFM, plain, Scripture Burrito (.zip).",
           "exists": true
         },
         {
@@ -947,30 +736,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/ExportMenu.jsx",
-        "src/views/CommunityChecking.jsx",
-        "src/data/export/pdf.ts",
-        "src/data/export/kernel.ts",
-        "src/views/print/PrintPages.jsx",
-        "electron/preload.js (printPdf bridge, in the download)"
-      ],
-      "journeys": [
-        "J7"
-      ],
-      "issues": [
-        "#20",
-        "#375",
-        "#382"
-      ],
-      "page": "bp-export-pdf.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — Export PDF on QA373 Titus (Double, Letter): Cancel showed no message; Save showed Saved TIT-2026-10-05.pdf after the window closed. The file is 1 US Letter page. On the undrafted Philemon the refusal named Philemon and no save window opened. Known issue: the save window's Save/Cancel buttons were off-screen (Enter/Esc work).",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus (1:1 and 2-3 drafted) and Philemon (nothing drafted). Files saved to ~/Downloads.",
-        "known_issues": 0
-      }
+      "page": "bp-export-pdf.html"
     },
     {
       "id": "bp-export-usfm",
@@ -979,7 +745,6 @@
       "section_title": "Bible projects",
       "status": "shipped",
       "since": "rc.1",
-      "release": "4.0.0-rc.1 (Increment 8, tagged Oct 2, 2026); retested on main 79d3017",
       "where": "Check › Community Checking › Export › USFM, aligned or USFM, plain",
       "summary": "Save the open book as a USFM file — with your word alignments woven in, or plain text only.",
       "ui_labels": [
@@ -1008,19 +773,19 @@
         {
           "n": 1,
           "file": "img/bp-export-usfm-1.png",
-          "caption": "Build 79d3017, QA373 Titus: after Export › USFM, aligned and Save, the panel shows Saved TIT-aligned-2026-10-05.usfm.",
+          "caption": "Sample Titus: after Export › USFM, aligned and Save, the panel shows Saved TIT-aligned-2026-10-05.usfm.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/bp-export-usfm-2.png",
-          "caption": "Save window for USFM, aligned on QA439 Titus, nothing drafted. Suggested name TIT-aligned-2026-10-03.usfm. Cancel was clicked.",
+          "caption": "Save window for USFM, aligned on Sample Titus, nothing drafted. Suggested name TIT-aligned-2026-10-03.usfm. ",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/bp-export-usfm-3.png",
-          "caption": "Save window for USFM, plain on QA439 Titus, nothing drafted. Suggested name TIT-2026-10-03.usfm. Cancel was clicked.",
+          "caption": "Save window for USFM, plain on Sample Titus, nothing drafted. Suggested name TIT-2026-10-03.usfm. ",
           "exists": true
         },
         {
@@ -1030,27 +795,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/ExportMenu.jsx",
-        "src/data/export/usfm.ts",
-        "src/data/export/weave.mjs",
-        "src/data/export/kernel.ts"
-      ],
-      "journeys": [
-        "J7"
-      ],
-      "issues": [
-        "#19",
-        "#425"
-      ],
-      "page": "bp-export-usfm.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass with issues — USFM, aligned showed Saved TIT-aligned-2026-10-05.usfm and USFM, plain showed Saved TIT-2026-10-05.usfm. With no alignments yet, the two files were the same. Known issues: the \\h, \\toc and \\mt lines carry the book code TIT, not a book name; undrafted verses are written as ___ placeholders.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus (1:1 and 2-3 drafted, nothing aligned). Files saved to ~/Downloads.",
-        "known_issues": 2
-      }
+      "page": "bp-export-usfm.html"
     },
     {
       "id": "bp-export-burrito",
@@ -1059,7 +804,6 @@
       "section_title": "Bible projects",
       "status": "shipped",
       "since": "rc.1",
-      "release": "4.0.0-rc.1 (Increment 8, tagged Oct 2, 2026); retested on main 79d3017",
       "where": "Check › Community Checking › Export › Scripture Burrito (.zip)",
       "summary": "Save the whole project — text, alignments and checking decisions — as one Scripture Burrito zip. Works for Bible and Open Bible Stories projects.",
       "ui_labels": [
@@ -1079,52 +823,33 @@
         "Click Open → on the Community Checking card.",
         "Click Export, then Scripture Burrito (.zip).",
         "A save window opens with a suggested file name. Keep it or type another, then save.",
-        "When the file is saved, the panel shows \"Saved <file name \", for example \"Saved QA373 Titus-2026-10-05.zip\". If you cancel, no message appears."
+        "When the file is saved, the panel shows \"Saved <file name \", for example \"Saved Sample Titus-2026-10-05.zip\". If you cancel, no message appears."
       ],
       "expected": [
-        "A file named after the project and today's date, like QA373 Titus-2026-10-05.zip, is saved.",
+        "A file named after the project and today's date, like Sample Titus-2026-10-05.zip, is saved.",
         "The panel shows \"Saved <file name \"."
       ],
       "screenshots": [
         {
           "n": 1,
           "file": "img/bp-export-burrito-1.png",
-          "caption": "Build 79d3017, QA373 Titus: after Export › Scripture Burrito (.zip) and Save, the panel shows Saved QA373 Titus-2026-10-05.zip.",
+          "caption": "Sample Titus: after Export › Scripture Burrito (.zip) and Save, the panel shows Saved Sample Titus-2026-10-05.zip.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/bp-export-burrito-2.png",
-          "caption": "Save window for Scripture Burrito on QA439 Titus, nothing drafted. Suggested name QA439 Titus-2026-10-03.zip. Cancel was clicked.",
+          "caption": "Save window for Scripture Burrito on Sample Titus, nothing drafted. Suggested name Sample Titus-2026-10-03.zip. ",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/bp-export-burrito-3.png",
-          "caption": "A stories project uses the same menu item: QA373 Stories after Scripture Burrito (.zip), Saved QA373 Stories-2026-10-05.zip.",
+          "caption": "A stories project uses the same menu item: Sample Stories after Scripture Burrito (.zip), Saved Sample Stories-2026-10-05.zip.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/ExportMenu.jsx",
-        "src/data/export/burritoZip.ts",
-        "src/data/export/relationships.ts"
-      ],
-      "journeys": [
-        "J7",
-        "J23"
-      ],
-      "issues": [
-        "#359"
-      ],
-      "page": "bp-export-burrito.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — QA373 Titus saved QA373 Titus-2026-10-05.zip and QA373 Stories saved QA373 Stories-2026-10-05.zip, each with its Saved message. Importing a tC4 burrito (QA661 Titus, exported from rc.1) as a new project also passed; see Import.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus and QA373 Stories. Files saved to ~/Downloads.",
-        "known_issues": 0
-      }
+      "page": "bp-export-burrito.html"
     },
     {
       "id": "tr-screen",
@@ -1133,7 +858,6 @@
       "section_title": "Translate",
       "status": "shipped",
       "since": "alpha.1 (redesigned alpha.5)",
-      "release": "",
       "where": "Top bar › Translate",
       "summary": "Translate shows the source text on the left and your translation on the right, one row per section, with the book list and the helps panel beside them.",
       "ui_labels": [
@@ -1164,28 +888,11 @@
         {
           "n": 1,
           "file": "img/tr-screen-1.png",
-          "caption": "Offline371, Titus 1, Section view. ULT v91 is selected. Verse 1 reads Paul, a servant of God. The section button says Draft section 1–3.",
+          "caption": "Sample English, Titus 1, Section view. ULT v91 is selected. Verse 1 reads Paul, a servant of God. The section button says Draft section 1–3.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Draft.jsx",
-        "src/views/BookRail.jsx",
-        "src/views/HelpsPanel.jsx",
-        "src/views/sections.js"
-      ],
-      "journeys": [
-        "J2"
-      ],
-      "issues": [],
-      "page": "tr-screen.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — Offline371 Titus 1 in Section view shows ULT v91, the drafted verse 1, and Draft section 1–3. Nothing was drafted.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. Offline371, English, Titus 1. Section view. Nothing was edited.",
-        "known_issues": 0
-      }
+      "page": "tr-screen.html"
     },
     {
       "id": "tr-source-texts",
@@ -1194,7 +901,6 @@
       "section_title": "Translate",
       "status": "shipped",
       "since": "alpha.1 (original-language pane alpha.5)",
-      "release": "",
       "where": "Translate › source column tabs. This Spanish project shows GLT · GST · Greek. An English gateway shows ULT · UST · Greek (or Hebrew in the Old Testament).",
       "summary": "Switch the source column between the literal text, the simplified text and the Greek or Hebrew original.",
       "ui_labels": [
@@ -1220,41 +926,23 @@
         {
           "n": 1,
           "file": "img/tr-source-texts-1.png",
-          "caption": "Translate, QA439 Titus 1, Greek tab selected. Caption: unfoldingWord Greek New Testament · v0.34 · pinned. The draft column is still empty.",
+          "caption": "Translate, Sample Titus 1, Greek tab selected. Caption: unfoldingWord Greek New Testament · v0.34 · pinned. The draft column is still empty.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/tr-source-texts-2.png",
-          "caption": "Offline371, Translate, Greek tab. Caption unfoldingWord Greek New Testament · v0.34 · pinned. The source section is Titus 1:1–16. The draft still shows Paul, a servant of God, and Draft section 1–16. Switched back to ULT.",
+          "caption": "Sample English, Translate, Greek tab. Caption unfoldingWord Greek New Testament · v0.34 · pinned. The source section is Titus 1:1–16. The draft still shows Paul, a servant of God, and Draft section 1–16. Switched back to ULT.",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/tr-source-texts-3.png",
-          "caption": "Offline371, Translate, UST tab. Caption unfoldingWord Simplified Text · v91 · pinned. Section Titus 1:1–3. Draft section 1–3. Verse 1 of the source contains curly braces. Switched back to ULT.",
+          "caption": "Sample English, Translate, UST tab. Caption unfoldingWord Simplified Text · v91 · pinned. Section Titus 1:1–3. Draft section 1–3. Verse 1 of the source contains curly braces. Switched back to ULT.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Draft.jsx (SourceTabs, SourceCell)",
-        "src/views/SourceVerse.jsx",
-        "src/data/sourceState.ts"
-      ],
-      "journeys": [
-        "J2"
-      ],
-      "issues": [
-        "#207"
-      ],
-      "page": "tr-source-texts.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — QA439 and Offline371 both show unfoldingWord Greek New Testament · v0.34 · pinned. On Offline371, ULT and UST are Titus 1:1–3; Greek is Titus 1:1–16. UST is unfoldingWord Simplified Text · v91 · pinned and its verse 1 contains curly braces. The draft was not edited. Hebrew was not opened.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus (Spanish) and Offline371 (English). Source was returned to ULT.",
-        "known_issues": 0
-      }
+      "page": "tr-source-texts.html"
     },
     {
       "id": "tr-draft-section",
@@ -1263,7 +951,6 @@
       "section_title": "Translate",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Translate › Section › Draft section {span} on a section row",
       "summary": "Type a whole section as one piece of text, then place the verse numbers. This is the main way to draft in tC4.",
       "ui_labels": [
@@ -1303,26 +990,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/SectionEditor.jsx",
-        "src/views/sectionDraft.js",
-        "src/views/Draft.jsx (TargetCell)",
-        "src/state.jsx (startSection, saveSection)"
-      ],
-      "journeys": [
-        "J2"
-      ],
-      "issues": [
-        "#141"
-      ],
-      "page": "tr-draft-section.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass with known issues",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 1
-      }
+      "page": "tr-draft-section.html"
     },
     {
       "id": "tr-place-verse-numbers",
@@ -1331,7 +999,6 @@
       "section_title": "Translate",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Translate › section editor › Place verse numbers",
       "summary": "After typing a section, pick up each verse number and click the word where that verse begins.",
       "ui_labels": [
@@ -1367,26 +1034,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/SectionEditor.jsx (PlaceView, PinBefore)",
-        "src/views/sectionDraft.js (canDrop, dropPin)",
-        "src/ds/components/translation/VerseMarker.jsx"
-      ],
-      "journeys": [
-        "J2"
-      ],
-      "issues": [
-        "#141",
-        "#241"
-      ],
-      "page": "tr-place-verse-numbers.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass with known issues",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 1
-      }
+      "page": "tr-place-verse-numbers.html"
     },
     {
       "id": "tr-verse-spans",
@@ -1395,7 +1043,6 @@
       "section_title": "Translate",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Translate › section editor › Place verse numbers (or a line starting 2-3 in Type)",
       "summary": "Join two or more verses into one span, such as 2–3, when your language needs to reorder their content. Break the span again the same way. Bible projects only.",
       "ui_labels": [
@@ -1432,27 +1079,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/SectionEditor.jsx",
-        "src/views/sectionDraft.js (runOf, spanEnd)",
-        "src/state.jsx (writeBookOrStructure, applyStructuralEdit)",
-        "src/data/usfm/splice.ts"
-      ],
-      "journeys": [
-        "J2"
-      ],
-      "issues": [
-        "#63",
-        "#219"
-      ],
-      "page": "tr-verse-spans.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 0
-      }
+      "page": "tr-verse-spans.html"
     },
     {
       "id": "tr-verse-by-verse",
@@ -1461,7 +1088,6 @@
       "section_title": "Translate",
       "status": "shipped",
       "since": "alpha.1",
-      "release": "",
       "where": "Translate › switch to Verse › Draft verse {n} pill, or click a drafted verse",
       "summary": "Switch to Verse to draft a single verse, or to fix one verse without opening the whole section.",
       "ui_labels": [
@@ -1489,33 +1115,17 @@
         {
           "n": 1,
           "file": "img/tr-verse-by-verse-1.png",
-          "caption": "Offline371, Titus 1, Verse view. Verse 1 reads Paul, a servant of God. Verses 2 and 3 are dashed Draft verse pills. ULT is selected.",
+          "caption": "Sample English, Titus 1, Verse view. Verse 1 reads Paul, a servant of God. Verses 2 and 3 are dashed Draft verse pills. ULT is selected.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/tr-verse-by-verse-2.png",
-          "caption": "Offline371, Titus 1, verse 1 editor. Heading DRAFTING 1, text Paul, a servant of God. Buttons Save verse and Cancel. The verse place says Editing below.",
+          "caption": "Sample English, Titus 1, verse 1 editor. Heading DRAFTING 1, text Paul, a servant of God. Buttons Save verse and Cancel. The verse place says Editing below.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Draft.jsx (VerseEditor, TargetVerse, DraftUnitSwitch)",
-        "src/state.jsx (startVerse, editVerse, blurVerse, cancelVerse)"
-      ],
-      "journeys": [
-        "J2",
-        "J6"
-      ],
-      "issues": [],
-      "page": "tr-verse-by-verse.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — Verse view on Offline371 Titus 1 shows verse 1 as Paul, a servant of God. Verses 2 and 3 are dashed Draft verse pills. Opening verse 1 showed DRAFTING 1 with Save verse and Cancel. Cancel left the verse unchanged.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. Offline371, English, Titus 1. Verse 1 was already drafted. Nothing was edited.",
-        "known_issues": 0
-      }
+      "page": "tr-verse-by-verse.html"
     },
     {
       "id": "tr-formatting",
@@ -1524,7 +1134,6 @@
       "section_title": "Translate",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Translate › section editor › Type — press Enter or Tab",
       "summary": "Start a new paragraph with Enter and indent a poetry line with Tab while you type a section.",
       "ui_labels": [
@@ -1551,25 +1160,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/SectionEditor.jsx (onTypeKeyDown)",
-        "src/views/sectionDraft.js (indentLine)",
-        "src/views/sections.js (paragraphsOf, paragraphLevel)"
-      ],
-      "journeys": [
-        "J2"
-      ],
-      "issues": [
-        "#54"
-      ],
-      "page": "tr-formatting.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 0
-      }
+      "page": "tr-formatting.html"
     },
     {
       "id": "tr-helps-panel",
@@ -1578,7 +1169,6 @@
       "section_title": "Translate",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Translate › right side panel — tabs Notes · Words · Questions · GST · Comments (an English gateway shows UST instead of GST)",
       "summary": "While you draft, the helps panel shows the notes, word links, questions, simplified text and your own comments for the verses in focus.",
       "ui_labels": [
@@ -1609,55 +1199,35 @@
         {
           "n": 1,
           "file": "img/tr-helps-panel-1.png",
-          "caption": "Translate on QA439 Titus 1, Comments tab selected. It says Nothing in this chapter.",
+          "caption": "Translate on Sample Titus 1, Comments tab selected. It says Nothing in this chapter.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/tr-helps-panel-2.png",
-          "caption": "Offline371 Translate, Words tab. Key-word cards: Paul, a servant, of God, an apostle. Each says Read the article. No article opened.",
+          "caption": "Sample English Translate, Words tab. Key-word cards: Paul, a servant, of God, an apostle. Each says Read the article. No article opened.",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/tr-helps-panel-3.png",
-          "caption": "Offline371 Translate, Questions tab. First question: What was Paul's purpose in his service to God? Answer line visible.",
+          "caption": "Sample English Translate, Questions tab. First question: What was Paul's purpose in his service to God? Answer line visible.",
           "exists": true
         },
         {
           "n": 4,
           "file": "img/tr-helps-panel-4.png",
-          "caption": "Offline371 Translate, UST tab. Heading Simplified text · meaning-based. Verse 1 contains curly braces.",
+          "caption": "Sample English Translate, UST tab. Heading Simplified text · meaning-based. Verse 1 contains curly braces.",
           "exists": true
         },
         {
           "n": 5,
           "file": "img/tr-helps-panel-5.png",
-          "caption": "Offline371 Translate, Comments tab. It says Nothing in this chapter. Panel returned to Notes.",
+          "caption": "Sample English Translate, Comments tab. It says Nothing in this chapter. Panel returned to Notes.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/HelpsPanel.jsx",
-        "src/views/helpsFocus.js",
-        "src/views/Draft.jsx"
-      ],
-      "journeys": [
-        "J2",
-        "J16"
-      ],
-      "issues": [
-        "#239",
-        "#252"
-      ],
-      "page": "tr-helps-panel.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass for the tab set on QA439 and Offline371. On Offline371 the tabs are Notes, Words, Questions, UST and Comments. Words, Questions and UST were opened and Comments said Nothing in this chapter. No article was opened and nothing was typed. The section-comment verse label was not retested, and opening an editor to narrow the panel was not retested.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus (Spanish) and Offline371 (English). The panel was returned to Notes.",
-        "known_issues": 1
-      }
+      "page": "tr-helps-panel.html"
     },
     {
       "id": "tr-edit-after-check",
@@ -1666,7 +1236,6 @@
       "section_title": "Translate",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Translate (the edit), then Check (the flags)",
       "summary": "When you change a verse that has check decisions or alignments, tC4 flags them for review. Nothing is deleted.",
       "ui_labels": [
@@ -1702,24 +1271,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/data/revalidate.ts",
-        "src/views/Check.jsx (CheckSessionNotices)",
-        "src/views/Align.jsx",
-        "src/data/align/edit.ts"
-      ],
-      "journeys": [
-        "J6"
-      ],
-      "issues": [],
-      "page": "tr-edit-after-check.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 0
-      }
+      "page": "tr-edit-after-check.html"
     },
     {
       "id": "un-read-passage",
@@ -1728,7 +1280,6 @@
       "section_title": "Understand",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Top bar › Understand",
       "summary": "Understand shows the source passage section by section, with its helps beside it and a box for your own comments.",
       "ui_labels": [
@@ -1758,41 +1309,23 @@
       "expected": [
         "The title reads the book and chapter with the line \"Read the passage and its helps before you translate.\"",
         "The source tabs sit above the passage. On this Spanish project they are GLT and GST. An English gateway shows ULT and UST. The Comment by Section / Verse switch is there too.",
-        "Each section is a block with its reference, the source text and a comment box. On QA439 Titus the first block is \"Titus 1:1–16\". On Offline371 the first block is \"Titus 1:1–3\", because the English literal text breaks the chapter there. The helps panel on the right shows the helps for the selected block."
+        "Each section is a block with its reference, the source text and a comment box. On Sample Titus the first block is \"Titus 1:1–16\". On Sample English the first block is \"Titus 1:1–3\", because the English literal text breaks the chapter there. The helps panel on the right shows the helps for the selected block."
       ],
       "screenshots": [
         {
           "n": 1,
           "file": "img/un-read-passage-1.png",
-          "caption": "QA439 Titus, Spanish. Understand, Titus 1, GLT and GST. The first block is TITUS 1:1–16.",
+          "caption": "Sample Titus, Spanish. Understand, Titus 1, GLT and GST. The first block is TITUS 1:1–16.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/un-read-passage-2.png",
-          "caption": "Offline371, English. Understand, Titus 1, ULT and UST. The first block is TITUS 1:1–3. The comment box is empty.",
+          "caption": "Sample English, English. Understand, Titus 1, ULT and UST. The first block is TITUS 1:1–3. The comment box is empty.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Understand.jsx",
-        "src/views/HelpsPanel.jsx",
-        "src/views/helpsFocus.js"
-      ],
-      "journeys": [
-        "J16"
-      ],
-      "issues": [
-        "#197"
-      ],
-      "page": "un-read-passage.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — QA439 Titus shows GLT and GST, and the first block is Titus 1:1–16. Offline371 shows ULT and UST, and the first block is Titus 1:1–3. The comment box was empty. Nothing was typed.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus (Spanish) and Offline371 (English). No comment was typed on Offline371.",
-        "known_issues": 0
-      }
+      "page": "un-read-passage.html"
     },
     {
       "id": "un-notes",
@@ -1801,7 +1334,6 @@
       "section_title": "Understand",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Understand or Translate › helps panel › Notes › Translation Academy →",
       "summary": "Translation notes explain hard phrases verse by verse. Each note can link to a Translation Academy article that teaches the translation issue behind it.",
       "ui_labels": [
@@ -1825,7 +1357,7 @@
         {
           "n": 1,
           "file": "img/un-notes-1.png",
-          "caption": "Notes on QA439 Titus 1 in Spanish. The first card is the chapter introduction, Tito 1: Notas Generales, with Show more. The verse 1 card quotes conforme a la fe.",
+          "caption": "Notes on Sample Titus 1 in Spanish. The first card is the chapter introduction, Tito 1: Notas Generales, with Show more. The verse 1 card quotes conforme a la fe.",
           "exists": true
         },
         {
@@ -1837,32 +1369,17 @@
         {
           "n": 3,
           "file": "img/un-notes-3.png",
-          "caption": "Offline371, English. Notes: vintro Titus 1 Chapter Introduction, then a v1 note quoting for the faith of the chosen people of God and knowledge of the truth.",
+          "caption": "Sample English, English. Notes: vintro Titus 1 Chapter Introduction, then a v1 note quoting for the faith of the chosen people of God and knowledge of the truth.",
           "exists": true
         },
         {
           "n": 4,
           "file": "img/un-notes-4.png",
-          "caption": "Offline371. Translation Academy article Abstract Nouns is open. The phrase is highlighted in the passage. The article was closed after this shot.",
+          "caption": "Sample English. Translation Academy article Abstract Nouns is open. The phrase is highlighted in the passage. The article was closed after this shot.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/HelpsPanel.jsx (notes tab, ArticleView)",
-        "src/data/articles.ts"
-      ],
-      "journeys": [
-        "J16"
-      ],
-      "issues": [],
-      "page": "un-notes.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — QA439 notes are Spanish, and Sustantivos abstractos opens. Offline371 notes are English: vintro Titus 1 Chapter Introduction, then the v1 quote. Translation Academy opens Abstract Nouns and highlights the phrase. The article was closed.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus (Spanish) and Offline371 (English), Understand, Titus 1.",
-        "known_issues": 0
-      }
+      "page": "un-notes.html"
     },
     {
       "id": "un-word-links",
@@ -1871,7 +1388,6 @@
       "section_title": "Understand",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Understand or Translate › helps panel › Words › Read the article →",
       "summary": "Word links point out the key biblical terms in the passage and link each to a Translation Words article that defines it.",
       "ui_labels": [
@@ -1896,38 +1412,23 @@
         {
           "n": 1,
           "file": "img/un-word-links-1.png",
-          "caption": "The Words tab on QA439 Titus 1, with Spanish key-word cards and the Pablo article open.",
+          "caption": "The Words tab on Sample Titus 1, with Spanish key-word cards and the Pablo article open.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/un-word-links-2.png",
-          "caption": "Offline371, English, Understand, Titus 1:1–3. Words tab. Cards: Paul / paul, a servant / servant, of God / god, an apostle / apostle. Each says Key word and Read the article.",
+          "caption": "Sample English, English, Understand, Titus 1:1–3. Words tab. Cards: Paul / paul, a servant / servant, of God / god, an apostle / apostle. Each says Key word and Read the article.",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/un-word-links-3.png",
-          "caption": "Offline371, Paul article open. Title Paul, Saul. Paul is highlighted in the passage. The article was closed again.",
+          "caption": "Sample English, Paul article open. Title Paul, Saul. Paul is highlighted in the passage. The article was closed again.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/HelpsPanel.jsx (words tab)",
-        "src/data/articles.ts"
-      ],
-      "journeys": [
-        "J16"
-      ],
-      "issues": [],
-      "page": "un-word-links.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — QA439 shows Spanish cards and the Pablo article. Offline371 Words lists Paul, a servant, of God and an apostle. Opening Paul highlights Paul in the passage and shows the article Paul, Saul. The article was closed.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus (Spanish) and Offline371 (English), Understand, Titus 1.",
-        "known_issues": 0
-      }
+      "page": "un-word-links.html"
     },
     {
       "id": "un-questions",
@@ -1936,7 +1437,6 @@
       "section_title": "Understand",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Understand or Translate › helps panel › Questions",
       "summary": "Translation questions ask what the passage says. Use them to test whether your translation communicates the meaning.",
       "ui_labels": [
@@ -1956,31 +1456,17 @@
         {
           "n": 1,
           "file": "img/un-questions-1.png",
-          "caption": "The Questions tab on QA439 Titus 1, in Spanish, each card with Answer under the question.",
+          "caption": "The Questions tab on Sample Titus 1, in Spanish, each card with Answer under the question.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/un-questions-2.png",
-          "caption": "Offline371, English, Titus 1:1–3. Questions: Paul's purpose, when God promised everlasting life, Does God lie?, and who received the proclamation. Each answer starts with Answer.",
+          "caption": "Sample English, English, Titus 1:1–3. Questions: Paul's purpose, when God promised everlasting life, Does God lie?, and who received the proclamation. Each answer starts with Answer.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/HelpsPanel.jsx (questions tab)"
-      ],
-      "journeys": [
-        "J16"
-      ],
-      "issues": [],
-      "page": "un-questions.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — QA439 shows Spanish questions. Offline371 Titus 1:1–3 shows four English questions, each with Answer in front of the answer. Nothing was typed.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus (Spanish) and Offline371 (English), Understand, Titus 1.",
-        "known_issues": 0
-      }
+      "page": "un-questions.html"
     },
     {
       "id": "un-simplified",
@@ -1989,7 +1475,6 @@
       "section_title": "Understand",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Understand or Translate › helps panel › the tab named after the simplified text (GST here, UST for English)",
       "summary": "The helps panel can show the meaning-based simplified text of the chapter next to what you are reading.",
       "ui_labels": [
@@ -2004,44 +1489,30 @@
         "Read the chapter's simplified text."
       ],
       "expected": [
-        "On QA439 the tab is labeled GST. It shows \"Simplified text · meaning-based\" and the chapter's simplified Spanish text.",
-        "On Offline371 the tab is labeled UST. The heading is \"Simplified text · meaning-based\". Titus 1 begins \"I, Paul, {write this letter to you, Titus. I} am a servant of God\"."
+        "In a Spanish project the tab is labeled GST. It shows \"Simplified text · meaning-based\" and the chapter's simplified Spanish text.",
+        "On Sample English the tab is labeled UST. The heading is \"Simplified text · meaning-based\". Titus 1 begins \"I, Paul, {write this letter to you, Titus. I} am a servant of God\"."
       ],
       "screenshots": [
         {
           "n": 1,
           "file": "img/un-simplified-1.png",
-          "caption": "The GST tab on QA439 Titus 1, headed Simplified text · meaning-based, with the Spanish simplified text.",
+          "caption": "The GST tab on Sample Titus 1, headed Simplified text · meaning-based, with the Spanish simplified text.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/un-simplified-2.png",
-          "caption": "Offline371, English. The helps panel UST tab is headed Simplified text · meaning-based. Titus 1 starts I, Paul, with curly braces around part of the sentence.",
+          "caption": "Sample English, English. The helps panel UST tab is headed Simplified text · meaning-based. Titus 1 starts I, Paul, with curly braces around part of the sentence.",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/un-simplified-3.png",
-          "caption": "Offline371 source column on UST. Caption unfoldingWord Simplified Text. Verse 1 shows the same curly braces. Switched back to ULT after this shot.",
+          "caption": "Sample English source column on UST. Caption unfoldingWord Simplified Text. Verse 1 shows the same curly braces. Switched back to ULT after this shot.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/HelpsPanel.jsx (simplifiedLabel, simplified tab)"
-      ],
-      "journeys": [
-        "J16"
-      ],
-      "issues": [],
-      "page": "un-simplified.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — QA439 uses the GST tab. Offline371 uses the UST tab, headed Simplified text · meaning-based. The same braces show in the source column, caption unfoldingWord Simplified Text. The source was switched back to ULT.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus (Spanish) and Offline371 (English), Understand, Titus 1.",
-        "known_issues": 0
-      }
+      "page": "un-simplified.html"
     },
     {
       "id": "un-user-comments",
@@ -2050,7 +1521,6 @@
       "section_title": "Understand",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Understand › the comment box under each section or verse",
       "summary": "Write down what a passage means, who is speaking, and what will be hard to translate. Your comments are saved with the project and shown in Translate.",
       "ui_labels": [
@@ -2070,7 +1540,7 @@
       ],
       "expected": [
         "In Section view the box's hint reads \"What is this section saying? Who is speaking, to whom, and what will be hard to render?\"",
-        "In Verse view the hint reads \"What does this verse mean, and what will be hard to render?\" On Offline371, Titus 1:1 is its own block. Nothing was typed.",
+        "In Verse view the hint reads \"What does this verse mean, and what will be hard to render?\" On Sample English, Titus 1:1 is its own block. Nothing was typed.",
         "When you click outside the box the comment is saved; a green dot appears on the block's header.",
         "The comment appears in Translate › helps panel › Comments."
       ],
@@ -2084,27 +1554,11 @@
         {
           "n": 2,
           "file": "img/un-user-comments-2.png",
-          "caption": "Offline371, Comment by Verse. Titus 1:1 is its own block. The empty box says What does this verse mean, and what will be hard to render? Switched back to Section.",
+          "caption": "Sample English, Comment by Verse. Titus 1:1 is its own block. The empty box says What does this verse mean, and what will be hard to render? Switched back to Section.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Understand.jsx (ComprehensionBox)",
-        "src/state.jsx (stageNote, flushNotes)",
-        "src/data/journal/journalingStore.ts"
-      ],
-      "journeys": [
-        "J16"
-      ],
-      "issues": [],
-      "page": "un-user-comments.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Partial — the empty verse box on Offline371 Titus 1:1 uses the verse hint. No comment was typed, so saving, the green dot, and the Translate Comments tab were not retested. A saved comment still cannot be emptied.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. Offline371, English, Understand, Titus 1. Comment by was returned to Section.",
-        "known_issues": 1
-      }
+      "page": "un-user-comments.html"
     },
     {
       "id": "ck-tool-picker",
@@ -2113,7 +1567,6 @@
       "section_title": "Check",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Top bar › Check › Choose a checking tool",
       "summary": "The Check screen lists the checking tools for the open book and how far you have got in each.",
       "ui_labels": [
@@ -2151,39 +1604,23 @@
         {
           "n": 2,
           "file": "img/ck-tool-picker-2.png",
-          "caption": "Offline371 Titus. Translation Words 0 of 182, Start checking. Translation Notes 1 of 157, Continue. Align 0 of 1 verses aligned, Start checking. Community Checking says Whole chapter and Open. Nothing was opened.",
+          "caption": "Sample English Titus. Translation Words 0 of 182, Start checking. Translation Notes 1 of 157, Continue. Align 0 of 1 verses aligned, Start checking. Community Checking says Whole chapter and Open. Nothing was opened.",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/ck-tool-picker-3.png",
-          "caption": "Build 79d3017, QA373 Titus: Translation Words 0 of 182 resolved (Next: Paul · 1:1), Translation Notes 0 of 157 resolved, Align 0 of 2 verses aligned (Next: verse 1:1), and Community Checking, Whole chapter, Next · read Titus 1 aloud.",
+          "caption": "Sample Titus: Translation Words 0 of 182 resolved (Next: Paul · 1:1), Translation Notes 0 of 157 resolved, Align 0 of 2 verses aligned (Next: verse 1:1), and Community Checking, Whole chapter, Next · read Titus 1 aloud.",
           "exists": true
         },
         {
           "n": 4,
           "file": "img/ck-tool-picker-4.png",
-          "caption": "QA373 Stories, story 1, right after the Titus checks: three cards. Translation Words 0 of 35 resolved (Next: God · 1:1), Translation Notes 1 of 91 resolved with Continue →, and Community Checking, All drafted stories. No Align card and no pinned-resource error.",
+          "caption": "Sample Stories, story 1, right after the Titus checks: three cards. Translation Words 0 of 35 resolved (Next: God · 1:1), Translation Notes 1 of 91 resolved with Continue →, and Community Checking, All drafted stories. No Align card and no pinned-resource error.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Check.jsx (PickerGrid, ToolCard)",
-        "src/data/resolve.ts (preflight)"
-      ],
-      "journeys": [
-        "J9",
-        "J10"
-      ],
-      "issues": [],
-      "page": "ck-tool-picker.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — QA373 Titus shows four cards (Translation Words 0 of 182, Translation Notes 0 of 157, Align 0 of 2 verses aligned, Community Checking). QA373 Stories shows three cards with its own counts (35 words, 91 notes). Switching between the two projects, each tool opened its own resource with no This book is not in the pinned resource error (issue #434).",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus and QA373 Stories, fresh HOME.",
-        "known_issues": 1
-      }
+      "page": "ck-tool-picker.html"
     },
     {
       "id": "ck-translation-notes",
@@ -2192,7 +1629,6 @@
       "section_title": "Check",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Check › Translation Notes card",
       "summary": "Work through every note in the book that links to a Translation Academy article, and confirm how your translation handles each one.",
       "ui_labels": [
@@ -2220,7 +1656,7 @@
         {
           "n": 1,
           "file": "img/ck-translation-notes-1.png",
-          "caption": "QA439 Titus in Spanish notes: es-419_tn v66, quote conforme a la fe, 1 of 112 resolved, Saved. The account icon is at the upper right.",
+          "caption": "Sample Titus in Spanish notes: es-419_tn v66, quote conforme a la fe, 1 of 112 resolved, Saved. The account icon is at the upper right.",
           "exists": true
         },
         {
@@ -2232,32 +1668,17 @@
         {
           "n": 3,
           "file": "img/ck-translation-notes-3.png",
-          "caption": "Offline371 Titus, Item 2 of 157. Quote of the chosen people of God, highlighted in the gateway pane. Your translation reads Paul a servant of God. Nothing was marked.",
+          "caption": "Sample English Titus, Item 2 of 157. Quote of the chosen people of God, highlighted in the gateway pane. Your translation reads Paul a servant of God. Nothing was marked.",
           "exists": true
         },
         {
           "n": 4,
           "file": "img/ck-translation-notes-4.png",
-          "caption": "Build 79d3017, QA373 Titus: Translation Notes, Item 1 of 157, quote for the faith of the chosen people of God and knowledge of the truth. What to check, Learn more: Abstract Nouns →, the Greek text, and the gateway text with the quote highlighted. The rail line reads git.door43.org/unfoldingWord/en_tn · v91 · primary gateway language.",
+          "caption": "Sample Titus: Translation Notes, Item 1 of 157, quote for the faith of the chosen people of God and knowledge of the truth. What to check, Learn more: Abstract Nouns →, the Greek text, and the gateway text with the quote highlighted. The rail line reads git.door43.org/unfoldingWord/en_tn · v91 · primary gateway language.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Check.jsx (CheckTool, AcademyDrawer)",
-        "src/data/derive.ts"
-      ],
-      "journeys": [
-        "J9"
-      ],
-      "issues": [],
-      "page": "ck-translation-notes.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — on QA373 Titus the tool opened on the Titus notes (en_tn v91, Item 1 of 157) with no pinned-resource error, right after the stories notes had been open. ✓ Mark valid on the first item saved. Learn more was not opened in this pass.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus (Spanish draft, English checking language), fresh HOME. The Spanish-notes and Offline371 shots are from builds daf42c9 and 6f878aa.",
-        "known_issues": 0
-      }
+      "page": "ck-translation-notes.html"
     },
     {
       "id": "ck-translation-words",
@@ -2266,7 +1687,6 @@
       "section_title": "Check",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Check › Translation Words card",
       "summary": "Check every key term in the book against its definition, so important words are translated accurately and consistently.",
       "ui_labels": [
@@ -2298,38 +1718,23 @@
         {
           "n": 1,
           "file": "img/ck-translation-words-1.png",
-          "caption": "Translation Words on QA439 Titus, sorted By word. Item 1 of 223 is Pablo. The verse is not drafted yet.",
+          "caption": "Translation Words on Sample Titus, sorted By word. Item 1 of 223 is Pablo. The verse is not drafted yet.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/ck-translation-words-2.png",
-          "caption": "Offline371 Titus, Item 1 of 182, term Paul. Gateway highlights Paul. Your translation reads Paul a servant of God, without the comma or the period. Nothing was marked.",
+          "caption": "Sample English Titus, Item 1 of 182, term Paul. Gateway highlights Paul. Your translation reads Paul a servant of God, without the comma or the period. Nothing was marked.",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/ck-translation-words-3.png",
-          "caption": "Build 79d3017, QA373 Titus: Translation Words, Item 1 of 182, Paul (Titus 1:1), Learn more: Paul, Saul →. Gateway highlights Paul. Your translation reads Pablo siervo. Sorted By word; the rail starts at Admonish.",
+          "caption": "Sample Titus: Translation Words, Item 1 of 182, Paul (Titus 1:1), Learn more: Paul, Saul →. Gateway highlights Paul. Your translation reads Pablo siervo. Sorted By word; the rail starts at Admonish.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Check.jsx",
-        "src/data/derive.ts"
-      ],
-      "journeys": [
-        "J10"
-      ],
-      "issues": [],
-      "page": "ck-translation-words.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass with issues — on QA373 Titus the tool opened on the Titus words (en_tw v91, Item 1 of 182, Paul) with no pinned-resource error. Translate › Check returned to Translation Words. Known issue: sorted By word, the rail does not show or highlight the open item (Paul).",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus, fresh HOME.",
-        "known_issues": 2
-      }
+      "page": "ck-translation-words.html"
     },
     {
       "id": "ck-decide",
@@ -2338,7 +1743,6 @@
       "section_title": "Check",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Inside a checking tool › Your translation and the buttons ✓ Mark valid, Invalid, To do",
       "summary": "For each check, select the words in your translation, then mark the item valid or invalid, or leave it to do.",
       "ui_labels": [
@@ -2371,23 +1775,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Check.jsx (decision bar)",
-        "src/data/selections.ts"
-      ],
-      "journeys": [
-        "J9",
-        "J10"
-      ],
-      "issues": [],
-      "page": "ck-decide.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass with known issues",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 1
-      }
+      "page": "ck-decide.html"
     },
     {
       "id": "ck-bookmarks",
@@ -2396,7 +1784,6 @@
       "section_title": "Check",
       "status": "shipped",
       "since": "alpha.6",
-      "release": "",
       "where": "Inside a checking tool › ⚑ Bookmark",
       "summary": "Flag a check item to come back to it later, for example to discuss with your team.",
       "ui_labels": [
@@ -2422,22 +1809,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Check.jsx",
-        "src/views/checkFilters.js"
-      ],
-      "journeys": [
-        "J9"
-      ],
-      "issues": [],
-      "page": "ck-bookmarks.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — Bookmark became Bookmarked, and the Bookmarked filter showed that one item. The flag was removed afterward, so the count is 0 again.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus, Translation Words.",
-        "known_issues": 0
-      }
+      "page": "ck-bookmarks.html"
     },
     {
       "id": "ck-comments",
@@ -2446,7 +1818,6 @@
       "section_title": "Check",
       "status": "shipped",
       "since": "alpha.6",
-      "release": "",
       "where": "Inside a checking tool › ✎ Add a comment",
       "summary": "Add a note to a check item about what you decided or what to ask your team.",
       "ui_labels": [
@@ -2460,12 +1831,12 @@
       "steps": [
         "In a checking tool, click Add a comment.",
         "The box is titled My comment on this check. Its hint is \"Say what you decided, or what to ask your team about this check.\" While it is open, the button changes to Hide comment.",
-        "Done and Delete comment are in the box. Neither was clicked on this run, and nothing was typed.",
+        "Done and Delete comment are in the box. ",
         "Hide comment closed the box. The button went back to Add a comment, and the Commented count stayed at 0."
       ],
       "expected": [
         "A box titled My comment on this check opens with the hint \"Say what you decided, or what to ask your team about this check.\"",
-        "While the box is open the button says Hide comment. Done was not clicked, so Comment · written was not seen, and Commented stayed at 0."
+        "While the box is open the button says Hide comment. "
       ],
       "screenshots": [
         {
@@ -2475,22 +1846,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Check.jsx",
-        "src/views/checkFilters.js"
-      ],
-      "journeys": [
-        "J9"
-      ],
-      "issues": [],
-      "page": "ck-comments.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Partial — the empty box opened and Hide comment closed it. Nothing was typed. Done and Delete comment were not clicked.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus, Translation Words.",
-        "known_issues": 0
-      }
+      "page": "ck-comments.html"
     },
     {
       "id": "ck-filter-sort",
@@ -2499,7 +1855,6 @@
       "section_title": "Check",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Inside a checking tool › the rail › filter chips and Sort",
       "summary": "Narrow the list to what still needs work, and change the order of items.",
       "ui_labels": [
@@ -2533,23 +1888,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/checkFilters.js",
-        "src/views/Check.jsx"
-      ],
-      "journeys": [
-        "J9",
-        "J10"
-      ],
-      "issues": [],
-      "page": "ck-filter-sort.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass for Translation Words. Invalid · 0 shows Nothing matches this filter, and the Pablo item stays open in the main pane. The other tools' sort pairs were not retested.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Titus.",
-        "known_issues": 0
-      }
+      "page": "ck-filter-sort.html"
     },
     {
       "id": "ck-community-checking",
@@ -2558,7 +1897,6 @@
       "section_title": "Check",
       "status": "shipped",
       "since": "alpha.5",
-      "release": "",
       "where": "Check › Community Checking card › Open →",
       "summary": "Read the whole book as a printed page, set up the page, and export a copy for reviewers.",
       "ui_labels": [
@@ -2596,7 +1934,7 @@
         {
           "n": 1,
           "file": "img/ck-community-checking-1.png",
-          "caption": "Community Checking for QA439 Titus. The page says Titus and Nothing is drafted in this book yet. Columns 1, Spacing Single, Paper size A4.",
+          "caption": "Community Checking for Sample Titus. The page says Titus and Nothing is drafted in this book yet. Columns 1, Spacing Single, Paper size A4.",
           "exists": true
         },
         {
@@ -2608,13 +1946,13 @@
         {
           "n": 3,
           "file": "img/ck-community-checking-3.png",
-          "caption": "Offline371 Titus. Verse 1 prints Paul, a servant of God. Verses 2 through 16 say verse not yet drafted. Columns 1, Spacing Single, Paper size A4. Export was not clicked.",
+          "caption": "Sample English Titus. Verse 1 prints Paul, a servant of God. Verses 2 through 16 say verse not yet drafted. Columns 1, Spacing Single, Paper size A4. ",
           "exists": true
         },
         {
           "n": 4,
           "file": "img/ck-community-checking-4.png",
-          "caption": "Build 79d3017, QA373 Titus: the preview prints Titus with a drop-cap 1, verse 1 Pablo siervo, the span 2-3 con la esperanza y a su tiempo, and [ verse not yet drafted ] for the rest. Page setup: Columns 1, Spacing Single, Paper size A4, Drop-cap chapters and Verse numbers on, Footnotes off.",
+          "caption": "Sample Titus: the preview prints Titus with a drop-cap 1, verse 1 Pablo siervo, the span 2-3 con la esperanza y a su tiempo, and [ verse not yet drafted ] for the rest. Page setup: Columns 1, Spacing Single, Paper size A4, Drop-cap chapters and Verse numbers on, Footnotes off.",
           "exists": true
         },
         {
@@ -2624,28 +1962,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/CommunityChecking.jsx",
-        "src/views/print/PrintPages.jsx",
-        "src/data/export/pageSetup.ts"
-      ],
-      "journeys": [
-        "J7"
-      ],
-      "issues": [
-        "#387",
-        "#380",
-        "#142",
-        "#381"
-      ],
-      "page": "ck-community-checking.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — QA373 Titus preview showed 1:1 and the span 2-3, with [ verse not yet drafted ] for the rest. Spacing Double/Single/Double changed the line spacing each time; Letter widened the page; Saved stayed on. The exported PDF was Letter. No Inspector (dev) panel in this build. Page setup was not kept when the screen was opened again (known limit).",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus (1:1 and 2-3 drafted), fresh HOME.",
-        "known_issues": 0
-      }
+      "page": "ck-community-checking.html"
     },
     {
       "id": "al-open",
@@ -2654,7 +1971,6 @@
       "section_title": "Align",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Check › Align card",
       "summary": "Align links each word of your translation to the original-language word it translates. Open it from the Check screen.",
       "ui_labels": [
@@ -2684,26 +2000,11 @@
         {
           "n": 1,
           "file": "img/al-open-1.png",
-          "caption": "Offline371, Align, Titus 1:1. Gateway · ULT. Progress 0 of 1 verses aligned. Filters All 46, To do 46, Invalid 0. Word bank 1 of 5 words placed.",
+          "caption": "Sample English, Align, Titus 1:1. Gateway · ULT. Progress 0 of 1 verses aligned. Filters All 46, To do 46, Invalid 0. Word bank 1 of 5 words placed.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Check.jsx (Align card, AlignRail)",
-        "src/views/Align.jsx"
-      ],
-      "journeys": [
-        "J11"
-      ],
-      "issues": [],
-      "page": "al-open.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — Align opened on Offline371 Titus 1:1 in Gateway · ULT. 0 of 1 verses aligned, filters 46, word bank 1 of 5 words placed. No words were clicked.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. Offline371, English, Titus. Align was only opened. Nothing was linked or marked.",
-        "known_issues": 0
-      }
+      "page": "al-open.html"
     },
     {
       "id": "al-link-words",
@@ -2712,7 +2013,6 @@
       "section_title": "Align",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Align › Word bank · your translation and the word cards",
       "summary": "Click a word in the word bank and then the card it belongs under, or drag it there.",
       "ui_labels": [
@@ -2750,22 +2050,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Align.jsx (WordCard, word bank)",
-        "src/data/align/edit.ts"
-      ],
-      "journeys": [
-        "J11"
-      ],
-      "issues": [],
-      "page": "al-link-words.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass with known issues",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 1
-      }
+      "page": "al-link-words.html"
     },
     {
       "id": "al-phrases",
@@ -2774,7 +2059,6 @@
       "section_title": "Align",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Align › drag one word card onto another › SPLIT",
       "summary": "When several source words are translated together, merge their cards into one phrase card. SPLIT undoes it.",
       "ui_labels": [
@@ -2799,21 +2083,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Align.jsx (onDropOnCard, onSplit)"
-      ],
-      "journeys": [
-        "J11"
-      ],
-      "issues": [],
-      "page": "al-phrases.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass with known issues",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 1
-      }
+      "page": "al-phrases.html"
     },
     {
       "id": "al-modes",
@@ -2822,7 +2092,6 @@
       "section_title": "Align",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Align › the switch Gateway · ULT / Original · Greek (or Original · Hebrew)",
       "summary": "Align to the gateway words you can read (which already carry the link to the original), or directly to the Greek or Hebrew words.",
       "ui_labels": [
@@ -2844,31 +2113,17 @@
         {
           "n": 1,
           "file": "img/al-modes-1.png",
-          "caption": "Offline371 Titus 1:1 in Gateway · ULT. Cards show English gateway words with Greek underneath. Paul is already placed.",
+          "caption": "Sample English Titus 1:1 in Gateway · ULT. Cards show English gateway words with Greek underneath. Paul is already placed.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/al-modes-2.png",
-          "caption": "Offline371 Titus 1:1 in Original · Greek. Cards are Greek only. Paul stays under Παῦλος. Hint: Align directly to the original-language words.",
+          "caption": "Sample English Titus 1:1 in Original · Greek. Cards are Greek only. Paul stays under Παῦλος. Hint: Align directly to the original-language words.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Align.jsx (mode switch)"
-      ],
-      "journeys": [
-        "J11"
-      ],
-      "issues": [],
-      "page": "al-modes.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — Gateway · ULT shows English cards with Greek under them. Original · Greek shows Greek cards only, heading Original language · Greek, hint Align directly to the original-language words. Paul stayed placed. Switched back to Gateway · ULT. No words were clicked.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. Offline371, English, Titus 1:1. Both modes were opened. No words were clicked. Left on Gateway · ULT.",
-        "known_issues": 0
-      }
+      "page": "al-modes.html"
     },
     {
       "id": "al-suggestions",
@@ -2877,7 +2132,6 @@
       "section_title": "Align",
       "status": "shipped",
       "since": "alpha.6",
-      "release": "",
       "where": "Align › Suggestions › Suggest links",
       "summary": "tC4 can learn from the verses you have already aligned and suggest links for the next ones. You confirm or reject each one.",
       "ui_labels": [
@@ -2916,23 +2170,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Align.jsx (SuggestionsRow)",
-        "src/state.jsx (setAlignSuggestions, suggestAlign)",
-        "src/data/align/suggest.ts"
-      ],
-      "journeys": [
-        "J11"
-      ],
-      "issues": [],
-      "page": "al-suggestions.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Not retested — the Suggestions row on Offline371 Titus 1:1 was off, and it read Off. Turn on to get links proposed from the verses you have already aligned. The switch was not turned on, so the earlier problem of wrong suggestions was not checked again.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. Offline371, English, Titus 1:1, Align. Suggest links was left off.",
-        "known_issues": 1
-      }
+      "page": "al-suggestions.html"
     },
     {
       "id": "al-mark-valid",
@@ -2941,7 +2179,6 @@
       "section_title": "Align",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Align › ✓ Mark valid",
       "summary": "When a verse is aligned, mark it valid. It counts toward the verses-aligned progress.",
       "ui_labels": [
@@ -2966,22 +2203,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Align.jsx",
-        "src/data/align/edit.ts"
-      ],
-      "journeys": [
-        "J11"
-      ],
-      "issues": [],
-      "page": "al-mark-valid.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 0
-      }
+      "page": "al-mark-valid.html"
     },
     {
       "id": "obs-create",
@@ -2990,7 +2212,6 @@
       "section_title": "Open Bible Stories",
       "status": "shipped",
       "since": "alpha.7",
-      "release": "",
       "where": "Home › + Add a project › New Open Bible Stories",
       "summary": "Create a project for translating all fifty Open Bible Stories into your language.",
       "ui_labels": [
@@ -3044,26 +2265,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/AddProject.jsx",
-        "src/views/modals/NewObs.jsx",
-        "src/views/Home.jsx (ObsProjectCard)",
-        "src/data/obsStory.ts"
-      ],
-      "journeys": [
-        "J20"
-      ],
-      "issues": [
-        "#402"
-      ],
-      "page": "obs-create.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Partial — the empty New Open Bible Stories dialog shows project name, language, code, direction, checking language (English, Recommended) and script font, with Cancel and Create stories. Creating a project was not repeated on this build.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 projects.",
-        "known_issues": 1
-      }
+      "page": "obs-create.html"
     },
     {
       "id": "obs-story-tiles",
@@ -3072,7 +2274,6 @@
       "section_title": "Open Bible Stories",
       "status": "shipped",
       "since": "alpha.7",
-      "release": "",
       "where": "Home › the stories project card › story tiles › Show all {n} stories",
       "summary": "The stories card shows your three most recent stories. Show all 50 to pick any story.",
       "ui_labels": [
@@ -3099,22 +2300,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Home.jsx (ObsProjectCard, collapsedStories)"
-      ],
-      "journeys": [
-        "J20",
-        "J2"
-      ],
-      "issues": [],
-      "page": "obs-story-tiles.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 0
-      }
+      "page": "obs-story-tiles.html"
     },
     {
       "id": "obs-translate",
@@ -3123,7 +2309,6 @@
       "section_title": "Open Bible Stories",
       "status": "shipped",
       "since": "alpha.7",
-      "release": "",
       "where": "Open a story › Translate",
       "summary": "Draft the story title, each frame, and the reference line, one at a time, with the picture and the gateway story beside you.",
       "ui_labels": [
@@ -3177,23 +2362,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/StoryDraft.jsx",
-        "src/views/StoryRail.jsx",
-        "src/data/obsStory.ts"
-      ],
-      "journeys": [
-        "J21"
-      ],
-      "issues": [],
-      "page": "obs-translate.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Partial — frame 2 was opened for drafting and cancelled, so it stayed undrafted. Frame 16 shows Draft frame 16. The reference is A Bible story from: Genesis 1-2, with Draft the reference. Comments says Nothing in this chapter. A filled-in story was not retested.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Stories, story 1. Frame 2 was not saved.",
-        "known_issues": 2
-      }
+      "page": "obs-translate.html"
     },
     {
       "id": "obs-understand",
@@ -3202,7 +2371,6 @@
       "section_title": "Open Bible Stories",
       "status": "shipped",
       "since": "alpha.7",
-      "release": "",
       "where": "Open a story › Understand",
       "summary": "Read each frame with its picture and the story helps, and write a comment for each frame.",
       "ui_labels": [
@@ -3233,22 +2401,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/StoryUnderstand.jsx",
-        "src/views/HelpsPanel.jsx"
-      ],
-      "journeys": [
-        "J21"
-      ],
-      "issues": [],
-      "page": "obs-understand.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass for the Notes tab on story 1, frame 1. The first note quotes \"the beginning\". No comment was typed.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 Stories, story 1, frame 1.",
-        "known_issues": 1
-      }
+      "page": "obs-understand.html"
     },
     {
       "id": "obs-check",
@@ -3257,7 +2410,6 @@
       "section_title": "Open Bible Stories",
       "status": "shipped",
       "since": "alpha.7",
-      "release": "",
       "where": "Open a story › Check",
       "summary": "Check a story with Translation Notes and Translation Words, frame by frame.",
       "ui_labels": [
@@ -3298,34 +2450,17 @@
         {
           "n": 3,
           "file": "img/obs-check-3.png",
-          "caption": "Build 79d3017, QA373 Stories story 1: Translation Notes, Story 1 1:0 The Creation, marked ✓ Mark valid; 1 of 91 resolved. The resource line reads git.door43.org/unfoldingWord/en_obs-tn · v13. Sort By frame.",
+          "caption": "Sample Stories story 1: Translation Notes, Story 1 1:0 The Creation, marked ✓ Mark valid; 1 of 91 resolved. The resource line reads git.door43.org/unfoldingWord/en_obs-tn · v13. Sort By frame.",
           "exists": true
         },
         {
           "n": 4,
           "file": "img/obs-check-4.png",
-          "caption": "QA373 Stories story 1: Translation Words, Item 1 of 35, God (Story 1 1:1), gateway story text with God highlighted, your translation Dios creó todo. The resource is en_obs-twl · v3. Sort By word, with By frame beside it.",
+          "caption": "Sample Stories story 1: Translation Words, Item 1 of 35, God (Story 1 1:1), gateway story text with God highlighted, your translation Dios creó todo. The resource is en_obs-twl · v3. Sort By word, with By frame beside it.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/Check.jsx",
-        "src/data/derive.ts"
-      ],
-      "journeys": [
-        "J22"
-      ],
-      "issues": [
-        "#291"
-      ],
-      "page": "obs-check.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — QA373 Stories story 1: Translation Notes used en_obs-tn v13 (0 of 91, then 1 of 91 resolved after ✓ Mark valid). Translation Words used en_obs-twl v3 (0 of 35). Neither showed This book is not in the pinned resource, before or after checking QA373 Titus (issue #434).",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Stories (es), fresh HOME.",
-        "known_issues": 0
-      }
+      "page": "obs-check.html"
     },
     {
       "id": "obs-community-checking",
@@ -3334,7 +2469,6 @@
       "section_title": "Open Bible Stories",
       "status": "shipped",
       "since": "alpha.7",
-      "release": "",
       "where": "Open a story › Check › Community Checking › Open →",
       "summary": "Preview a story as a page with its pictures, adjust page setup, and export PDF, Story Markdown or a Scripture Burrito.",
       "ui_labels": [
@@ -3360,7 +2494,7 @@
       ],
       "expected": [
         "The preview is labelled PREVIEW and Story 1. Frame 1 shows its picture and \"God made everything.\" A line reads \"[ frames 2–16 not yet drafted ]\". A reference line was not in view.",
-        "Page setup Layout is Pictures above or Pictures wrapped. Pictures can be on or off. On this pass Pictures above was selected and Pictures was on.",
+        "Page setup Layout is Pictures above or Pictures wrapped. Pictures can be on or off. ",
         "A story's Page setup has no Columns, Spacing or Paper size rows. Those are for Bible books only.",
         "The Export menu offers Export PDF, Story Markdown (.zip) and Scripture Burrito (.zip)."
       ],
@@ -3368,43 +2502,23 @@
         {
           "n": 1,
           "file": "img/obs-community-checking-1.png",
-          "caption": "QA439 Stories preview of Story 1: picture, God made everything., and [ frames 2–16 not yet drafted ]. Layout is Pictures above. Pictures is on.",
+          "caption": "Sample Stories preview of Story 1: picture, God made everything., and [ frames 2–16 not yet drafted ]. Layout is Pictures above. Pictures is on.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/obs-community-checking-2.png",
-          "caption": "Build 79d3017, QA373 Stories: the preview La creación with the frame-1 picture and Dios creó todo. Page setup has only Layout (Pictures above, selected, or Pictures wrapped) and Pictures (on). No Columns, Spacing or Paper size.",
+          "caption": "Sample Stories: the preview La creación with the frame-1 picture and Dios creó todo. Page setup has only Layout (Pictures above, selected, or Pictures wrapped) and Pictures (on). No Columns, Spacing or Paper size.",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/obs-community-checking-3.png",
-          "caption": "The same story with Layout set to Pictures wrapped: small pictures beside Dios creó todo. and Al principio..., then [ frames 3–16 not yet drafted ]. The message Saved QA373 Stories-2026-10-05.zip is from the export just before.",
+          "caption": "The same story with Layout set to Pictures wrapped: small pictures beside Dios creó todo. and Al principio..., then [ frames 3–16 not yet drafted ]. The message Saved Sample Stories-2026-10-05.zip is from the export just before.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/CommunityChecking.jsx (StoryCommunityChecking)",
-        "src/views/ExportMenu.jsx",
-        "src/data/export/producers.ts"
-      ],
-      "journeys": [
-        "J23"
-      ],
-      "issues": [
-        "#360",
-        "#11",
-        "#368"
-      ],
-      "page": "obs-community-checking.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — QA373 Stories preview showed Layout (Pictures above / Pictures wrapped) and Pictures, and no Spacing, Paper size or Columns. Pictures wrapped changed the preview and the exported PDF. Export PDF with pictures on saved QA373 Stories-2026-10-05.pdf (2 A4 pages) with no Printing failed message.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Stories (title and frames 1–2 drafted), fresh HOME.",
-        "known_issues": 0
-      }
+      "page": "obs-community-checking.html"
     },
     {
       "id": "obs-export-markdown-pdf",
@@ -3413,7 +2527,6 @@
       "section_title": "Open Bible Stories",
       "status": "shipped",
       "since": "rc.1",
-      "release": "4.0.0-rc.1 (Increment 8, tagged Oct 2, 2026); retested on main 79d3017",
       "where": "Open a story › Check › Community Checking › Open → › Export",
       "summary": "Save a print-ready PDF of the stories, a Story Markdown zip, or both alongside Scripture Burrito — from the same Export menu as Bible.",
       "ui_labels": [
@@ -3438,58 +2551,36 @@
       ],
       "expected": [
         "The Export menu lists Export PDF, Story Markdown (.zip) and Scripture Burrito (.zip).",
-        "Story Markdown (.zip) shows Saved QA373 Stories-stories-2026-10-05.zip; Export PDF shows Saved QA373 Stories-2026-10-05.pdf; Scripture Burrito (.zip) shows Saved QA373 Stories-2026-10-05.zip.",
+        "Story Markdown (.zip) shows Saved Sample Stories-stories-2026-10-05.zip; Export PDF shows Saved Sample Stories-2026-10-05.pdf; Scripture Burrito (.zip) shows Saved Sample Stories-2026-10-05.zip.",
         "The message appears only after the file is saved. Cancel shows no message."
       ],
       "screenshots": [
         {
           "n": 1,
           "file": "img/obs-export-markdown-pdf-1.png",
-          "caption": "Build 79d3017, QA373 Stories story 1 in Community Checking. The Export menu is open: Export PDF, Story Markdown (.zip), Scripture Burrito (.zip).",
+          "caption": "Sample Stories story 1 in Community Checking. The Export menu is open: Export PDF, Story Markdown (.zip), Scripture Burrito (.zip).",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/obs-export-markdown-pdf-2.png",
-          "caption": "The saved QA373 Stories-2026-10-05.pdf (build 79d3017, Pictures on, Pictures above): page 1 has the title La creación; page 2 has frame 1 with its picture and Dios creó todo., frame 2 with Al principio..., and the line [ frames 3–16 not yet drafted ].",
+          "caption": "The saved Sample Stories-2026-10-05.pdf (build 79d3017, Pictures on, Pictures above): page 1 has the title La creación; page 2 has frame 1 with its picture and Dios creó todo., frame 2 with Al principio..., and the line [ frames 3–16 not yet drafted ].",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/obs-export-markdown-pdf-3.png",
-          "caption": "After Story Markdown (.zip) and Save, the panel shows Saved QA373 Stories-stories-2026-10-05.zip.",
+          "caption": "After Story Markdown (.zip) and Save, the panel shows Saved Sample Stories-stories-2026-10-05.zip.",
           "exists": true
         },
         {
           "n": 4,
           "file": "img/obs-export-markdown-pdf-4.png",
-          "caption": "After Export PDF and Save, the panel shows Saved QA373 Stories-2026-10-05.pdf. No Printing failed message.",
+          "caption": "After Export PDF and Save, the panel shows Saved Sample Stories-2026-10-05.pdf. No Printing failed message.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/ExportMenu.jsx",
-        "src/data/export/producers.ts",
-        "src/data/export/kernel.ts",
-        "electron/features/pdf.js"
-      ],
-      "journeys": [
-        "J23"
-      ],
-      "issues": [
-        "#360",
-        "#11",
-        "#375",
-        "#382"
-      ],
-      "page": "obs-export-markdown-pdf.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — QA373 Stories saved Story Markdown (QA373 Stories-stories-2026-10-05.zip), the PDF with pictures (QA373 Stories-2026-10-05.pdf, 2 A4 pages, no Printing failed), the Scripture Burrito zip, and a Pictures wrapped PDF (QA373 Stories-wrapped.pdf). Each showed its Saved message.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Stories (title and frames 1–2 of story 1 drafted). Files saved to ~/Downloads.",
-        "known_issues": 0
-      }
+      "page": "obs-export-markdown-pdf.html"
     },
     {
       "id": "rs-whats-included",
@@ -3498,7 +2589,6 @@
       "section_title": "Resources and offline",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Installed with tC4. Each checking tool shows the version it uses under its filters.",
       "summary": "tC4 installs English source texts, helps and the Greek and Hebrew texts, so you can translate and check without internet.",
       "ui_labels": [
@@ -3519,24 +2609,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "BUILD-MANIFEST.json (packaged app, resources list)",
-        "src/data/gateways.ts",
-        "src/data/resourceFetch.ts",
-        "src/data/installed.ts"
-      ],
-      "journeys": [
-        "J3"
-      ],
-      "issues": [],
-      "page": "rs-whats-included.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Partial — the version table is from this package's build manifest. The offline screenshot was not retaken. Online, Get source texts on Offline371 still lists English as notes v89, words v89, academy v89, while this package's manifest says v91. Check for updates was not clicked.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z.",
-        "known_issues": 0
-      }
+      "page": "rs-whats-included.html"
     },
     {
       "id": "rs-source-texts",
@@ -3545,7 +2618,6 @@
       "section_title": "Resources and offline",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Inside a project: Project settings › Manage source texts → › Get source texts",
       "summary": "Download source texts and helps for another gateway language from Door43.",
       "ui_labels": [
@@ -3598,7 +2670,7 @@
         {
           "n": 4,
           "file": "img/rs-source-texts-4.png",
-          "caption": "Offline371, Get source texts. Pinned resources with Check for updates. Languages: English (unfoldingWord, notes v89), Español (Latinoamérica), and two rows both named Français (Xenizo and MVHS). Nothing was downloaded.",
+          "caption": "Sample English, Get source texts. Pinned resources with Check for updates. Languages: English (unfoldingWord, notes v89), Español (Latinoamérica), and two rows both named Français (Xenizo and MVHS). Nothing was downloaded.",
           "exists": true
         },
         {
@@ -3610,28 +2682,11 @@
         {
           "n": 6,
           "file": "img/rs-source-texts-6.png",
-          "caption": "Bottom of the English Titus package. Notes en_tn, Words en_tw, and three Always included source texts: en_ult, en_ust, and the Greek New Testament. Close and Download package are both shown. Download was not clicked.",
+          "caption": "Bottom of the English Titus package. Notes en_tn, Words en_tw, and three Always included source texts: en_ult, en_ust, and the Greek New Testament. Close and Download package are both shown. ",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/SourceTexts.jsx",
-        "src/data/gateways.ts",
-        "src/data/resourceFetch.ts"
-      ],
-      "journeys": [
-        "J3",
-        "J12"
-      ],
-      "issues": [],
-      "page": "rs-source-texts.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Partial — Offline371 lists English at notes v89 and two Français rows. Opening English says This project already checks against English, and Download package is still shown next to Close. Always included source cards are en_t4t, en_ult, en_ust, and the Greek New Testament. Nothing was downloaded.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 projects and Offline371. No download was started.",
-        "known_issues": 0
-      }
+      "page": "rs-source-texts.html"
     },
     {
       "id": "rs-checking-language",
@@ -3640,7 +2695,6 @@
       "section_title": "Resources and offline",
       "status": "shipped",
       "since": "alpha.6",
-      "release": "",
       "where": "Home › project card › Settings › Project settings › Checking language",
       "summary": "Choose which installed gateway language this project checks against. The choice is in Project settings. Decisions that match a check in the new notes carry over; the rest come back as work.",
       "ui_labels": [
@@ -3676,49 +2730,29 @@
         {
           "n": 1,
           "file": "img/rs-checking-language-1.png",
-          "caption": "Project settings for QA439 Titus. Español (Latinoamérica) is the Current checking language. The sentence reads This project checks in Spanish (Latin American) · es-419_gl.",
+          "caption": "Project settings for Sample Titus. Español (Latinoamérica) is the Current checking language. The sentence reads This project checks in Spanish (Latin American) · es-419_gl.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/rs-checking-language-2.png",
-          "caption": "Build 79d3017: the change dialog for QA373 Titus. Change checking language to Spanish (Latin American)? 3 decisions in Titus were made against the notes you are leaving. Decisions that match a check in the new notes carry over. The rest stop applying, so those checks come back as work — a book that was finished will not be finished any more. Nothing is deleted. Titus · Translation Notes: 0 carried over, 3 to check again. Buttons Keep en and Change to Spanish (Latin American).",
+          "caption": "The change dialog for Sample Titus. Change checking language to Spanish (Latin American)? 3 decisions in Titus were made against the notes you are leaving. Decisions that match a check in the new notes carry over. The rest stop applying, so those checks come back as work — a book that was finished will not be finished any more. Nothing is deleted. Titus · Translation Notes: 0 carried over, 3 to check again. Buttons Keep en and Change to Spanish (Latin American).",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/rs-checking-language-3.png",
-          "caption": "Build 79d3017: Project settings after the change. This project checks in Spanish (Latin American) · es-419_gl. Español (Latinoamérica), es-419_gl, Spanish (Latin American), marked CURRENT; English unfoldingWord above it.",
+          "caption": "Project settings after the change. This project checks in Spanish (Latin American) · es-419_gl. Español (Latinoamérica), es-419_gl, Spanish (Latin American), marked CURRENT; English unfoldingWord above it.",
           "exists": true
         },
         {
           "n": 4,
           "file": "img/rs-checking-language-4.png",
-          "caption": "Build 79d3017: Check › Translation Notes after the change. git.door43.org/es-419_gl/es-419_tn · v66 · primary gateway language, 0 of 112 resolved, Item 1 of 112, the Spanish quote “conforme a la fe” for Titus 1:1.",
+          "caption": "Check › Translation Notes after the change. git.door43.org/es-419_gl/es-419_tn · v66 · primary gateway language, 0 of 112 resolved, Item 1 of 112, the Spanish quote “conforme a la fe” for Titus 1:1.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/ProjectSettings.jsx",
-        "src/views/modals/GatewayChange.jsx",
-        "src/data/gatewayChange.ts",
-        "src/data/carryOver.ts"
-      ],
-      "journeys": [
-        "J12"
-      ],
-      "issues": [
-        "#412",
-        "#448"
-      ],
-      "page": "rs-checking-language.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-06",
-        "result": "Pass with issues — QA373 Titus, 3 English decisions (2 Mark valid, 1 Invalid). Downloaded es-419_gl (✓ Titus · Spanish (Latin American) is ready). Change dialog: 3 decisions, Titus · Translation Notes: 0 carried over, 3 to check again. After the change: es-419_tn v66, 0 of 112 resolved (matches the dialog: the Spanish notes have no matching check for these three), quote conforme a la fe, Mark valid saved twice (1 of 112, 2 of 112) with no save error; after a restart Resume returned to Check › Translation Notes with 2 of 112. Issues: the same language is called Español (Latinoamérica) and Spanish (Latin American) on different screens, and the dialog's button reads Keep en. A change where some decisions do carry over was not seen in this test.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z, fresh HOME, online for the Spanish download.",
-        "known_issues": 2
-      }
+      "page": "rs-checking-language.html"
     },
     {
       "id": "rs-upgrade-helps",
@@ -3727,7 +2761,6 @@
       "section_title": "Resources and offline",
       "status": "shipped",
       "since": "alpha.6",
-      "release": "",
       "where": "Home › project card › Settings › Manage source texts → › Pinned resources › Check for updates",
       "summary": "See which resource versions your project uses, and move to newer releases when you are ready.",
       "ui_labels": [
@@ -3759,7 +2792,7 @@
         {
           "n": 1,
           "file": "img/rs-upgrade-helps-1.png",
-          "caption": "Build 79d3017: Get source texts for QA661 Titus (pins en_tn v86, en_tw v87, en_ta v86, en_tq v89) after Check for updates. Primary set · en and Fallback set · en each offer Upgrade 4 resource(s): en_tn v86 → v91, en_tw v87 → v91, en_ta v86 → v91, en_tq v89 → v91 · 2026-09-26. Scripture texts below.",
+          "caption": "Get source texts for Sample Titus (pins en_tn v86, en_tw v87, en_ta v86, en_tq v89) after Check for updates. Primary set · en and Fallback set · en each offer Upgrade 4 resource(s): en_tn v86 → v91, en_tw v87 → v91, en_ta v86 → v91, en_tq v89 → v91 · 2026-09-26. Scripture texts below.",
           "exists": true
         },
         {
@@ -3771,29 +2804,11 @@
         {
           "n": 3,
           "file": "img/rs-upgrade-helps-3.png",
-          "caption": "Build 79d3017: QA373 Titus, made with this build, after Check for updates. Primary set · en ✓ Up to date, Fallback set · en ✓ Up to date, Scripture texts ✓ Every scripture text is up to date.",
+          "caption": "Sample Titus, made with this build, after Check for updates. Primary set · en ✓ Up to date, Fallback set · en ✓ Up to date, Scripture texts ✓ Every scripture text is up to date.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/ResourceUpdates.jsx",
-        "src/views/modals/UpgradeSet.jsx"
-      ],
-      "journeys": [
-        "J12"
-      ],
-      "issues": [
-        "#504",
-        "#505"
-      ],
-      "page": "rs-upgrade-helps.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-06",
-        "result": "Pass — QA661 Titus (imported, older pins): both English sets offered Upgrade 4 resource(s) (en_tn v86 → v91, en_tw v87 → v91, en_ta v86 → v91, en_tq v89 → v91). Equipo Ejemplo: Primary set · es-419 ✓ Up to date, Fallback set · en Upgrade 4 resource(s). QA373 Titus (new, bundled v91): both sets ✓ Up to date. Use the internet? appeared each time. The upgrade confirmation was not opened (nothing upgraded).",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z, fresh HOME, online. Path: Home › project card › Settings › Manage source texts → › Check for updates. Nothing was upgraded.",
-        "known_issues": 1
-      }
+      "page": "rs-upgrade-helps.html"
     },
     {
       "id": "rs-upgrade-texts",
@@ -3802,7 +2817,6 @@
       "section_title": "Resources and offline",
       "status": "shipped",
       "since": "new since alpha.7",
-      "release": "main after alpha.7 (PR #428)",
       "where": "Home › project card › Settings › Manage source texts → › Pinned resources › Check for updates › Scripture texts",
       "summary": "Move the project to a newer release of the Greek or Hebrew text, or of the gateway Bible.",
       "ui_labels": [
@@ -3831,36 +2845,17 @@
         {
           "n": 1,
           "file": "img/rs-upgrade-texts-1.png",
-          "caption": "Build 79d3017: Equipo Ejemplo — Tito y Jonás (Jonah + Titus) after Check for updates. Scripture texts: Original-language text hbo_uhb v2.1.30 → v3.0.0 · 2026-08-14, Gateway Bible en_ult v89 → v91 and en_ust v89 → v91, each with Upgrade. Primary set · es-419 ✓ Up to date; Fallback set · en Upgrade 4 resource(s).",
+          "caption": "Equipo Ejemplo — Tito y Jonás (Jonah + Titus) after Check for updates. Scripture texts: Original-language text hbo_uhb v2.1.30 → v3.0.0 · 2026-08-14, Gateway Bible en_ult v89 → v91 and en_ust v89 → v91, each with Upgrade. Primary set · es-419 ✓ Up to date; Fallback set · en Upgrade 4 resource(s).",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/rs-upgrade-texts-2.png",
-          "caption": "Build 79d3017: QA661 Titus (Titus only, New Testament) after Check for updates. Scripture texts lists only Gateway Bible en_ult v89 → v91 and en_ust v89 → v91. There is no Original-language text row for the Hebrew text.",
+          "caption": "Sample Titus (Titus only, New Testament) after Check for updates. Scripture texts lists only Gateway Bible en_ult v89 → v91 and en_ust v89 → v91. There is no Original-language text row for the Hebrew text.",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/ResourceUpdates.jsx",
-        "src/data/upgrade.ts"
-      ],
-      "journeys": [
-        "J12"
-      ],
-      "issues": [
-        "#428",
-        "#438",
-        "#504"
-      ],
-      "page": "rs-upgrade-texts.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-06",
-        "result": "Pass — QA661 Titus (Titus only): Gateway Bible en_ult v89 → v91 and en_ust v89 → v91, no Original-language text hbo_uhb row (#438). Equipo Ejemplo — Tito y Jonás (Jonah + Titus, pins hbo_uhb v2.1.30): Original-language text hbo_uhb v2.1.30 → v3.0.0 · 2026-08-14 plus the two Gateway Bible rows. QA373 Titus (new): ✓ Every scripture text is up to date. Upgrade was not clicked.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z, fresh HOME, online. Path: Home › project card › Settings › Manage source texts → › Check for updates. Nothing was upgraded.",
-        "known_issues": 0
-      }
+      "page": "rs-upgrade-texts.html"
     },
     {
       "id": "rs-guided-fix",
@@ -3869,7 +2864,6 @@
       "section_title": "Resources and offline",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Check › a tool card › Fix this…",
       "summary": "When a checking tool needs a resource that is not on this computer, tC4 offers three ways to get it.",
       "ui_labels": [
@@ -3906,22 +2900,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/GuidedFix.jsx",
-        "src/views/Check.jsx"
-      ],
-      "journeys": [
-        "J12"
-      ],
-      "issues": [],
-      "page": "rs-guided-fix.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 0
-      }
+      "page": "rs-guided-fix.html"
     },
     {
       "id": "rs-offline",
@@ -3930,7 +2909,6 @@
       "section_title": "Resources and offline",
       "status": "shipped",
       "since": "alpha.2",
-      "release": "",
       "where": "Everywhere. Internet is used only when you choose Go online.",
       "summary": "tC4 works without internet. It only goes online when you ask it to, for downloads and updates.",
       "ui_labels": [
@@ -3954,22 +2932,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/SourceTexts.jsx",
-        "src/state.jsx (netEnabled, goOnline)"
-      ],
-      "journeys": [
-        "J3"
-      ],
-      "issues": [],
-      "page": "rs-offline.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Pass",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 0
-      }
+      "page": "rs-offline.html"
     },
     {
       "id": "st-project-settings",
@@ -3978,7 +2941,6 @@
       "section_title": "Settings",
       "status": "partial",
       "since": "alpha.4",
-      "release": "",
       "where": "Home › project card › Settings › Project settings",
       "summary": "Open a project's settings from the Settings button on its Home card. Change the text direction, the script font, or the checking language, or manage its source texts. The name and language are shown but cannot be changed yet.",
       "ui_labels": [
@@ -4013,7 +2975,7 @@
         {
           "n": 1,
           "file": "img/st-project-settings-1.png",
-          "caption": "Project settings for QA439 Titus. Bible name, Spanish, es, Left to right, and Español (Latinoamérica) marked Current.",
+          "caption": "Project settings for Sample Titus. Bible name, Spanish, es, Left to right, and Español (Latinoamérica) marked Current.",
           "exists": true
         },
         {
@@ -4031,44 +2993,29 @@
         {
           "n": 4,
           "file": "img/st-project-settings-4.png",
-          "caption": "Project settings for QA439 Stories. Subtitle QA439 Stories · 0 books. Bible name QA439 Stories, Spanish, es, Left to right. Checks in English · unfoldingWord, marked Current. Script font Noto Sans (default).",
+          "caption": "Project settings for Sample Stories. Subtitle Sample Stories · 0 books. Bible name Sample Stories, Spanish, es, Left to right. Checks in English · unfoldingWord, marked Current. Script font Noto Sans (default).",
           "exists": true
         },
         {
           "n": 5,
           "file": "img/st-project-settings-5.png",
-          "caption": "Project settings for QA439 Import. Subtitle QA439 Import · 1 books. Language name is blank, code es. This project has no checking language yet. English and Español (Latinoamérica) are listed, and neither is Current.",
+          "caption": "Project settings for Sample Import. Subtitle Sample Import · 1 books. Language name is blank, code es. This project has no checking language yet. English and Español (Latinoamérica) are listed, and neither is Current.",
           "exists": true
         },
         {
           "n": 6,
           "file": "img/st-project-settings-6.png",
-          "caption": "Offline371 settings, cancelled. Subtitle Offline371 · 1 books. Bible name Offline371, English, en, Left to right. Checks in English · unfoldingWord, marked Current. Font Noto Sans (default).",
+          "caption": "Sample English settings, cancelled. Subtitle Sample English · 1 books. Bible name Sample English, English, en, Left to right. Checks in English · unfoldingWord, marked Current. Font Noto Sans (default).",
           "exists": true
         },
         {
           "n": 7,
           "file": "img/st-project-settings-7.png",
-          "caption": "Build 79d3017: Project settings opened from the Settings button on the QA373 Titus card on Home. Subtitle QA373 Titus · 1 books. Bible name QA373 Titus, Language name Español, Code es (greyed), Renaming arrives with a later increment., Left to right, This project checks in English · unfoldingWord with English marked Current, Manage source texts →, and Script font Noto Sans (default).",
+          "caption": "Project settings opened from the Settings button on the Sample Titus card on Home. Subtitle Sample Titus · 1 books. Bible name Sample Titus, Language name Español, Code es (greyed), Renaming arrives with a later increment., Left to right, This project checks in English · unfoldingWord with English marked Current, Manage source texts →, and Script font Noto Sans (default).",
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/ProjectSettings.jsx",
-        "src/views/scriptStyle.js"
-      ],
-      "journeys": [
-        "J2"
-      ],
-      "issues": [],
-      "page": "st-project-settings.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05",
-        "result": "Pass — Settings on the QA373 Titus card opened Project settings with Bible name, Language name Español, Code es, Renaming arrives with a later increment., Text direction, Checking language (English, Current), Manage source texts → and Script font. No Project settings button in the top bar on Home, Understand, Translate or Check. Closed without saving. Changing the checking language was tested on 2026-10-06 on the same build (see Change the checking language).",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. QA373 Titus (es), fresh HOME. Older QA439/Offline371 shots are from build 6f878aa.",
-        "known_issues": 0
-      }
+      "page": "st-project-settings.html"
     },
     {
       "id": "st-where-projects-live",
@@ -4077,7 +3024,6 @@
       "section_title": "Settings",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Your computer's home folder › pankosmia › tc4-projects",
       "summary": "tC4 keeps your projects in one folder in your home folder. Back it up regularly.",
       "ui_labels": [],
@@ -4087,21 +3033,7 @@
       ],
       "expected": [],
       "screenshots": [],
-      "code": [
-        "docs/PACKAGING.md (project store)"
-      ],
-      "journeys": [
-        "J2"
-      ],
-      "issues": [],
-      "page": "st-where-projects-live.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Pass — on this Linux run the store is ~/pankosmia/tc4-projects. Offline371 is the folder _local_/_local_/offline371, and the stories project is _local_/_local_/offline371_stories. The app was not closed and no folder was copied.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. HOME for this run is the offline-run home.",
-        "known_issues": 0
-      }
+      "page": "st-where-projects-live.html"
     },
     {
       "id": "st-app-language",
@@ -4110,7 +3042,6 @@
       "section_title": "Settings",
       "status": "not-yet",
       "since": "",
-      "release": "",
       "where": "Not in the app yet",
       "summary": "The app's menus and buttons are in English only. Choosing another interface language is planned.",
       "ui_labels": [],
@@ -4119,22 +3050,7 @@
       ],
       "expected": [],
       "screenshots": [],
-      "code": [
-        "src/i18n/en.json (the only interface language)",
-        "docs/JOURNEYS.md (J1 describes a first-run language choice)"
-      ],
-      "journeys": [
-        "J1"
-      ],
-      "issues": [],
-      "page": "st-app-language.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Not tested — not built",
-        "environment": null,
-        "known_issues": 0
-      }
+      "page": "st-app-language.html"
     },
     {
       "id": "ts-save-problems",
@@ -4143,7 +3059,6 @@
       "section_title": "Troubleshooting and known limits",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Save indicator at the top right › Retry",
       "summary": "If a save fails, your text is kept in the app. Use Retry, and do not close the app until it says Saved.",
       "ui_labels": [
@@ -4163,25 +3078,7 @@
       ],
       "expected": [],
       "screenshots": [],
-      "code": [
-        "src/data/saveScheduler.ts",
-        "src/state.jsx (setCanClose)"
-      ],
-      "journeys": [
-        "J4"
-      ],
-      "issues": [
-        "#356",
-        "#357"
-      ],
-      "page": "ts-save-problems.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Not tested",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 0
-      }
+      "page": "ts-save-problems.html"
     },
     {
       "id": "ts-protect-messages",
@@ -4190,7 +3087,6 @@
       "section_title": "Troubleshooting and known limits",
       "status": "shipped",
       "since": "alpha.4",
-      "release": "",
       "where": "Shown as a warning when you open, save, import or export",
       "summary": "When tC4 finds something unexpected, it stops rather than risk your work, and tells you what to do. Damaged import files are refused with a reason and a code, and nothing is created.",
       "ui_labels": [
@@ -4214,7 +3110,7 @@
         {
           "n": 1,
           "file": "img/ts-protect-messages-1.png",
-          "caption": "Build 79d3017: a USFM file with no \\id line is refused. Review what was found — Fix the file and choose it again. Red box: This file cannot be imported / no-id.sfm has no \\id line, so the book is not known. / import.damaged.usfm-parse · Nothing will be created from this file. tC4 does not import only the correct parts of a damaged file. BOOKS 0.",
+          "caption": "A USFM file with no \\id line is refused. Review what was found — Fix the file and choose it again. Red box: This file cannot be imported / no-id.sfm has no \\id line, so the book is not known. / import.damaged.usfm-parse · Nothing will be created from this file. tC4 does not import only the correct parts of a damaged file. BOOKS 0.",
           "exists": true
         },
         {
@@ -4224,30 +3120,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/i18n/en.json (refusal.*, importer.*)",
-        "src/data/import/usfm.ts",
-        "src/data/import/burrito.ts",
-        "src/data/import/tc3.ts",
-        "src/data/export/pdf.ts",
-        "src/data/journal/"
-      ],
-      "journeys": [
-        "J4",
-        "J9"
-      ],
-      "issues": [
-        "#41",
-        "#156"
-      ],
-      "page": "ts-protect-messages.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-05/06",
-        "result": "Pass with issues — no-id.sfm was refused with import.damaged.usfm-parse and damaged-truncated-burrito.zip with import.damaged.truncated; Import stayed greyed, no card and no project folder were created. The PDF refusal for the undrafted Philemon named the book. The name-clash message showed on a duplicate import. Known issue: under the red box the Checks column still shows green Details and Every verse is present. Other messages in the table were not triggered in this pass.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z. Fixtures no-id.sfm and damaged-truncated-burrito.zip; QA373 Titus › Philemon.",
-        "known_issues": 2
-      }
+      "page": "ts-protect-messages.html"
     },
     {
       "id": "ts-crash-recovery",
@@ -4256,7 +3129,6 @@
       "section_title": "Troubleshooting and known limits",
       "status": "shipped",
       "since": "new since alpha.7",
-      "release": "main after alpha.7 (PR #430); Window › Reload and the error screen in 4.0.0-rc.1 (issue #435, PR #444)",
       "where": "Automatic, the next time you start tC4. In the desktop app: the Window menu › Reload (Ctrl+R).",
       "summary": "tC4 keeps a log of each project operation and finishes or cleans up an interrupted step at the next start. If a screen cannot be drawn, tC4 shows a message with Back to Home, and Window › Reload brings the app back without quitting.",
       "ui_labels": [],
@@ -4277,28 +3149,11 @@
         {
           "n": 1,
           "file": "img/ts-crash-recovery-1.png",
-          "caption": "Build 79d3017: the Window menu of the desktop app, open over a translationCore 3 project just imported (cfm_fbt, Titus 1 in Understand): Reload Ctrl+R, Force Reload Ctrl+Shift+R, Toggle Developer Tools Ctrl+Shift+I.",
+          "caption": "The Window menu of the desktop app, open over a translationCore 3 project just imported (cfm_fbt, Titus 1 in Understand): Reload Ctrl+R, Force Reload Ctrl+Shift+R, Toggle Developer Tools Ctrl+Shift+I.",
           "exists": true
         }
       ],
-      "code": [
-        "src/data/journal/opsLog.ts",
-        "src/state.jsx",
-        "electron/electronStartup.js (Window menu)"
-      ],
-      "journeys": [],
-      "issues": [
-        "#430",
-        "#435"
-      ],
-      "page": "ts-crash-recovery.html",
-      "tested": {
-        "sha": "79d3017",
-        "date": "2026-10-06",
-        "result": "Pass — Window menu shows Reload (Ctrl+R), Force Reload (Ctrl+Shift+R) and Toggle Developer Tools; Window › Reload went back to Home with all projects intact. A translationCore 3 project opened at once after import three times (cfm_fbt, cfm_fbt 2, cfm_fbt 3) with no white window, so the error screen was never needed (its text is in the build). Recovery after a real crash or power cut was not tested.",
-        "environment": "Packaged Linux build 4.0.0-rc.1 at main 79d3017 (package-desktop run 37288923493, zip sha256 ce6dd6e2…ffa3), product datetime 2026-10-05T09:18:26Z, fresh HOME. tC3 fixture cfm_fbt_tit_book.zip.",
-        "known_issues": 0
-      }
+      "page": "ts-crash-recovery.html"
     },
     {
       "id": "ts-platform",
@@ -4307,7 +3162,6 @@
       "section_title": "Troubleshooting and known limits",
       "status": "partial",
       "since": "alpha.4",
-      "release": "",
       "where": "Installing and starting the app",
       "summary": "The alpha builds are unsigned. Here is what to expect on each system, and the known problems.",
       "ui_labels": [],
@@ -4317,24 +3171,7 @@
       ],
       "expected": [],
       "screenshots": [],
-      "code": [
-        "docs/PACKAGING.md"
-      ],
-      "journeys": [],
-      "issues": [
-        "#284",
-        "#44",
-        "#425",
-        "#402"
-      ],
-      "page": "ts-platform.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Not tested",
-        "environment": "main · package-desktop run 36289140027 · Linux x64 unsigned alpha.7 zip · fresh HOME",
-        "known_issues": 0
-      }
+      "page": "ts-platform.html"
     },
     {
       "id": "ts-share-door43",
@@ -4343,7 +3180,6 @@
       "section_title": "Troubleshooting and known limits",
       "status": "shipped",
       "since": "new since alpha.7",
-      "release": "main after alpha.7 (Increment 8.5, epic #372; PRs #459, #464, #468)",
       "where": "Home › project card Share on Door43 · the person icon, tooltip Door43 account: not signed in",
       "summary": "Sign in to Door43 once, choose your account or an organization, and push the project's working main branch. Later shares upload changes again.",
       "ui_labels": [
@@ -4353,10 +3189,10 @@
       ],
       "steps": [
         "On Home, click Share on Door43 on the project card.",
-        "The first dialog is \"Use the internet?\" Continue was not clicked on this run, so the sign-in form did not open. Cancel closes the dialog. \"Don't ask again on this computer\" was left off. The note under it says you can turn these prompts back on in the account menu, and that internet use starts only when you choose an action.",
+        "The first dialog is \"Use the internet?\" Cancel closes the dialog. \"Don't ask again on this computer\" was left off. The note under it says you can turn these prompts back on in the account menu, and that internet use starts only when you choose an action.",
         "Or open the person icon. The menu says Sign in to Door43, with the line \"Sign in to share projects on Door43.\" Under that, Ask before using the internet is on, and it says internet actions ask for confirmation.",
         "Sign in to Door43 asks for a Door43 username or email and a password, and it says it signs in to git.door43.org. Stay signed in on this computer was left off. Without it, the form says the sign-in lasts for one app session. It also says each change you share is signed with this computer's account name, which Door43 shows as the author. Cancel closed the form. Nothing was typed.",
-        "Choosing the repository and uploading were not opened on this run. Nothing was sent."
+        "Nothing was sent."
       ],
       "expected": [
         "There is no Door43 bar. The person icon's tooltip says Door43 account: not signed in.",
@@ -4392,32 +3228,7 @@
           "exists": true
         }
       ],
-      "code": [
-        "src/views/modals/ShareSignIn.jsx",
-        "src/data/share/door43Api.ts",
-        "src/data/share/shareOperation.ts",
-        "src/data/share/session.ts"
-      ],
-      "journeys": [
-        "J11",
-        "J24"
-      ],
-      "issues": [
-        "#372",
-        "#362",
-        "#203",
-        "#366",
-        "#468",
-        "#467"
-      ],
-      "page": "ts-share-door43.html",
-      "tested": {
-        "sha": "6f878aa",
-        "date": "2026-10-03",
-        "result": "Partial — the account menu and the empty Sign in to Door43 form were opened and cancelled. Nothing was typed or sent. The upload was not opened.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client 6f878aa, product datetime 2026-10-02T23:58:48Z. QA439 projects. Not signed in.",
-        "known_issues": 0
-      }
+      "page": "ts-share-door43.html"
     },
     {
       "id": "ts-team-sync",
@@ -4426,7 +3237,6 @@
       "section_title": "Troubleshooting and known limits",
       "status": "not-yet",
       "since": "",
-      "release": "",
       "where": "Not in the app yet",
       "summary": "tC4 keeps each project on one computer. Syncing a project between computers is not built yet.",
       "ui_labels": [],
@@ -4436,19 +3246,7 @@
       ],
       "expected": [],
       "screenshots": [],
-      "code": [
-        "docs/JOURNEYS.md"
-      ],
-      "journeys": [],
-      "issues": [],
-      "page": "ts-team-sync.html",
-      "tested": {
-        "sha": "9215071",
-        "date": "2026-09-27",
-        "result": "Not tested — not built",
-        "environment": null,
-        "known_issues": 0
-      }
+      "page": "ts-team-sync.html"
     },
     {
       "id": "ts-not-yet",
@@ -4457,7 +3255,6 @@
       "section_title": "Troubleshooting and known limits",
       "status": "not-yet",
       "since": "",
-      "release": "",
       "where": "Not in the app yet",
       "summary": "A list of things people often ask for that this build does not do yet.",
       "ui_labels": [
@@ -4468,25 +3265,7 @@
       ],
       "expected": [],
       "screenshots": [],
-      "code": [
-        "docs/JOURNEYS.md"
-      ],
-      "journeys": [],
-      "issues": [
-        "#364",
-        "#55",
-        "#139",
-        "#29",
-        "#365"
-      ],
-      "page": "ts-not-yet.html",
-      "tested": {
-        "sha": "daf42c9",
-        "date": "2026-10-02",
-        "result": "Partial — stories PDF export is in the app and saved on this Linux package. The other rows were not retested.",
-        "environment": "Packaged Linux build 4.0.0-rc.1, client daf42c9, product datetime 2026-10-02T15:10:45Z. QA439 projects.",
-        "known_issues": 0
-      }
+      "page": "ts-not-yet.html"
     }
   ],
   "release_pages": [
@@ -4519,11 +3298,6 @@
       "id": "wn-alpha7",
       "title": "alpha.7 — Open Bible Stories",
       "page": "wn-alpha7.html"
-    },
-    {
-      "id": "wn-next",
-      "title": "Since alpha.7 — export, import, share and more (not yet released)",
-      "page": "wn-next.html"
     },
     {
       "id": "wn-add-a-project",
