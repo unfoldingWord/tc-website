@@ -57,8 +57,8 @@
       ],
       "steps": [
         "Get the build for your computer from the tC4 releases page: the .exe installer for Windows, the .pkg installer for macOS, or the .zip for Linux.",
-        "Windows: run the .exe. Windows SmartScreen warns about an unsigned app: choose More info , then Run anyway . Start tC4 from the Start menu or the desktop shortcut.",
-        "macOS: open the .pkg. If macOS blocks it, open System Settings › Privacy & Security and choose Open Anyway . The installer asks for an administrator password. Then start translationCore 4 from Applications.",
+        "Windows: run the .exe. Windows SmartScreen warns about an unsigned app: choose More info, then Run anyway. Start tC4 from the Start menu or the desktop shortcut.",
+        "macOS: open the .pkg. If macOS blocks it, open System Settings › Privacy & Security and choose Open Anyway. The installer asks for an administrator password. Then start translationCore 4 from Applications.",
         "Linux: unpack the zip, open a terminal in the unpacked translationCore4 folder and run ./start-tc4.sh.",
         "Wait for the window. tC4 opens on Home, with the heading Your projects.",
         "To start your first project, click + Add a project. See The Home screen."
@@ -187,6 +187,7 @@
       "ui_labels": [
         "Check",
         "Community Checking",
+        "Project settings",
         "Saved",
         "Translate",
         "Understand",
@@ -250,7 +251,7 @@
         {
           "n": 1,
           "file": "img/gs-save-1.png",
-          "caption": "Check on Sample Titus. The top right shows a green Saved next to the account icon. ",
+          "caption": "Check on Sample Titus. The top right shows a green Saved next to the account icon.",
           "exists": true
         }
       ],
@@ -469,7 +470,7 @@
       "steps": [
         "On Home, click the Add a book tile on your project card. (After Create Bible → this dialog opens by itself.)",
         "Click Start a blank book.",
-        "Choose the book in the Book list, for example Titus (TIT) .",
+        "Choose the book in the Book list, for example Titus (TIT).",
         "To add several books at once, click Choose several at once → and click each book in the New Testament and Old Testament grids. Click Pick one book → to go back to the list.",
         "Click Create book (or Create {n} books).",
         "The new book opens in Understand at chapter 1, so you can read the passage and its helps first. Click Translate when you are ready to draft. After that, opening the book from Home returns to the mode you used last."
@@ -531,7 +532,7 @@
         "Understand"
       ],
       "steps": [
-        "On Home, click a book tile, for example Titus . A new book with no remembered place opened in Understand. If you last worked in Translate, it opens there again.",
+        "On Home, click a book tile, for example Titus. A new book with no remembered place opened in Understand. If you last worked in Translate, it opens there again.",
         "In Translate or Understand, look at the list on the left. If it is hidden, click the Toggle book list button at the top left of the page.",
         "Click a chapter number to go to that chapter.",
         "Click another book's name to open that book."
@@ -595,8 +596,8 @@
         "Click Review files →.",
         "Read Review what was found (step 3 of 3). On the left, What was found lists each book with its chapters, verses and drafted verses, and the counts of books and files. On the right, Checks shows three rows: License, Details and Missing verses. A green dot means all is well; an orange dot means you need to look.",
         "Check the Bible name and Language code under Read from the file. Change them if they are wrong.",
-        "A tC4 Scripture Burrito shows Carried over from translationCore 4 with the number of aligned verses and checking decisions it brings. A translationCore 3 project shows Carried over from translationCore 3 .",
-        "For a translationCore 3 import, the Resource versions check is orange: \"Look up on Door43 the resource versions this project used (translationNotes, the original-language text), or use the versions on this computer.\" Choose Look up on Door43 (this needs the internet; click Continue if \"Use the internet?\" appears) or Use installed versions. Import as a new Bible stays off until you choose. After the look-up the check turns green and names what it found, for example \"The versions this project used were found: unfoldingWord/en tn v87, unfoldingWord/el-x-koine ugnt v0.34.\"",
+        "A tC4 Scripture Burrito shows Carried over from translationCore 4 with the number of aligned verses and checking decisions it brings. A translationCore 3 project shows Carried over from translationCore 3.",
+        "For a translationCore 3 import, the Resource versions check is orange: \"Look up on Door43 the resource versions this project used (translationNotes, the original-language text), or use the versions on this computer.\" Choose Look up on Door43 (this needs the internet; click Continue if \"Use the internet?\" appears) or Use installed versions. Import as a new Bible stays off until you choose. After the look-up the check turns green and names what it found, for example \"The versions this project used were found: unfoldingWord/en_tn v87, unfoldingWord/el-x-koine_ugnt v0.34.\"",
         "Click Import as a new Bible. tC4 shows Creating your Bible… (for a small book this may flash by too fast to see).",
         "Home opens with the message \"{name} was imported · {books}\", for example \"Tito was imported · Titus\". The new card is at the top of the list and carries the Imported badge.",
         "Click a book tile on the new card. A book with no remembered place opens in Understand at chapter 1."
@@ -688,6 +689,9 @@
         "Letter",
         "Open →",
         "Page setup",
+        "Scripture Burrito (.zip)",
+        "USFM, aligned",
+        "USFM, plain",
         "← All checking tools"
       ],
       "steps": [
@@ -696,7 +700,7 @@
         "Optional: set the Page setup (see Community Checking preview and page setup).",
         "Click Export, then Export PDF.",
         "A save window opens with a suggested file name. Keep it or type another, then save.",
-        "When the file is saved, the panel shows \"Saved <file name \", for example \"Saved TIT-2026-10-05.pdf\". Close the message with its ✕."
+        "When the file is saved, the panel shows \"Saved <file name>\", for example \"Saved TIT-2026-10-05.pdf\". Close the message with its ✕."
       ],
       "expected": [
         "The Export menu lists Export PDF, USFM, aligned, USFM, plain and Scripture Burrito (.zip).",
@@ -762,12 +766,12 @@
         "Click Export.",
         "Click USFM, aligned or USFM, plain.",
         "A save window opens with a suggested file name. Keep it or type another, then save.",
-        "When the file is saved, the panel shows \"Saved <file name \", for example \"Saved TIT-aligned-2026-10-05.usfm\". If you cancel, no message appears."
+        "When the file is saved, the panel shows \"Saved <file name>\", for example \"Saved TIT-aligned-2026-10-05.usfm\". If you cancel, no message appears."
       ],
       "expected": [
         "USFM, aligned saves a file named like TIT-aligned-2026-10-05.usfm.",
         "USFM, plain saves a file named like TIT-2026-10-05.usfm.",
-        "The panel shows \"Saved <file name \"."
+        "The panel shows \"Saved <file name>\"."
       ],
       "screenshots": [
         {
@@ -779,13 +783,13 @@
         {
           "n": 2,
           "file": "img/bp-export-usfm-2.png",
-          "caption": "Save window for USFM, aligned on Sample Titus, nothing drafted. Suggested name TIT-aligned-2026-10-03.usfm. ",
+          "caption": "Save window for USFM, aligned on Sample Titus, nothing drafted. Suggested name TIT-aligned-2026-10-03.usfm.",
           "exists": true
         },
         {
           "n": 3,
           "file": "img/bp-export-usfm-3.png",
-          "caption": "Save window for USFM, plain on Sample Titus, nothing drafted. Suggested name TIT-2026-10-03.usfm. ",
+          "caption": "Save window for USFM, plain on Sample Titus, nothing drafted. Suggested name TIT-2026-10-03.usfm.",
           "exists": true
         },
         {
@@ -823,11 +827,11 @@
         "Click Open → on the Community Checking card.",
         "Click Export, then Scripture Burrito (.zip).",
         "A save window opens with a suggested file name. Keep it or type another, then save.",
-        "When the file is saved, the panel shows \"Saved <file name \", for example \"Saved Sample Titus-2026-10-05.zip\". If you cancel, no message appears."
+        "When the file is saved, the panel shows \"Saved <file name>\", for example \"Saved Sample Titus-2026-10-05.zip\". If you cancel, no message appears."
       ],
       "expected": [
         "A file named after the project and today's date, like Sample Titus-2026-10-05.zip, is saved.",
-        "The panel shows \"Saved <file name \"."
+        "The panel shows \"Saved <file name>\"."
       ],
       "screenshots": [
         {
@@ -839,7 +843,7 @@
         {
           "n": 2,
           "file": "img/bp-export-burrito-2.png",
-          "caption": "Save window for Scripture Burrito on Sample Titus, nothing drafted. Suggested name Sample Titus-2026-10-03.zip. ",
+          "caption": "Save window for Scripture Burrito on Sample Titus, nothing drafted. Suggested name Sample Titus-2026-10-03.zip.",
           "exists": true
         },
         {
@@ -862,6 +866,7 @@
       "summary": "Translate shows the source text on the left and your translation on the right, one row per section, with the book list and the helps panel beside them.",
       "ui_labels": [
         "Draft section 1–3",
+        "Draft section {span}",
         "Greek",
         "Hebrew",
         "Section",
@@ -958,6 +963,7 @@
         "Draft section {span}",
         "Place verse numbers",
         "Save section",
+        "Saved",
         "Section",
         "To place",
         "Translate",
@@ -973,7 +979,7 @@
         "To change a saved section later, click its Draft section {span} label on the row again. Clicking the saved text itself does not open the editor."
       ],
       "expected": [
-        "The editor card opens under the section, headed \"Drafting 1–3\" with a Type Place verse numbers switch.",
+        "The editor card opens under the section, headed \"Drafting 1–3\" with a Type | Place verse numbers switch.",
         "After Save section the verses show in your translation column with their numbers, and the save indicator shows Saved."
       ],
       "screenshots": [
@@ -1061,7 +1067,7 @@
         "To break the span: open the section again with its Draft section {span} label, click Place verse numbers, pick up the 3 and click the word where verse 3 should begin. Click Save section."
       ],
       "expected": [
-        "While you hold a number over a word where another verse begins, the tooltip reads \"Join verse 3 to verse 2 at <word \".",
+        "While you hold a number over a word where another verse begins, the tooltip reads \"Join verse 3 to verse 2 at <word>\".",
         "After Save section the verse number shows as a span, for example \"2-3\".",
         "Checks and alignments on the joined verses are marked invalid and kept, so you can re-check them."
       ],
@@ -1096,6 +1102,7 @@
         "Edit this verse",
         "Editing below",
         "Save verse",
+        "Saved",
         "Translate",
         "Verse"
       ],
@@ -1338,6 +1345,7 @@
       "summary": "Translation notes explain hard phrases verse by verse. Each note can link to a Translation Academy article that teaches the translation issue behind it.",
       "ui_labels": [
         "Notes",
+        "Show more",
         "Translate",
         "Translation Academy →",
         "Understand"
@@ -1570,15 +1578,21 @@
       "where": "Top bar › Check › Choose a checking tool",
       "summary": "The Check screen lists the checking tools for the open book and how far you have got in each.",
       "ui_labels": [
+        "Align",
         "All resolved — review any item",
         "Check",
         "Choose a checking tool",
+        "Community Checking",
         "Continue",
         "Fix this…",
         "Needs downloading",
         "No items in this book yet",
+        "No resources pinned",
+        "Not available for this book",
         "Review",
         "Start checking",
+        "Translation Notes",
+        "Translation Words",
         "Unavailable offline",
         "← All checking tools"
       ],
@@ -1633,7 +1647,9 @@
       "summary": "Work through every note in the book that links to a Translation Academy article, and confirm how your translation handles each one.",
       "ui_labels": [
         "By category",
+        "By verse",
         "Check",
+        "Sort",
         "Translation Notes",
         "What to check",
         "Your translation",
@@ -1831,12 +1847,12 @@
       "steps": [
         "In a checking tool, click Add a comment.",
         "The box is titled My comment on this check. Its hint is \"Say what you decided, or what to ask your team about this check.\" While it is open, the button changes to Hide comment.",
-        "Done and Delete comment are in the box. ",
+        "Done and Delete comment are in the box.",
         "Hide comment closed the box. The button went back to Add a comment, and the Commented count stayed at 0."
       ],
       "expected": [
         "A box titled My comment on this check opens with the hint \"Say what you decided, or what to ask your team about this check.\"",
-        "While the box is open the button says Hide comment. "
+        "While the box is open the button says Hide comment."
       ],
       "screenshots": [
         {
@@ -1946,7 +1962,7 @@
         {
           "n": 3,
           "file": "img/ck-community-checking-3.png",
-          "caption": "Sample English Titus. Verse 1 prints Paul, a servant of God. Verses 2 through 16 say verse not yet drafted. Columns 1, Spacing Single, Paper size A4. ",
+          "caption": "Sample English Titus. Verse 1 prints Paul, a servant of God. Verses 2 through 16 say verse not yet drafted. Columns 1, Spacing Single, Paper size A4.",
           "exists": true
         },
         {
@@ -1981,6 +1997,7 @@
         "Not drafted yet",
         "To do",
         "USFM, aligned",
+        "Word bank · your translation",
         "← All checking tools",
         "← Back to translating"
       ],
@@ -2222,8 +2239,11 @@
         "Code",
         "Create stories →",
         "Language name",
+        "Left to right",
         "New Open Bible Stories",
+        "OBS",
         "Project name",
+        "Right to left",
         "Script font",
         "Text direction",
         "Translate",
@@ -2316,12 +2336,16 @@
         "Draft the reference",
         "Draft the title",
         "Edit this text",
+        "Gateway story",
         "Get source",
+        "Reference",
         "Save",
         "Stories",
+        "Story title",
         "Toggle helps panel",
         "Toggle story list",
-        "Translate"
+        "Translate",
+        "Type your translation…"
       ],
       "steps": [
         "Open a story from Home (or pick one in the Stories rail; Toggle story list shows or hides it).",
@@ -2374,7 +2398,10 @@
       "where": "Open a story › Understand",
       "summary": "Read each frame with its picture and the story helps, and write a comment for each frame.",
       "ui_labels": [
-        "Understand"
+        "Notes",
+        "Questions",
+        "Understand",
+        "Words"
       ],
       "steps": [
         "Open a story and click Understand.",
@@ -2413,8 +2440,12 @@
       "where": "Open a story › Check",
       "summary": "Check a story with Translation Notes and Translation Words, frame by frame.",
       "ui_labels": [
+        "Align",
         "By frame",
+        "By word",
         "Check",
+        "Community Checking",
+        "Gateway · story text",
         "Invalid",
         "Sort",
         "To do",
@@ -2477,6 +2508,7 @@
         "Export",
         "Export PDF",
         "Open →",
+        "Page setup",
         "Paper size",
         "Pictures",
         "Pictures above",
@@ -2494,7 +2526,7 @@
       ],
       "expected": [
         "The preview is labelled PREVIEW and Story 1. Frame 1 shows its picture and \"God made everything.\" A line reads \"[ frames 2–16 not yet drafted ]\". A reference line was not in view.",
-        "Page setup Layout is Pictures above or Pictures wrapped. Pictures can be on or off. ",
+        "Page setup Layout is Pictures above or Pictures wrapped. Pictures can be on or off.",
         "A story's Page setup has no Columns, Spacing or Paper size rows. Those are for Bible books only.",
         "The Export menu offers Export PDF, Story Markdown (.zip) and Scripture Burrito (.zip)."
       ],
@@ -2539,6 +2571,8 @@
         "Page setup",
         "Pictures",
         "Pictures wrapped",
+        "Scripture Burrito (.zip)",
+        "Story Markdown (.zip)",
         "← All checking tools"
       ],
       "steps": [
@@ -2547,7 +2581,7 @@
         "Optional: set Page setup (Pictures, Layout).",
         "Click Export, then the format you want.",
         "A save window opens with a suggested file name. Keep it or type another, then save.",
-        "When the file is saved, the panel shows \"Saved <file name \". Close it with its ✕."
+        "When the file is saved, the panel shows \"Saved <file name>\". Close it with its ✕."
       ],
       "expected": [
         "The Export menu lists Export PDF, Story Markdown (.zip) and Scripture Burrito (.zip).",
@@ -2596,7 +2630,7 @@
       ],
       "steps": [
         "Create a Bible or stories project.",
-        "To see which version a checking tool uses, open the tool from Check. The line under the filters names it, for example \"git.door43.org/unfoldingWord/en tn · v91 · primary gateway language\" in this package."
+        "To see which version a checking tool uses, open the tool from Check. The line under the filters names it, for example \"git.door43.org/unfoldingWord/en_tn · v91 · primary gateway language\" in this package."
       ],
       "expected": [
         "A new Bible project already pins the English texts and helps. Nothing needs downloading to start."
@@ -2621,6 +2655,7 @@
       "where": "Inside a project: Project settings › Manage source texts → › Get source texts",
       "summary": "Download source texts and helps for another gateway language from Door43.",
       "ui_labels": [
+        "Always included",
         "Book",
         "Checking language",
         "Choose your gateway language",
@@ -2682,7 +2717,7 @@
         {
           "n": 6,
           "file": "img/rs-source-texts-6.png",
-          "caption": "Bottom of the English Titus package. Notes en_tn, Words en_tw, and three Always included source texts: en_ult, en_ust, and the Greek New Testament. Close and Download package are both shown. ",
+          "caption": "Bottom of the English Titus package. Notes en_tn, Words en_tw, and three Always included source texts: en_ult, en_ust, and the Greek New Testament. Close and Download package are both shown.",
           "exists": true
         }
       ],
@@ -2710,13 +2745,13 @@
         "✓ Mark valid"
       ],
       "steps": [
-        "Download the notes for the new language first if that language is not listed (see Download source texts). On Home, click Settings on the card, then Manage source texts →. Under Choose your gateway language , pick the language, for example Español (Latinoamérica) (es-419 gl), and click ⇣ Download package . When it is done it says \"✓ Titus · Spanish (Latin American) is ready\".",
+        "Download the notes for the new language first if that language is not listed (see Download source texts). On Home, click Settings on the card, then Manage source texts →. Under Choose your gateway language, pick the language, for example Español (Latinoamérica) (es-419_gl), and click ⇣ Download package. When it is done it says \"✓ Titus · Spanish (Latin American) is ready\".",
         "On Home, click Settings on the project card. Checking language is in that dialog. It is not in the top bar.",
-        "Read the sentence under the heading, for example \"This project checks in English · unfoldingWord.\" Each downloaded language has its own row, for example Español (Latinoamérica), es-419 gl, Spanish (Latin American).",
+        "Read the sentence under the heading, for example \"This project checks in English · unfoldingWord.\" Each downloaded language has its own row, for example Español (Latinoamérica), es-419_gl, Spanish (Latin American).",
         "Click the other language. A dialog opens: \"Change checking language to Spanish (Latin American)?\" It says how many of your decisions were made against the notes you are leaving, for example \"3 decisions in Titus were made against the notes you are leaving.\", and for each tool how many carry over: \"Titus · Translation Notes: 0 carried over, 3 to check again\".",
         "Click \"Change to Spanish (Latin American)\" to confirm, or \"Keep en\" to stay with the current language.",
-        "Project settings now says \"This project checks in Spanish (Latin American) · es-419 gl.\" and the Spanish row is marked Current.",
-        "Open Check › Translation Notes. The package line reads git.door43.org/es-419 gl/es-419 tn · v66 · primary gateway language, and the quotes are Spanish, for example \"conforme a la fe\". The progress line counts the decisions that carried over (with 0 carried over: \"0 of 112 resolved\").",
+        "Project settings now says \"This project checks in Spanish (Latin American) · es-419_gl.\" and the Spanish row is marked Current.",
+        "Open Check › Translation Notes. The package line reads git.door43.org/es-419_gl/es-419_tn · v66 · primary gateway language, and the quotes are Spanish, for example \"conforme a la fe\". The progress line counts the decisions that carried over (with 0 carried over: \"0 of 112 resolved\").",
         "Decide the checks again. ✓ Mark valid saves, the indicator shows Saved, and the count goes up (1 of 112, then 2 of 112).",
         "After a full restart, Resume opens Check on the Spanish notes, in the same tool."
       ],
@@ -2775,10 +2810,10 @@
         "✓ Up to date"
       ],
       "steps": [
-        "On Home, click Settings on the project card. Project settings opens. (It is no longer in the top bar — issue 505.)",
+        "On Home, click Settings on the project card. Project settings opens. (It is no longer in the top bar — issue #505.)",
         "Click Manage source texts →. The project opens, with Get source texts on top.",
         "If the dialog says the app is offline, click Go online.",
-        "In Pinned resources, click Check for updates. If \"Use the internet?\" appears, click Continue . The button reads \"Asking git.door43.org…\", then each set shows ✓ Up to date or \"Upgrade N resource(s)\" with each move, for example en tn v86 → v91 · 2026-09-26.",
+        "In Pinned resources, click Check for updates. If \"Use the internet?\" appears, click Continue. The button reads \"Asking git.door43.org…\", then each set shows ✓ Up to date or \"Upgrade N resource(s)\" with each move, for example en_tn v86 → v91 · 2026-09-26.",
         "If a set has updates, click \"Upgrade N resource(s)\".",
         "Read the confirmation. If nothing is checked yet, it says \"Nothing you have already checked will be affected.\"",
         "Click Upgrade, or Keep the current release."
@@ -2821,7 +2856,9 @@
       "summary": "Move the project to a newer release of the Greek or Hebrew text, or of the gateway Bible.",
       "ui_labels": [
         "Check for updates",
+        "Gateway Bible",
         "Manage source texts →",
+        "Original-language text",
         "Pinned resources",
         "Scripture texts",
         "Settings",
@@ -2831,7 +2868,7 @@
       "steps": [
         "On Home, click Settings on the project card, then Manage source texts →. The project opens, with Get source texts on top.",
         "Go online if needed, then in Pinned resources click Check for updates (click Continue if \"Use the internet?\" appears).",
-        "Look under Scripture texts. Each text with a newer release has its own row, for example Gateway Bible en ult v89 → v91 · 2026-09-26. If everything is current, it says ✓ Every scripture text is up to date.",
+        "Look under Scripture texts. Each text with a newer release has its own row, for example Gateway Bible en_ult v89 → v91 · 2026-09-26. If everything is current, it says ✓ Every scripture text is up to date.",
         "Click Upgrade on a row.",
         "Read the confirmation and confirm."
       ],
@@ -2945,6 +2982,7 @@
       "summary": "Open a project's settings from the Settings button on its Home card. Change the text direction, the script font, or the checking language, or manage its source texts. The name and language are shown but cannot be changed yet.",
       "ui_labels": [
         "Bible name",
+        "Check",
         "Checking language",
         "Code",
         "Current",
@@ -2957,7 +2995,9 @@
         "Script font",
         "Settings",
         "Share on Door43",
-        "Text direction"
+        "Text direction",
+        "Translate",
+        "Understand"
       ],
       "steps": [
         "On Home, find the project card and click Settings (next to Share on Door43).",
@@ -2969,7 +3009,7 @@
       "expected": [
         "Project settings opens from the Home card Settings button. There is no Project settings button in the top bar, on Home or inside Understand, Translate or Check.",
         "The dialog shows Bible name, Language name, Code, the note \"Renaming arrives with a later increment.\", Text direction, Checking language, Manage source texts →, and Script font.",
-        "The sentence is \"This project checks in Spanish (Latin American) · es-419 gl.\" Español (Latinoamérica), es-419 gl, is marked Current. English, unfoldingWord, is the other row."
+        "The sentence is \"This project checks in Spanish (Latin American) · es-419_gl.\" Español (Latinoamérica), es-419_gl, is marked Current. English, unfoldingWord, is the other row."
       ],
       "screenshots": [
         {
@@ -3093,6 +3133,7 @@
         "Bible name",
         "Cancel",
         "Details",
+        "Import as a new Bible",
         "Pictures",
         "← Choose other files"
       ],
@@ -3135,13 +3176,13 @@
       "steps": [
         "Open the Window menu at the top of the app window and click Reload (or press Ctrl+R).",
         "tC4 comes back on Home. Check that your projects are there, then open the project again.",
-        "If you see \"This screen could not be shown.\", click Back to Home , then open the project again.",
+        "If you see \"This screen could not be shown.\", click Back to Home, then open the project again.",
         "Start tC4 again.",
         "Check that your projects are on Home.",
         "If an import was interrupted, import the file again."
       ],
       "expected": [
-        "The desktop app's Window menu has Reload (Ctrl+R), Force Reload (Ctrl+Shift+R) and Toggle Developer Tools .",
+        "The desktop app's Window menu has Reload (Ctrl+R), Force Reload (Ctrl+Shift+R) and Toggle Developer Tools.",
         "Window › Reload reloads the app without quitting. It comes back on Home, and every project is still there.",
         "If a screen cannot be drawn, tC4 shows \"This screen could not be shown.\" with the error text and a Back to Home button, and the top bar stays. It does not leave a white window."
       ],
