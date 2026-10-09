@@ -120,3 +120,8 @@ th { background: var(--app); }
   .topbar, .sidebar, .sitefoot, .devrefs { display: none; }
   .content { max-width: none; padding: 0; }
 }
+/* inline screenshots ({{shot N}}): drawn at 2x, shown at half size, never wider than the column */
+.shot-inline { margin: 14px 0 22px; }
+.shot-inline img { display: block; max-width: 100%; height: auto; }
+.shot-inline.overview { margin: 8px 0 26px; }
+.shot-inline a { display: inline-block; max-width: 100%; }
