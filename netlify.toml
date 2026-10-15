@@ -11,6 +11,11 @@
   to   = "/translation-helps/"
   status = 301
 
+[[redirects]]
+  from = "/tc4"
+  to   = "/tc4/"
+  status = 301
+
 [[headers]]
   for = "/assets/fonts/*"
   [headers.values]
