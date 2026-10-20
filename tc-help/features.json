@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16",
+  "generated": "2026-10-20",
   "target_build": "2545c2e",
   "target_label": "build 2545c2e, which includes v4.0.0-rc.2 plus later fixes",
   "latest_release": "v4.0.0-rc.2",
@@ -716,6 +716,12 @@
           "file": "img/tr-formatting-1.png",
           "caption": "The section editor for Titus 3:4–5 in Type mode. The hint reads Enter for paragraph, Tab for poetry. Two lines of the Spanish text start further in because Tab was pressed.",
           "exists": true
+        },
+        {
+          "n": 2,
+          "file": null,
+          "caption": "The verse editor open on a Psalm verse of poetry: every line of the poem is in the editor, and each line starts with its indent, one tab for the first level and two for the second.",
+          "exists": false
         }
       ],
       "page": "tr-formatting.html"
@@ -1065,7 +1071,7 @@
         {
           "n": 1,
           "file": "img/ck-translation-words-1.png",
-          "caption": "Translation Words for Titus (English project), en_twl v91, item 1 of 182: “Paul” in Titus 1:1. Labels point to All checking tools, Learn more, the gateway text with Paul highlighted, the Greek of the verse, Previous and Next, the filters, Back to translating, the check list grouped by word with Paul selected, the decision buttons (Mark valid, Invalid, To do), Your translation, and Add a comment.",
+          "caption": "Translation Words for Titus (sample Spanish project), en_twl v91, item 1 of 182: “Paul” in Titus 1:1. Labels point to All checking tools, Learn more, the gateway text with Paul highlighted, the Greek of the verse, Previous and Next, the filters, Back to translating, the check list grouped by word with Paul selected, the decision buttons (Mark valid, Invalid, To do), Your translation, and Add a comment.",
           "exists": true
         }
       ],
@@ -1268,8 +1274,14 @@
         {
           "n": 1,
           "file": "img/al-open-1.png",
-          "caption": "The Align tool for Sample Titus, Titus 1:1. Labels point to All checking tools, How alignment works, the Align to switch (Gateway · ULT or Original · Greek), Suggest links (off), Previous and Next, Back to translating, the verse list, Mark valid, the word cards and the word bank.",
+          "caption": "The Align tool for a sample Spanish Titus, Titus 1:1. Labels point to All checking tools, How alignment works, the Align to switch (Gateway · ULT or Original · Greek), Suggest links (off), Previous and Next beside Mark valid, Back to translating, the verse list, Mark valid, the word cards and the word bank.",
           "exists": true
+        },
+        {
+          "n": 2,
+          "file": null,
+          "caption": "A verse in Align from a book that was added from an aligned USFM file. The notice says This verse already holds an alignment, and the word bank and cards cannot be changed.",
+          "exists": false
         }
       ],
       "page": "al-open.html"
@@ -1413,7 +1425,7 @@
         {
           "n": 1,
           "file": "img/al-mark-valid-1.png",
-          "caption": "The bottom of a verse in Align: the last source card, godliness, and the ✓ Mark valid button under the cards.",
+          "caption": "The bottom of a verse in Align: the last source cards and the row under them: ← Previous, ✓ Mark valid and Next →.",
           "exists": true
         }
       ],
