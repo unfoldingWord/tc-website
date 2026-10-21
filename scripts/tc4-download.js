@@ -33,7 +33,12 @@
     links.forEach(link => {
       const p = PATTERNS[link.dataset.tc4Asset];
       const asset = p && release.assets?.find(a => p.test(a.name));
-      if (asset) { link.href = asset.browser_download_url; link.title = asset.name; }
+      if (asset) {
+        link.href = asset.browser_download_url;
+        link.title = asset.name;
+        const sub = link.querySelector('[data-tc4-sub]');
+        if (sub && asset.size) sub.textContent += ` \u00b7 ${Math.round(asset.size / 1e6)} MB`;
+      }
     });
     document.querySelectorAll('[data-tc4-version]').forEach(el => {
       el.textContent = release.tag_name + (release.prerelease ? ' (pre-release)' : '');
