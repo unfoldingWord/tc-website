@@ -105,7 +105,7 @@
         {
           "n": 1,
           "file": "img/gs-home-1.png",
-          "caption": "The Home screen with one project, Sample Titus. Labels point to the translationCore logo, Resume, + Add a project, the Door43 account menu, a book tile, Add a book, Share on Door43 and Settings.",
+          "caption": "The Home screen with one Bible project. Labels point to the translationCore logo, Resume, + Add a project, the Door43 account menu (Sign in, internet, Help and guides, App language, Report a problem, About), a book tile, Add a book, Sync with Door43 and Settings.",
           "exists": true
         },
         {
@@ -591,7 +591,7 @@
         {
           "n": 2,
           "file": "img/tr-draft-section-2.png",
-          "caption": "The section editor open beside the source: DRAFTING 4–5, with Type selected, the hint Enter for paragraph, Tab for poetry, Spanish text typed in, and Save section and Cancel.",
+          "caption": "The section editor open beside the source for Psalms 9:1–2: DRAFTING 1–2, with Type selected, the hint Enter for paragraph, Tab for poetry, the poem lines with their indents, and Save section and Cancel.",
           "exists": true
         }
       ],
@@ -714,14 +714,14 @@
         {
           "n": 1,
           "file": "img/tr-formatting-1.png",
-          "caption": "The section editor for Titus 3:4–5 in Type mode. The hint reads Enter for paragraph, Tab for poetry. Two lines of the Spanish text start further in because Tab was pressed.",
+          "caption": "The section editor for Psalms 9:1–2 in Type mode. The hint reads Enter for paragraph, Tab for poetry. The second line of each verse starts further in, marked 1 and 2, because it is a second-level poetry line.",
           "exists": true
         },
         {
           "n": 2,
-          "file": null,
-          "caption": "The verse editor open on a Psalm verse of poetry: every line of the poem is in the editor, and each line starts with its indent, one tab for the first level and two for the second.",
-          "exists": false
+          "file": "img/tr-formatting-2.png",
+          "caption": "The verse editor open on Psalms 9:1: both lines of the poem are in the editor, and the second line starts further in because it is a second-level poetry line.",
+          "exists": true
         }
       ],
       "page": "tr-formatting.html"
@@ -1279,9 +1279,9 @@
         },
         {
           "n": 2,
-          "file": null,
-          "caption": "A verse in Align from a book that was added from an aligned USFM file. The notice says This verse already holds an alignment, and the word bank and cards cannot be changed.",
-          "exists": false
+          "file": "img/al-open-2.png",
+          "caption": "A verse in Align from a book that was added from an aligned USFM file. The notice says This verse already holds an alignment. Titus was added from a file that already holds alignments. tC4 keeps this verse's alignment as it is. You cannot change it in tC4 yet.",
+          "exists": true
         }
       ],
       "page": "al-open.html"
@@ -1879,7 +1879,7 @@
         {
           "n": 2,
           "file": "img/rs-offline-2.png",
-          "caption": "The account menu: Sign in to Door43, Use the internet with its switch off (marked 1) and the line Off. A step that needs the internet asks first., App language, Report a problem, About translationCore.",
+          "caption": "The account menu: the Door43 account, Use the internet with its switch off (marked 1) and the line Off. A step that needs the internet asks first., Help and guides, App language, Report a problem, About translationCore.",
           "exists": true
         }
       ],
@@ -1964,7 +1964,7 @@
         {
           "n": 1,
           "file": "img/st-app-language-1.png",
-          "caption": "The account menu, open. Badge 1 is on the round person icon at the top right. Badge 2 is on App language, which shows English.",
+          "caption": "The account menu, open while signed in to Door43: the Door43 account name, Use the internet (on), Help and guides, App language (English), Report a problem, About translationCore and Sign out of Door43. Badge 1 is on the round person icon at the top right. Badge 2 is on App language.",
           "exists": true
         },
         {
