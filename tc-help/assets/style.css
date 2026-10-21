@@ -135,4 +135,3 @@ th { background: var(--app); }
 .shot-inline img { display: block; max-width: 100%; height: auto; }
 .shot-inline.overview { margin: 8px 0 26px; }
 .shot-inline a { display: inline-block; max-width: 100%; }
-.hero-meta { margin: 0 0 4px; font-size: 13px; text-align: right; } .hero-meta a { color: var(--muted, #5b6b7a); }
