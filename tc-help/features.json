@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16",
+  "generated": "2026-10-20",
   "target_build": "2545c2e",
   "target_label": "build 2545c2e, which includes v4.0.0-rc.2 plus later fixes",
   "latest_release": "v4.0.0-rc.2",
@@ -105,7 +105,7 @@
         {
           "n": 1,
           "file": "img/gs-home-1.png",
-          "caption": "The Home screen with one project, Sample Titus. Labels point to the translationCore logo, Resume, + Add a project, the Door43 account menu, a book tile, Add a book, Share on Door43 and Settings.",
+          "caption": "The Home screen with one Bible project. Labels point to the translationCore logo, Resume, + Add a project, the Door43 account menu (Sign in, internet, Help and guides, App language, Report a problem, About), a book tile, Add a book, Sync with Door43 and Settings.",
           "exists": true
         },
         {
@@ -591,7 +591,7 @@
         {
           "n": 2,
           "file": "img/tr-draft-section-2.png",
-          "caption": "The section editor open beside the source: DRAFTING 4–5, with Type selected, the hint Enter for paragraph, Tab for poetry, Spanish text typed in, and Save section and Cancel.",
+          "caption": "The section editor open beside the source for Psalms 9:1–2: DRAFTING 1–2, with Type selected, the hint Enter for paragraph, Tab for poetry, the poem lines with their indents, and Save section and Cancel.",
           "exists": true
         }
       ],
@@ -714,7 +714,13 @@
         {
           "n": 1,
           "file": "img/tr-formatting-1.png",
-          "caption": "The section editor for Titus 3:4–5 in Type mode. The hint reads Enter for paragraph, Tab for poetry. Two lines of the Spanish text start further in because Tab was pressed.",
+          "caption": "The section editor for Psalms 9:1–2 in Type mode. The hint reads Enter for paragraph, Tab for poetry. The second line of each verse starts further in, marked 1 and 2, because it is a second-level poetry line.",
+          "exists": true
+        },
+        {
+          "n": 2,
+          "file": "img/tr-formatting-2.png",
+          "caption": "The verse editor open on Psalms 9:1: both lines of the poem are in the editor, and the second line starts further in because it is a second-level poetry line.",
           "exists": true
         }
       ],
@@ -1065,7 +1071,7 @@
         {
           "n": 1,
           "file": "img/ck-translation-words-1.png",
-          "caption": "Translation Words for Titus (English project), en_twl v91, item 1 of 182: “Paul” in Titus 1:1. Labels point to All checking tools, Learn more, the gateway text with Paul highlighted, the Greek of the verse, Previous and Next, the filters, Back to translating, the check list grouped by word with Paul selected, the decision buttons (Mark valid, Invalid, To do), Your translation, and Add a comment.",
+          "caption": "Translation Words for Titus (sample Spanish project), en_twl v91, item 1 of 182: “Paul” in Titus 1:1. Labels point to All checking tools, Learn more, the gateway text with Paul highlighted, the Greek of the verse, Previous and Next, the filters, Back to translating, the check list grouped by word with Paul selected, the decision buttons (Mark valid, Invalid, To do), Your translation, and Add a comment.",
           "exists": true
         }
       ],
@@ -1268,7 +1274,13 @@
         {
           "n": 1,
           "file": "img/al-open-1.png",
-          "caption": "The Align tool for Sample Titus, Titus 1:1. Labels point to All checking tools, How alignment works, the Align to switch (Gateway · ULT or Original · Greek), Suggest links (off), Previous and Next, Back to translating, the verse list, Mark valid, the word cards and the word bank.",
+          "caption": "The Align tool for a sample Spanish Titus, Titus 1:1. Labels point to All checking tools, How alignment works, the Align to switch (Gateway · ULT or Original · Greek), Suggest links (off), Previous and Next beside Mark valid, Back to translating, the verse list, Mark valid, the word cards and the word bank.",
+          "exists": true
+        },
+        {
+          "n": 2,
+          "file": "img/al-open-2.png",
+          "caption": "A verse in Align from a book that was added from an aligned USFM file. The notice says This verse already holds an alignment. Titus was added from a file that already holds alignments. tC4 keeps this verse's alignment as it is. You cannot change it in tC4 yet.",
           "exists": true
         }
       ],
@@ -1413,7 +1425,7 @@
         {
           "n": 1,
           "file": "img/al-mark-valid-1.png",
-          "caption": "The bottom of a verse in Align: the last source card, godliness, and the ✓ Mark valid button under the cards.",
+          "caption": "The bottom of a verse in Align: the last source cards and the row under them: ← Previous, ✓ Mark valid and Next →.",
           "exists": true
         }
       ],
@@ -1867,7 +1879,7 @@
         {
           "n": 2,
           "file": "img/rs-offline-2.png",
-          "caption": "The account menu: Sign in to Door43, Use the internet with its switch off (marked 1) and the line Off. A step that needs the internet asks first., App language, Report a problem, About translationCore.",
+          "caption": "The account menu: the Door43 account, Use the internet with its switch off (marked 1) and the line Off. A step that needs the internet asks first., Help and guides, App language, Report a problem, About translationCore.",
           "exists": true
         }
       ],
@@ -1952,7 +1964,7 @@
         {
           "n": 1,
           "file": "img/st-app-language-1.png",
-          "caption": "The account menu, open. Badge 1 is on the round person icon at the top right. Badge 2 is on App language, which shows English.",
+          "caption": "The account menu, open while signed in to Door43: the Door43 account name, Use the internet (on), Help and guides, App language (English), Report a problem, About translationCore and Sign out of Door43. Badge 1 is on the round person icon at the top right. Badge 2 is on App language.",
           "exists": true
         },
         {
