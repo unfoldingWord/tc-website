@@ -1,7 +1,7 @@
 /**
  * Resolve translationCore 4 download buttons to real release assets via the GitHub API.
  * Without JS, or if the API fails, buttons keep their href (the Releases page) and the
- * static install notes stay as written (test builds note SmartScreen steps).
+ * static install notes stay as written (the Windows note describes the signed installer).
  * Picks the newest non-draft release; set PREFER_STABLE = true once v4.0.0 ships
  * to use only full releases (falls back to the newest prerelease if none exist).
  */
@@ -38,12 +38,12 @@
     document.querySelectorAll('[data-tc4-version]').forEach(el => {
       el.textContent = release.tag_name + (release.prerelease ? ' (pre-release)' : '');
     });
-    // Static HTML defaults to the unsigned SmartScreen note. Once a signed stable build arrives, swap to signed.
+    // Static HTML describes the signed installer (signed since v4.0.0-rc.2, D99).
+    // Signed builds are named tC4-<version>-windows-x64.exe; unsigned ones carry "-unsigned".
     const winAsset = release.assets?.find(a => PATTERNS.windows.test(a.name));
-    const isUnsigned = release.prerelease || (winAsset && /unsigned/i.test(winAsset.name));
-    if (!isUnsigned) {
+    if (winAsset && /unsigned/i.test(winAsset.name)) {
       document.querySelectorAll('[data-tc4-windows-note]').forEach(el => {
-        el.innerHTML = '<strong>Windows:</strong> the installer is signed. Run it and follow the steps.';
+        el.innerHTML = '<strong>Windows:</strong> this build is not signed. If Windows SmartScreen warns you on first launch, choose <em>More info</em>, then <em>Run anyway</em>.';
       });
     }
     document.querySelectorAll('[data-tc4-notes]').forEach(el => { el.href = release.html_url; });
