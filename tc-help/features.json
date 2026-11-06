@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-20",
-  "target_build": "2545c2e",
-  "target_label": "build 2545c2e, which includes v4.0.0-rc.2 plus later fixes",
-  "latest_release": "v4.0.0-rc.2",
+  "generated": "2026-11-05",
+  "target_build": "550345e9",
+  "target_label": "build 550345e9, translationCore4 main for 4.1.0-preview",
+  "latest_release": "4.1",
   "feature_count": 66,
   "by_section_status": {
     "getting-started": {
@@ -734,7 +734,7 @@
       "status": "shipped",
       "since": "alpha.4",
       "where": "",
-      "summary": "While you draft, the helps panel shows the notes, word links, questions, simplified text and your own comments for the verses in focus.",
+      "summary": "While you draft, the helps panel shows notes grouped under verse headings, word cards with article intros, questions, simplified text and your comments.",
       "ui_labels": [
         "Comments",
         "GST",
@@ -755,8 +755,7 @@
         {
           "n": 1,
           "file": "img/tr-helps-panel-1.png",
-          "caption": "The helps panel on Titus 1 with the Words tab selected. The tabs are Notes, Words, Questions, UST and Comments. Each card is a key word (Paul, a servant, of God, an apostle) with Read the article →.",
-          "exists": true
+          "caption": "Words tab: article intros and Read the article →, no KEY WORD badges."
         }
       ],
       "page": "tr-helps-panel.html"
@@ -1415,7 +1414,7 @@
       "status": "shipped",
       "since": "alpha.2",
       "where": "",
-      "summary": "When a verse is aligned, mark it valid. It counts toward the verses-aligned progress.",
+      "summary": "Mark a verse alignment valid, or clear every placed word back to the word bank.",
       "ui_labels": [
         "✓ Mark valid"
       ],
@@ -2188,6 +2187,11 @@
       "id": "wn-rc2",
       "title": "What's new in 4.0 rc.2",
       "page": "wn-rc2.html"
+    },
+    {
+      "id": "wn-4.1",
+      "title": "What's new in 4.1",
+      "page": "wn-4.1.html"
     }
   ]
 }
