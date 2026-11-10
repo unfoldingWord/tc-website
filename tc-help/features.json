@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-20",
-  "target_build": "2545c2e",
-  "target_label": "build 2545c2e, which includes v4.0.0-rc.2 plus later fixes",
-  "latest_release": "v4.0.0-rc.2",
+  "generated": "2026-11-09",
+  "target_build": "90f82216",
+  "target_label": "build 90f82216, translationCore4 main for 4.1.0-preview2",
+  "latest_release": "4.1",
   "feature_count": 66,
   "by_section_status": {
     "getting-started": {
@@ -111,7 +111,7 @@
         {
           "n": 2,
           "file": "img/gs-home-2.png",
-          "caption": "The Add a project dialog with three numbered choices: 1 New Bible, 2 New Open Bible Stories, 3 Import a project.",
+          "caption": "The Add a project dialog with five numbered choices: 1 New Bible, 2 New Open Bible Stories, 3 Import a project, 4 Open a project from Door43, 5 Receive work from a file.",
           "exists": true
         },
         {
@@ -249,15 +249,19 @@
       "status": "shipped",
       "since": "alpha.1",
       "where": "",
-      "summary": "Create a new, empty Bible translation project. You add books right after.",
+      "summary": "Start a new Bible translation project: blank, from USFM files, or from a Scripture Burrito. You add books right after.",
       "ui_labels": [
         "+ Add a project",
         "Add a book",
         "Bible name",
+        "Blank",
         "Cancel",
         "Checking language",
         "Code",
         "Create Bible →",
+        "From USFM files",
+        "From a Scripture Burrito",
+        "How do you want to start?",
         "Language name",
         "Left to right",
         "New Bible",
@@ -271,13 +275,37 @@
         {
           "n": 1,
           "file": "img/bp-new-bible-1.png",
-          "caption": "The Add a project dialog. New Bible, the first card, is marked 1.",
+          "caption": "The Add a project dialog with five cards: New Bible, marked 1, New Open Bible Stories, Import a project, Open a project from Door43 and Receive work from a file.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/bp-new-bible-2.png",
-          "caption": "The empty New Bible dialog: Bible name, Language name and Code, Text direction (Left to right selected), Checking language English, recommended and installed with the app, Script font Noto Sans (default), Versification folded away, and Cancel and Create Bible →.",
+          "caption": "New Bible, How do you want to start?: Blank, Name the project, then add the books you will translate, marked 1; From USFM files, .usfm, .sfm or .txt · one or many, marked 2; From a Scripture Burrito, .zip · one Bible, marked 3.",
+          "exists": true
+        },
+        {
+          "n": 3,
+          "file": "img/bp-new-bible-3.png",
+          "caption": "The empty New Bible form: Bible name, Language name and Code, Text direction (Left to right selected), Checking language English, recommended and installed with the app, Script font Noto Sans (default), Versification folded away, and Cancel and Create Bible →.",
+          "exists": true
+        },
+        {
+          "n": 4,
+          "file": "img/bp-new-bible-4.png",
+          "caption": "New Bible from USFM files: the drop zone, then three rows. TIT.usfm, Adds Titus, and sample-JON-span.usfm, Adds Jonah, have green dots. GEN-draft.usfm has an orange dot and says GEN-draft.usfm cannot be added: line 4: chapter 1 appears twice, marked 1. Back and a greyed-out Next →.",
+          "exists": true
+        },
+        {
+          "n": 5,
+          "file": "img/bp-new-bible-5.png",
+          "caption": "The New Bible form after From USFM files, scrolled down: Kanuri Bible, Kanuri, knc, Versification open with eng (default), Books from your files: Titus, Jonah, marked 1, and The books’ verse counts fit eng, marked 2. Cancel and Create Bible →.",
+          "exists": true
+        },
+        {
+          "n": 6,
+          "file": "img/bp-new-bible-6.png",
+          "caption": "The New Bible form filled from a Scripture Burrito: Bible name Biblia Ejemplo, Language name Spanish (Latin America), Code es-419, Left to right, Checking language English, Script font Noto Sans (default). Books from the Scripture Burrito: Jonah, Titus is marked 1, then The Scripture Burrito’s own versification is kept. Cancel and Create Bible →.",
           "exists": true
         }
       ],
@@ -344,13 +372,13 @@
     },
     {
       "id": "bp-import",
-      "title": "Import a project (translationCore 3, USFM or Scripture Burrito)",
+      "title": "Import a translationCore 3 project",
       "section": "bible-projects",
       "section_title": "Bible projects",
       "status": "shipped",
       "since": "rc.1",
       "where": "",
-      "summary": "Bring existing work into tC4 as a new project, from translationCore 3 project zips, USFM files or a Scripture Burrito zip.",
+      "summary": "Bring translationCore 3 work into tC4 as a new project, from the project zips translationCore 3 exported.",
       "ui_labels": [
         "+ Add a project",
         "Add books from USFM files",
@@ -373,13 +401,13 @@
         {
           "n": 1,
           "file": "img/bp-import-1.png",
-          "caption": "The Add a project dialog with three cards: New Bible, New Open Bible Stories, and Import a project, marked 1.",
+          "caption": "The Add a project dialog with five cards: New Bible, New Open Bible Stories, Import a project, marked 1, Open a project from Door43 and Receive work from a file.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/bp-import-2.png",
-          "caption": "Import, step 1 of 3: choose the kind of file you have, translationCore 3 project, USFM files or Scripture Burrito. Each import creates a new Bible. Nothing on this computer is changed until you confirm.",
+          "caption": "Import, step 1 of 3: Import a project, Choose the kind of file you have. translationCore 3 project, .zip · one or many, is marked 1. USFM files and Scripture Burrito are greyed out with Arrives with its importer. Each import creates a new Bible. Nothing on this computer is changed until you confirm.",
           "exists": true
         },
         {
@@ -585,13 +613,13 @@
         {
           "n": 1,
           "file": "img/tr-draft-section-1.png",
-          "caption": "An empty section row: TITUS 3:4–5 on the left, the verse numbers 4 5 on the right, and Draft section 4–5 at its top right, marked 1.",
+          "caption": "An empty section row: TITUS 2:9–10 on the left, and Draft section 9–10 at its top right, marked 1.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/tr-draft-section-2.png",
-          "caption": "The section editor open beside the source for Psalms 9:1–2: DRAFTING 1–2, with Type selected, the hint Enter for paragraph, Tab for poetry, the poem lines with their indents, and Save section and Cancel.",
+          "caption": "The section editor open beside the source for Titus 2:9–10: DRAFTING 9–10, with Type selected, the hint Enter for paragraph, Tab for poetry, the typed verses 9 and 10, and Save section and Cancel. The card is as tall as the source passage beside it.",
           "exists": true
         }
       ],
@@ -619,13 +647,13 @@
         {
           "n": 1,
           "file": "img/tr-place-verse-numbers-1.png",
-          "caption": "Place verse numbers mode for Titus 3:4–5. Verse 4 is fixed at the start of the text, and the number 5 waits in the To place box with the hint Pick a number up, then click the word it begins at.",
+          "caption": "Place verse numbers mode for Titus 2:9–10. Verse 9 is fixed at the start of the text, and the number 10 waits in the To place box, marked 1, with the hint Click a verse number, then click the word that begins the verse.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/tr-place-verse-numbers-2.png",
-          "caption": "Place verse numbers mode for Titus 1:1–3 with verse 3 picked up. The To place box says Click the word where verse 3 begins, and the words where verse 3 may begin are highlighted.",
+          "caption": "The same section after clicking the 10: the To place box says Click the word where verse 10 begins.",
           "exists": true
         }
       ],
@@ -653,7 +681,7 @@
         {
           "n": 1,
           "file": "img/tr-verse-spans-1.png",
-          "caption": "Place verse numbers mode for Titus 1:1–3. Verse 3 has been picked up and is held next to verse 2 on the word con, so the two numbers sit side by side.",
+          "caption": "Place verse numbers mode for Titus 2:9–10 after joining: the numbers 9 and 10 sit side by side on the first word, Exhorta, so the two verses are one span.",
           "exists": true
         }
       ],
@@ -714,7 +742,7 @@
         {
           "n": 1,
           "file": "img/tr-formatting-1.png",
-          "caption": "The section editor for Psalms 9:1–2 in Type mode. The hint reads Enter for paragraph, Tab for poetry. The second line of each verse starts further in, marked 1 and 2, because it is a second-level poetry line.",
+          "caption": "The section editor for Titus 2:9–10 in Type mode. The hint reads Enter for paragraph, Tab for poetry. Lines that start further in are indented poetry lines; two are marked 1 and 2.",
           "exists": true
         },
         {
@@ -734,7 +762,7 @@
       "status": "shipped",
       "since": "alpha.4",
       "where": "",
-      "summary": "While you draft, the helps panel shows the notes, word links, questions, simplified text and your own comments for the verses in focus.",
+      "summary": "While you draft, the helps panel shows notes grouped under verse headings, word cards with article intros, questions, simplified text and your comments.",
       "ui_labels": [
         "Comments",
         "GST",
@@ -755,8 +783,7 @@
         {
           "n": 1,
           "file": "img/tr-helps-panel-1.png",
-          "caption": "The helps panel on Titus 1 with the Words tab selected. The tabs are Notes, Words, Questions, UST and Comments. Each card is a key word (Paul, a servant, of God, an apostle) with Read the article →.",
-          "exists": true
+          "caption": "Words tab: article intros and Read the article →, no KEY WORD badges."
         }
       ],
       "page": "tr-helps-panel.html"
@@ -1415,7 +1442,7 @@
       "status": "shipped",
       "since": "alpha.2",
       "where": "",
-      "summary": "When a verse is aligned, mark it valid. It counts toward the verses-aligned progress.",
+      "summary": "Mark a verse alignment valid, or clear every placed word back to the word bank.",
       "ui_labels": [
         "✓ Mark valid"
       ],
@@ -1464,7 +1491,7 @@
         {
           "n": 2,
           "file": "img/obs-create-2.png",
-          "caption": "Home with the new Sample Stories card: OBS and LTR badges, es · 50 stories · 0 in progress · 0% drafted · Only on this computer, and tiles for stories 1–3. The tile 1 · The Creation is marked 1.",
+          "caption": "An Open Bible Stories card on Home: OBS and LTR badges, the line with 50 stories and Only on this computer, Share on Door43, Save or receive work by USB and Settings, and tiles for stories 1–3. The tile 1 · La Creación is marked 1.",
           "exists": true
         }
       ],
@@ -1491,13 +1518,13 @@
         {
           "n": 1,
           "file": "img/obs-story-tiles-1.png",
-          "caption": "The Sample Stories card on Home with tiles 1 · The Creation, 2 · Sin Enters the World and 3 · The Flood, each at 0%. Show all 50 stories → is marked 1.",
+          "caption": "An Open Bible Stories card on Home with tiles 1 · La Creación, Story 2 and Story 3. Show all 50 stories → is marked 1.",
           "exists": true
         },
         {
           "n": 2,
           "file": "img/obs-story-tiles-2.png",
-          "caption": "The same card after Show all 50 stories →: a grid of story tiles, from 1 · The Creation to 18 · The Divided Kingdom on this screen, each with its percent drafted.",
+          "caption": "The same card after Show all 50 stories →: a grid of all 50 story tiles, each with its percent drafted.",
           "exists": true
         }
       ],
@@ -1531,7 +1558,7 @@
         {
           "n": 2,
           "file": "img/obs-translate-2.png",
-          "caption": "Frame 2 open for drafting. The box is headed Drafting frame 2 and holds Entonces Dios dijo: «¡Que haya luz!». Y hubo luz. Save is marked 1, next to Cancel.",
+          "caption": "Frame 2 open for drafting beside the English frame text. The box is headed Drafting frame 2, is as tall as the frame beside it, and holds Entonces Dios dijo: «¡Que haya luz!». Y hubo luz. Save is marked 1, next to Cancel.",
           "exists": true
         }
       ],
@@ -1933,7 +1960,7 @@
         {
           "n": 1,
           "file": "img/st-where-projects-live-1.png",
-          "caption": "The Sample Titus card on Home. The line es · 1 book · 1 in progress · Only on this computer is marked 1.",
+          "caption": "A Bible project card on Home. The line es-419 · 2 books · 2 in progress · Only on this computer is marked 1. Share on Door43, Save or receive work by USB and Settings are on the right.",
           "exists": true
         }
       ],
@@ -2031,7 +2058,7 @@
         {
           "n": 1,
           "file": "img/ts-protect-messages-1.png",
-          "caption": "An import review for a USFM file with no \\id line. A red box says This file cannot be imported, no-id.sfm has no \\id line, so the book is not known, with the code import.damaged.usfm-parse and Nothing will be created from this file.",
+          "caption": "Import step 3 of 3, Review what was found, for a translationCore 3 zip that was cut off. A red box says This file cannot be imported, titus-project.zip is not a complete zip file, with the code import.damaged.truncated and Nothing will be created from this file. ← Choose other files, Cancel, and a greyed-out Import as a new Bible.",
           "exists": true
         }
       ],
@@ -2095,7 +2122,7 @@
         {
           "n": 1,
           "file": "img/ts-share-door43-1.png",
-          "caption": "The Sample Titus card on Home. Share on Door43 is marked 1, next to Settings.",
+          "caption": "A Bible project card on Home. Share on Door43 is marked 1, next to Save or receive work by USB and Settings.",
           "exists": true
         },
         {
@@ -2188,6 +2215,11 @@
       "id": "wn-rc2",
       "title": "What's new in 4.0 rc.2",
       "page": "wn-rc2.html"
+    },
+    {
+      "id": "wn-4.1",
+      "title": "What's new in 4.1",
+      "page": "wn-4.1.html"
     }
   ]
 }
